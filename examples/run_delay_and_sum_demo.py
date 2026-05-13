@@ -9,7 +9,7 @@ array = LinearArray(
 
 beamformer = DelayAndSumBeamformer(array)
 
-beamformer.compute_beam_pattern(
+beamformer.plot_polar_beam_pattern(
     theta_target=30,
     wavelength=12.5
 )
