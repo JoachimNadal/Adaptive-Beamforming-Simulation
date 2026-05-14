@@ -11,7 +11,8 @@ def generate_snapshot_matrix(
     desired_amplitude,
     interference_amplitude,
     noise_power,
-    num_snapshots
+    num_snapshots,
+    unite="deg"
 ):
 
     X = np.zeros((antenna_array.num_elements, num_snapshots),dtype=complex)
@@ -25,7 +26,8 @@ def generate_snapshot_matrix(
             interference_angle,
             desired_amplitude,
             interference_amplitude,
-            noise_power
+            noise_power,
+            unite = unite
         )
 
     return X

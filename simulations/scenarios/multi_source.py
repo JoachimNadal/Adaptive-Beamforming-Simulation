@@ -8,10 +8,11 @@ def simulate_multi_source_snapshot(
     interference_angle,
     desired_amplitude,
     interference_amplitude,
-    noise_power
+    noise_power,
+    unite = "deg"
 ):
-    a1 = antenna_array.compute_steering_vector(desired_angle, wavelength, unite="rad")
-    a2 = antenna_array.compute_steering_vector(interference_angle, wavelength, unite="rad")
+    a1 = antenna_array.compute_steering_vector(desired_angle, wavelength, unite=unite)
+    a2 = antenna_array.compute_steering_vector(interference_angle, wavelength, unite=unite)
 
     noise_std = np.sqrt(noise_power)
 
