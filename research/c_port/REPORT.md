@@ -20,7 +20,7 @@ python -m research.c_port.report
    of difference, at 2.5 to 5 times the cost of the covariance mode and one third of the stack.
 4. The covariance modes now **flag** blocks whose precision is insufficient. Every float32 block that
    deviates by more than 0.1 dB is flagged.
-5. **62 × faster than Python** at N = 4, K = 256; no heap, 12.8 KiB of state in float32.
+5. **60 × faster than Python** at N = 4, K = 256 (Phase 1 mode); no heap, 12.8 KiB of state in float32.
 
 ## 1. Theory
 
@@ -48,7 +48,7 @@ errors. Loading is also a rotation: appending $\sqrt\alpha\,\mathbf I$ to $\math
 | ID | Verdict | Evidence |
 |---|---|---|
 | H3.1 float32 within 0.1 dB for ≥ 99 % of blocks | **refuted** at first (94.2 % at N = 8, 97.3 % at N = 4); after clamping, 98.7 % at N = 4 and 100 % at N = 8, 16 in Phase 1 mode: still just under at N = 4 | accuracy table; the scenes include up to 60 dB |
-| H3.2 ≥ 50 × faster at N = 4, K = 256 | supported | 62 × (Phase 1 pipeline, float64); 29 × for noise loading; 8–22 × at N ≥ 8 |
+| H3.2 ≥ 50 × faster at N = 4, K = 256 | supported | 60 × (Phase 1 pipeline, float64); 28 × for noise loading; 8–22 × at N ≥ 8 |
 | H3.3 ≤ 16 KiB state and stack, no heap, N = 16 | supported in float32 (12.8 KiB, 3.1 KiB); **refuted in float64** (25.3 KiB of state) | memory table |
 | H3.4 float32 loses ≤ 0.1 dB up to 60 dB | **refuted** before clamping (1.4 dB at N = 4, Phase 1 mode); supported afterwards for one interferer | precision table |
 | H3.5 square root in float32 correct to 80 dB | supported | 100 % correct order, ≤ 0.001 dB loss, N = 4, 8, 16 |
@@ -104,8 +104,9 @@ The frozen Python pipeline, and for the noise-loaded modes the Python estimator 
 <!-- /accuracy -->
 
 `flagged` is the share of blocks with `ABFP_PRECISION_LIMITED`. `noise f32` at N = 16 differs from Python
-in half of the blocks: the clamp raises the noise estimate, hence the loading. These blocks are flagged;
-the mean loss is not worse. The last column is the safety property: no silent failure.
+in half of the blocks: the clamp raises the noise estimate, hence the loading, and the mean loss rises
+from 1.51 to 2.41 dB. These blocks are flagged. The last column is the safety property: no silent
+failure.
 
 ### float32 against float64, one interferer (SINR loss in dB)
 
