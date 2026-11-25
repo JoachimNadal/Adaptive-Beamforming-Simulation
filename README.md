@@ -123,9 +123,9 @@ graph LR
 ## Testing
 
 ```bash
-pytest                                # 249 tests with PyTorch, CMake and a compiler installed
+pytest                                # 259 tests with PyTorch, CMake and a compiler installed
 ruff check . && ruff format --check . && mypy
-python scripts/mutation_check.py      # injects 18 known bugs, all must be caught
+python scripts/mutation_check.py      # injects 20 known bugs, all must be caught
 
 cmake -S embedded/core -B build && cmake --build build && ctest --test-dir build
 ```

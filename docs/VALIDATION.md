@@ -15,9 +15,9 @@ verified.
 
 | Check | Where | Result |
 |---|---|---|
-| Unit and integration tests | PC | 249 passed, 0 failed, 0 skipped |
+| Unit and integration tests | PC | 259 passed, 0 failed, 0 skipped |
 | Statement coverage (`dsp`, `simulations`, `embedded`, `ai`, `dashboard`) | PC | 96 % |
-| Mutation check, 18 injected bugs | PC | 18 caught |
+| Mutation check, 20 injected bugs | PC | 20 caught |
 | Lint and format (`ruff`) | PC | clean |
 | Types (`mypy`, 80 files) | PC | clean |
 | Oldest supported dependencies (NumPy 1.26.4, Matplotlib 3.8.4) | PC | 246 passed, 3 skipped (no SciPy/PyTorch there) |
@@ -25,7 +25,7 @@ verified.
 | README quick start from a clean copy and new environment | PC | works |
 | Wheel build | PC | works |
 | C core: strict warnings as errors, unit tests | PC | pass |
-| C core against Python, 19 tests | PC | pass |
+| C core against Python, 22 tests | PC | pass |
 | C core: `clang-tidy`, `gcc -fanalyzer` | PC | clean |
 | C core: cross-compile and link, aarch64, armhf, riscv64, x86-64 (Zig) | PC | success, not executed |
 | Figures regenerated | PC | byte-identical, except `dashboard.png` which shows a measured latency |
@@ -79,6 +79,13 @@ the uncorrelated sources, verified by mutation.
 | Detector | 0.6 % false alarms, 100 % detection from −6 dB (N=4, K=128) | [DOA](theory/doa_estimation.md#detection) |
 | Classifier | 99.2 %, baseline 91.2 %, synthetic | [ai](../ai/README.md) |
 | Error budget | tables | [hardware](hardware/error_budget_results.md) |
+
+## Found during the pre-merge review
+
+| Defect | Effect | Fix |
+|---|---|---|
+| `abf_covariance_update` accepted NaN and infinity | one corrupt sample disabled MVDR permanently, since the average is recursive | block rejected, covariance untouched; C and Python tests |
+| `PipelineConfig` did not check types | `4.0` antennas, NaN thresholds or `"no"` as a flag were accepted | types and finiteness checked |
 
 ## Known bugs and limits
 

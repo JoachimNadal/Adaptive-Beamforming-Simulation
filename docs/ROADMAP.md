@@ -38,7 +38,7 @@ Audit items and their resolution:
 | L9 | Fast interferers look like several sources | covariance memory | tracking, shorter blocks |
 | L10 | Python pipeline below 1 MS/s on a desktop | interpreter overhead | C port of order/DOA, or MVDR-only path |
 | L11 | Mutual coupling and element patterns not modelled | needs measurement or EM simulation | Phase 2 |
-| L12 | Bare-metal Cortex-M not built | no toolchain | arm-none-eabi |
+| L12 | Bare-metal Cortex-M not built | `arm-none-eabi-gcc` not on the PATH; Zig has no C library for it | arm-none-eabi |
 
 ## Phase 2 — R&D
 
