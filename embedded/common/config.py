@@ -1,5 +1,6 @@
 """Pipeline configuration: one validated object, loadable from TOML."""
 
+import math
 import tomllib
 from dataclasses import dataclass, fields
 from pathlib import Path
@@ -30,6 +31,8 @@ class PipelineConfig:
     min_wng_ratio: float = 0.1  # fall back when WNG < ratio * N (course 23.4.2)
 
     def __post_init__(self):
+        for item in fields(self):
+            self._check_type(item.name, type(item.default), getattr(self, item.name))
         checks = {
             "num_elements must be in [2, 16]": 2 <= self.num_elements <= 16,
             "spacing_m must be positive": self.spacing_m > 0,
@@ -54,6 +57,15 @@ class PipelineConfig:
                 f"spacing {self.spacing_m} m exceeds lambda/2 = {self.wavelength_m / 2:.4f} m: "
                 "angles would be ambiguous"
             )
+
+    @staticmethod
+    def _check_type(name, expected, value):
+        """Integers must be integers, flags flags, and every number finite."""
+        accepted = (int, float) if expected is float else (expected,)
+        if not isinstance(value, accepted) or isinstance(value, bool) != (expected is bool):
+            raise ConfigError(f"{name} must be of type {expected.__name__}, got {value!r}")
+        if not math.isfinite(value):
+            raise ConfigError(f"{name} must be finite")
 
     @property
     def wavelength_m(self):

@@ -117,6 +117,15 @@ static void test_covariance(void) {
     const abf_cf32 before = r[0];
     CHECK(abf_covariance_update(r, x, 2, 2, 0.75f) == ABF_OK);
     CHECK(near(r[0].re, before.re, 1e-6f));
+    abf_cf32 bad[4];
+    memcpy(bad, x, sizeof bad);
+    for (int i = 0; i < 4; i++) { /* a corrupt block must not poison the recursion */
+        const abf_cf32 kept = bad[i];
+        bad[i].im = (i % 2 == 0) ? NAN : INFINITY;
+        CHECK(abf_covariance_update(r, bad, 2, 2, 0.75f) == ABF_ERR_NUMERIC);
+        bad[i] = kept;
+    }
+    CHECK(near(r[0].re, 2.5f, 1e-6f) && near(r[1].im, 1.5f, 1e-6f));
     CHECK(abf_covariance_update(r, x, 2, 0, 0.5f) == ABF_ERR_ARG);
     CHECK(abf_covariance_update(r, x, 2, 2, 1.0f) == ABF_ERR_ARG);
 }

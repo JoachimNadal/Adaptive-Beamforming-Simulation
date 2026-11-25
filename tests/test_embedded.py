@@ -109,6 +109,13 @@ def test_reference_configuration_file():
         {"max_interferers": 4},
         {"min_wng_ratio": 1.0},
         {"guard_deg": 0.0},
+        {"num_elements": 4.0},
+        {"num_elements": True},
+        {"block_size": 256.5},
+        {"min_interferer_inr_db": float("nan")},
+        {"carrier_hz": float("inf")},
+        {"relative_loading": "0.01"},
+        {"derivative_constraint": "no"},
     ],
 )
 def test_invalid_configurations(changes):

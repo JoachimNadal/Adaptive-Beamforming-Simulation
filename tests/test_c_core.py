@@ -16,7 +16,7 @@ from embedded.common.iq_frame import FrameFlag, IQFrame, SampleFormat, pack_fram
 from simulations.channels.awgn import complex_noise
 
 SOURCE = Path(__file__).parents[1] / "embedded" / "core"
-ERR_ARG, ERR_NOT_POSDEF, ERR_FRAME = 1, 2, 4
+ERR_ARG, ERR_NOT_POSDEF, ERR_NUMERIC, ERR_FRAME = 1, 2, 3, 4
 
 pytestmark = [
     pytest.mark.ccore,
@@ -209,6 +209,21 @@ def test_frame_corruption_is_detected_by_c(lib):
         assert code == ERR_FRAME, f"byte {i}"
     for cut in (0, 10, 64, len(data) - 1):
         assert lib.abf_frame_parse(data, size(cut), ctypes.byref(frame)) == ERR_FRAME
+
+
+@pytest.mark.parametrize("corrupt", [np.nan, np.inf, -np.inf])
+def test_corrupt_block_does_not_poison_the_covariance(lib, corrupt):
+    good = c64(complex_noise((64, 4), 1.0, 0))
+    r, a = np.zeros((4, 4), np.complex64), c64(np.ones(4))
+    w = np.zeros(4, np.complex64)
+    lib.abf_covariance_update(ptr(r), ptr(good), size(4), size(64), f32(0.0))
+    before = r.copy()
+    bad = good.copy()
+    bad[17, 2] = corrupt
+    code = lib.abf_covariance_update(ptr(r), ptr(bad), size(4), size(64), f32(0.5))
+    assert code == ERR_NUMERIC
+    np.testing.assert_array_equal(r, before)
+    assert lib.abf_mvdr_weights(ptr(r), ptr(a), size(4), f32(1e-2), ptr(w)) == 0
 
 
 def test_covariance_definition(lib):

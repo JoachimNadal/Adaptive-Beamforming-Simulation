@@ -123,6 +123,18 @@ MUTATIONS = [
         "0.5 * p * np.log(num_snapshots)",
         "0 * p",
     ),
+    (
+        "C covariance poisoned by one corrupt sample",
+        "embedded/core/src/abf_weights.c",
+        "if (!isfinite(acc[i * n + i].re)) {",
+        "if (0) {",
+    ),
+    (
+        "configuration types unchecked",
+        "embedded/common/config.py",
+        "if not isinstance(value, accepted)",
+        "if False and not isinstance(value, accepted)",
+    ),
 ]
 
 

@@ -57,7 +57,8 @@ ABF_API abf_status abf_apply_weights(const abf_cf32* w, const abf_cf32* x, size_
 
 /* ---- covariance -------------------------------------------------------------------- */
 
-/* R <- beta R + (1 - beta) (1/k) sum x x^H. beta = 0 ignores the previous content of R. */
+/* R <- beta R + (1 - beta) (1/k) sum x x^H. beta = 0 ignores the previous content of R.
+ * A block containing NaN or infinity returns ABF_ERR_NUMERIC and leaves R untouched. */
 ABF_API abf_status abf_covariance_update(abf_cf32* r, const abf_cf32* x, size_t n, size_t k,
                                          float beta);
 

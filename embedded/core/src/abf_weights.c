@@ -41,6 +41,14 @@ abf_status abf_covariance_update(abf_cf32* r, const abf_cf32* x, size_t n, size_
             }
         }
     }
+    /* A diagonal term is the energy of one antenna: it is finite if and only if all of its
+     * samples are, and then so are the other terms. Checked before r is modified because a
+     * recursive average never forgets a NaN. */
+    for (size_t i = 0; i < n; i++) {
+        if (!isfinite(acc[i * n + i].re)) {
+            return ABF_ERR_NUMERIC;
+        }
+    }
     const float gain = (1.0f - beta) / (float)k;
     for (size_t i = 0; i < n; i++) {
         for (size_t j = i; j < n; j++) {
