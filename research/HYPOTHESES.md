@@ -94,3 +94,17 @@ eigenvalues drown in the rounding error of the covariance) and before the protot
 | ID | Hypothesis | Refuted if |
 |---|---|---|
 | H3.5 | Square-root processing in float32 (QR of the data instead of a covariance, SVD of the triangular factor) counts the sources correctly in ≥ 99 % of blocks and loses ≤ 0.1 dB against float64, up to 80 dB INR, for N ∈ {4, 8, 16} | any of these points fails |
+
+## Priority 4, second round
+
+Registered after single-factor stress tests (which refuted H4.1, H4.3, H4.4 and narrowly H4.6: the result
+is more robust than expected) and before the combined test was written.
+
+Combined scenes: five sources in random directions (±60°) at least `g` degrees apart, powers drawn
+uniformly over a 10 dB range below 10 dB SNR, K = 500, channel phase `p` RMS, element positions
+0.01 λ RMS, coupling `c`, correlation 0.2 between two sources, 400 scenes.
+
+| ID | Hypothesis | Refuted if |
+|---|---|---|
+| H4.7 | Mild (g = 18, p = 2°, c = 0.05): success ≥ 70 %. Severe (g = 14, p = 5°, c = 0.1): success < 40 % | either part fails |
+| H4.8 | In the same scenes with only **two** sources, the 4-element minimum-redundancy array has a smaller RMSE than the 4-element uniform array, in both cases | it does not, in one of them |
