@@ -66,9 +66,18 @@ removes most of it.
 
 ![Diagonal loading](../../assets/images/mvdr/diagonal_loading.png)
 
-Because it is relative to the *total* power, the loading grows with the interferer: at 60 dB
-INR a level of 1e-3 alone costs about 2.6 dB, visible as the floor of the
-[ADC table](../hardware/error_budget_results.md). A noise-referenced loading is a Phase 2 topic.
+Because it is relative to the *total* power, the loading grows with the interferer. Simulated loss
+for N=4, K=256, target at 0 dB exactly in the look direction, 150 trials:
+
+| INR | MVDR, 1e-2 | LCMV derivative, 1e-2 | MVDR, 10 × noise | LCMV derivative, 10 × noise |
+|---:|---:|---:|---:|---:|
+| 20 dB | 0.1 | 0.3 | 0.1 | 0.5 |
+| 40 dB | 0.1 | 0.5 | 0.1 | 0.3 |
+| 60 dB | **2.8** | **8.0** | 0.1 | 0.3 |
+
+A loading proportional to the estimated *noise* has no such limit. It is not implemented: it needs
+a reliable noise estimate, and is the first Phase 2 candidate. In the pipeline, explicit nulls
+compensate as long as the interferer is found.
 
 ## LCMV
 

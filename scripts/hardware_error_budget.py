@@ -89,32 +89,40 @@ def quantize(x, bits, full_scale):
     return rail(x.real) + 1j * rail(x.imag)
 
 
-def adc_rows():
-    """Full scale is set 12 dB above the RMS level, as an AGC would."""
+def adc_loss(inr_db, bits, headroom_db, trials=40):
+    """Mean SINR loss (dB) of MVDR behind an ideal quantiser that clips at full scale."""
     array, n, K = reference_array(4), 4, 2048
     A = steering(array)
-    rows = []
-    for bits in (4, 6, 8, 10, 12, 14):
-        row = [bits]
-        for inr_db in (20, 40, 60):
-            power = 10 ** (inr_db / 10)
-            full_scale = 4 * np.sqrt((power + 2) / 2)
-            R_in = scene_covariance(A[:, 1:], [power], 1.0)
-            best = optimal_sinr(A[:, 0], 1.0, R_in)
-            losses = []
-            for seed in range(20):
-                clean = simulate_array_snapshots(
-                    array, WAVELENGTH, [TARGET, JAMMER], [1.0, power], K, rng=seed
-                ).X
-                error = quantize(clean, bits, full_scale) - clean
-                R = compute_covariance_matrix(clean + error)
-                w = mvdr_weights(R, A[:, 0], 1e-3 * np.trace(R).real / n)
-                noise = np.mean(np.abs(w.conj() @ error) ** 2)
-                degraded = 1 / (1 / output_sinr(w, A[:, 0], 1.0, R_in) + noise)
-                losses.append(to_db(best) - to_db(degraded))
-            row.append(f"{np.mean(losses):.2f}")
-        rows.append(row)
-    return rows
+    power = 10 ** (inr_db / 10)
+    full_scale = 10 ** (headroom_db / 20) * np.sqrt((power + 2) / 2)
+    R_in = scene_covariance(A[:, 1:], [power], 1.0)
+    best = optimal_sinr(A[:, 0], 1.0, R_in)
+    losses = []
+    for seed in range(trials):
+        clean = simulate_array_snapshots(
+            array, WAVELENGTH, [TARGET, JAMMER], [1.0, power], K, rng=seed
+        ).X
+        error = quantize(clean, bits, full_scale) - clean
+        R = compute_covariance_matrix(clean + error)
+        w = mvdr_weights(R, A[:, 0], 1e-3 * np.trace(R).real / n)
+        noise = np.mean(np.abs(w.conj() @ error) ** 2)
+        degraded = 1 / (1 / output_sinr(w, A[:, 0], 1.0, R_in) + noise)
+        losses.append(to_db(best) - to_db(degraded))
+    return np.mean(losses)
+
+
+def adc_rows():
+    return [
+        [bits] + [f"{adc_loss(inr, bits, 15):.2f}" for inr in (20, 40, 60)]
+        for bits in (4, 6, 8, 10, 12, 14)
+    ]
+
+
+def headroom_rows():
+    return [
+        [headroom] + [f"{adc_loss(inr, 14, headroom):.2f}" for inr in (20, 40, 60)]
+        for headroom in (9, 12, 15, 18)
+    ]
 
 
 def bandwidth_rows():
@@ -186,7 +194,15 @@ def main():
             "ADC resolution (SINR loss in dB, N=4, MVDR)",
             ["bits", "INR 20 dB", "INR 40 dB", "INR 60 dB"],
             adc_rows(),
-            "Ideal quantiser, full scale 12 dB above the RMS level of each I and Q rail.",
+            "Ideal quantiser, full scale 15 dB above the RMS level of each I and Q rail, "
+            "loading 1e-3.",
+        ),
+        table(
+            "Headroom (SINR loss in dB, N=4, MVDR, 14 bits)",
+            ["full scale above RMS (dB)", "INR 20 dB", "INR 40 dB", "INR 60 dB"],
+            headroom_rows(),
+            "Gaussian interferer: at 12 dB about 2e-4 of the samples clip, which is enough to "
+            "matter.",
         ),
         table(
             "Signal bandwidth (residual interferer power in dB after a narrowband null)",

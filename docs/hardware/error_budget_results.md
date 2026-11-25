@@ -30,16 +30,27 @@ SINR in dB lost by MVDR (loading 1e-2) against the optimum, INR 30 dB, SNR 0 dB,
 
 ## ADC resolution (SINR loss in dB, N=4, MVDR)
 
-Ideal quantiser, full scale 12 dB above the RMS level of each I and Q rail.
+Ideal quantiser, full scale 15 dB above the RMS level of each I and Q rail, loading 1e-3.
 
 | bits | INR 20 dB | INR 40 dB | INR 60 dB |
 |---:|---:|---:|---:|
-| 4 | 4.94 | 23.17 | 43.14 |
-| 6 | 0.57 | 11.49 | 31.15 |
-| 8 | 0.06 | 2.64 | 19.28 |
-| 10 | 0.03 | 0.30 | 8.73 |
-| 12 | 0.02 | 0.10 | 3.40 |
-| 14 | 0.02 | 0.09 | 2.58 |
+| 4 | 7.15 | 26.12 | 46.10 |
+| 6 | 1.03 | 14.28 | 34.12 |
+| 8 | 0.09 | 4.16 | 22.09 |
+| 10 | 0.03 | 0.42 | 10.44 |
+| 12 | 0.02 | 0.04 | 2.16 |
+| 14 | 0.02 | 0.01 | 0.22 |
+
+## Headroom (SINR loss in dB, N=4, MVDR, 14 bits)
+
+Gaussian interferer: at 12 dB about 2e-4 of the samples clip, which is enough to matter.
+
+| full scale above RMS (dB) | INR 20 dB | INR 40 dB | INR 60 dB |
+|---:|---:|---:|---:|
+| 9 | 0.16 | 4.28 | 22.05 |
+| 12 | 0.03 | 0.22 | 4.21 |
+| 15 | 0.02 | 0.01 | 0.22 |
+| 18 | 0.02 | 0.01 | 0.37 |
 
 ## Signal bandwidth (residual interferer power in dB after a narrowband null)
 

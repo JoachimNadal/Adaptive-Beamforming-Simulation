@@ -89,6 +89,10 @@ Behaviour worth remembering:
   Delay-and-Sum and says so.
 - RLS overflows if adapted without input signal.
 - The classifier never answers "unknown" reliably.
+- Pipeline loss at 60 dB INR: 0.21 dB (N=4), 0.01 dB (N=8), 20 seeds. Without the explicit null the
+  relative loading would cost 8.0 dB (limit L8).
+- The first pushed version of these documents attributed a loss in the ADC study to the loading. Separating
+  the effects showed it was clipping; study and requirement R10 were corrected.
 - The local `cppcheck` package was broken (missing `std.cfg`); it runs in CI only.
 
 ## Not verified

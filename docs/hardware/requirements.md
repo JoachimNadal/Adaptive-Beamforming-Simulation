@@ -35,14 +35,14 @@ two calibrations**.
 
 | ID | Requirement | Value | Justification |
 |---|---|---|---|
-| R8 | ADC resolution | ≥ 10 bits for 40 dB INR, ≥ 12 bits for 60 dB | loss 0.3 dB (10 bits, 40 dB); 8 bits lose 2.6 dB |
+| R8 | ADC resolution | ≥ 10 bits for 40 dB INR, ≥ 14 bits for 60 dB | loss 0.4 dB (10 bits, 40 dB) and 0.2 dB (14 bits, 60 dB); 8 bits lose 4.2 dB at 40 dB |
 | R9 | Gain control common to all channels, with a change flag | required | different gains are calibration errors; a change resets the covariance |
-| R10 | Headroom above RMS | 12 dB | assumption of the ADC study |
+| R10 | Headroom above RMS | 15 dB | at 12 dB a Gaussian interferer clips 2e-4 of the samples: 0.2 dB loss at 40 dB INR, 4.2 dB at 60 dB |
 | R11 | Overflow indication per block | required | clipped blocks must not be used for adaptation |
 | R12 | Linearity | intermodulation of two interferers below the noise floor | spurious products look like new sources; value depends on the front end |
 
-At 60 dB INR a residual loss of 2.6 dB remains even with 14 bits. It comes from *relative*
-diagonal loading, not from the ADC.
+Clipping is the dominant error at high INR, before quantisation: an AGC set for 12 dB of headroom
+wastes a 14-bit converter.
 
 ## Bandwidth and rate
 

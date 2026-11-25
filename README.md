@@ -135,7 +135,7 @@ cmake -S embedded/core -B build && cmake --build build && ctest --test-dir build
 Planned targets: Raspberry Pi 5, Jetson Orin Nano, Zynq, coherent multichannel receivers. None has
 been used. What a receiver must provide is in
 [docs/hardware/requirements.md](docs/hardware/requirements.md): common LO and clock, 1° RMS phase
-after calibration for −43 dB nulls, at least 10 bits for 40 dB interference.
+after calibration for −43 dB nulls, at least 10 bits and 15 dB of headroom for 40 dB interference.
 
 ## Project status
 

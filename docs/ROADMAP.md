@@ -34,7 +34,7 @@ Audit items and their resolution:
 | L5 | Course PDFs uncorrected | LaTeX sources not in the repository | sources |
 | L6 | Narrowband only; subband analysis without synthesis | scope | Phase 2 |
 | L7 | ULA-only DOA in the pipeline | root-MUSIC | manifold-based MUSIC in the pipeline |
-| L8 | Loading relative to total power (2.6 dB loss at 60 dB INR) | simple and safe | noise-referenced or WNG-constrained loading |
+| L8 | Loading relative to total power: at 60 dB INR the default 1e-2 costs 2.8 dB (MVDR) and 8.0 dB (LCMV with derivative, no explicit null), N=4. Explicit nulls hide it in the pipeline while the DOA is found | simple and safe | noise-referenced or WNG-constrained loading |
 | L9 | Fast interferers look like several sources | covariance memory | tracking, shorter blocks |
 | L10 | Python pipeline below 1 MS/s on a desktop | interpreter overhead | C port of order/DOA, or MVDR-only path |
 | L11 | Mutual coupling and element patterns not modelled | needs measurement or EM simulation | Phase 2 |

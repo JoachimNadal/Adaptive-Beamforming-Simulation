@@ -78,7 +78,7 @@ the choice:
 - **KrakenSDR** has five coherent channels with a built-in noise source for phase
   synchronisation, but tunes 24–1766 MHz with 8-bit ADCs and 2.56 MHz bandwidth: it does **not**
   cover the 2.4 GHz reference frequency. The array would have to be rescaled (for example
-  λ/2 = 17.3 cm at 868 MHz), and 8 bits limit the rejection (2.6 dB SINR loss at 40 dB INR in the
+  λ/2 = 17.3 cm at 868 MHz), and 8 bits limit the rejection (4.2 dB SINR loss at 40 dB INR in the
   [error budget](../hardware/error_budget_results.md)).
 - **AD9361** transceivers have two receivers each and no internal RF phase synchronisation:
   four channels need two devices, and the LO phase must be measured and corrected after every
