@@ -8,24 +8,24 @@
 4. [Antenna Arrays](#4-antenna-arrays)
 5. [Steering Vector](#5-steering-vector)
 6. [Delay-and-Sum Beamforming](#6-delay-and-sum-beamforming)
-7. Beam Pattern and Polar Visualization
-8. Multi-Source RF Environment
-9. Covariance Matrix
-10. Adaptive Beamforming Methods
+7. [Beam Pattern and Polar Visualization](#7-beam-pattern-and-polar-visualization)
+8. [Multi-Source RF Environment](#8-multi-source-rf-environment)
+9. [Covariance Matrix](#9-covariance-matrix)
+10. [Adaptive Beamforming Methods](#10-adaptive-beamforming-methods)
     - 10.1 MVDR
     - 10.2 LMS
     - 10.3 RLS
     - 10.4 Null Steering
-11. DOA Estimation
+11. [DOA Estimation](#11-doa-estimation)
     - 11.1 MUSIC
     - 11.2 ESPRIT
-12. AI-Assisted RF Analysis
-13. Step-by-Step Code Implementation
-14. Realtime Beam Scan Simulation
-15. Embedded Hardware Architecture
-16. Antenna Array Design
-17. Safety, Legal and Ethical Notes
-18. Roadmap
+12. [AI-Assisted RF Analysis](#12-ai-assisted-rf-analysis)
+13. [Step-by-Step Code Implementation](#13-step-by-step-code-implementation)
+14. [Realtime Beam Scan Simulation](#14-realtime-beam-scan-simulation)
+15. [Embedded Hardware Architecture](#15-embedded-hardware-architecture)
+16. [Antenna Array Design](#16-antenna-array-design)
+17. [Safety, Legal and Ethical Notes](#17-safety-legal-and-ethical-notes)
+18. [Roadmap](#18-roadmap)
 
 ---
 
@@ -638,13 +638,14 @@ Almost every beamforming algorithm uses steering vectors, including:
 
 For a ULA, a wave arriving from angle `θ` creates a phase progression across antennas.
 
-If the phase shift between adjacent antennas is `Δφ`, then the antenna phases may look like:
+If the phase shift between adjacent antennas is `Δφ`, and the wave reaches A0 first, each
+following antenna lags a little more:
 
 ```text
 A0 → 0
-A1 → Δφ
-A2 → 2Δφ
-A3 → 3Δφ
+A1 → -Δφ
+A2 → -2Δφ
+A3 → -3Δφ
 ```
 
 The steering vector stores this progression in complex form.
@@ -671,16 +672,17 @@ $$
 k = \frac{2\pi}{\lambda}
 $$
 
-For antenna index `n`, the phase shift is:
+Antenna `n` receives the wave *later* than antenna 0. With the time convention
+$e^{j2\pi ft}$ a delay is a negative phase:
 
 $$
-\phi_n = n k d \sin(\theta)
+\phi_n = -\, n k d \sin(\theta)
 $$
 
 Using complex exponentials, the response of antenna `n` is:
 
 $$
-a_n(\theta) = e^{j n k d \sin(\theta)}
+a_n(\theta) = e^{-j n k d \sin(\theta)}
 $$
 
 Therefore, the full steering vector is:
@@ -689,10 +691,10 @@ $$
 \mathbf{a}(\theta) =
 \begin{bmatrix}
 1 \\
-e^{jkd\sin(\theta)} \\
-e^{j2kd\sin(\theta)} \\
+e^{-jkd\sin(\theta)} \\
+e^{-j2kd\sin(\theta)} \\
 \vdots \\
-e^{j(N-1)kd\sin(\theta)}
+e^{-j(N-1)kd\sin(\theta)}
 \end{bmatrix}
 $$
 
@@ -754,13 +756,16 @@ $$
 \mathbf{a}(30^\circ) =
 \begin{bmatrix}
 1 \\
-j \\
+-j \\
 -1 \\
--j
+j
 \end{bmatrix}
 $$
 
-This represents a `90°` phase progression between adjacent antennas.
+This represents a `-90°` phase progression between adjacent antennas.
+
+The sign is a convention, but it must be the same everywhere: in the signals, the weights and
+the angle estimators. The whole project uses the minus sign, as in the course.
 
 ---
 
@@ -778,7 +783,7 @@ The function computes:
 - the phase progression,
 - the complex response of each antenna.
 
-This steering vector is then used to compute beamforming weights, beam patterns and future adaptive algorithms.
+This steering vector is then used to compute beamforming weights, beam patterns and adaptive algorithms.
 
 ---
 
@@ -1038,7 +1043,9 @@ The method:
 2. scans angles from `-90°` to `+90°`,
 3. computes the steering vector for each angle,
 4. calculates the beamformer response,
-5. plots the gain.
+5. returns the angles and the gain.
+
+`plot_beam_pattern(...)` draws the result.
 
 ---
 
@@ -1075,6 +1082,8 @@ simulations/beamforming/delay_and_sum.py
 Example usage:
 
 ```python
+import matplotlib.pyplot as plt
+
 from simulations.antenna_array.linear_array import LinearArray
 from simulations.beamforming.delay_and_sum import DelayAndSumBeamformer
 
@@ -1085,6 +1094,7 @@ beamformer.plot_polar_beam_pattern(
     theta_target=30,
     wavelength=12.5
 )
+plt.show()
 ```
 
 ---
@@ -1184,7 +1194,8 @@ In practice, this means:
 - imaginary part: Gaussian noise,
 - one complex noise value per antenna.
 
-The noise power controls how strong the random perturbation is.
+The noise power $\sigma^2$ is the total power $E|n|^2$: half of it in the real part, half in
+the imaginary part.
 
 ---
 
@@ -1222,15 +1233,14 @@ Example usage:
 ```python
 from simulations.antenna_array.linear_array import LinearArray
 from simulations.scenarios.multi_source import simulate_multi_source_snapshot
-import numpy as np
 
 array = LinearArray(num_elements=4, spacing=6.25)
 
 x = simulate_multi_source_snapshot(
     antenna_array=array,
     wavelength=12.5,
-    desired_angle=np.radians(20),
-    interference_angle=np.radians(-40),
+    desired_angle=20,  # degrees (default unit)
+    interference_angle=-40,
     desired_amplitude=1.0,
     interference_amplitude=0.8,
     noise_power=0.05
@@ -1389,37 +1399,271 @@ adaptive beamforming / DOA estimation
 
 ---
 
-## Implementation Plan
+## Implementation
 
-The next implementation step is to create functions that:
-
-1. generate multiple snapshots,
-2. stack them into a matrix,
-3. compute the covariance matrix,
-4. visualize its magnitude and phase.
-
-A future file can be:
-
-```text
-dsp/covariance_matrix.py
-```
-
-or:
+The two files announced above now exist:
 
 ```text
 simulations/scenarios/snapshot_generator.py
+dsp/covariance_matrix.py
 ```
 
-The core function will look conceptually like:
+`generate_snapshot_matrix(...)` draws **uncorrelated** sources: each one is an independent random
+process. This matters. If both sources kept a constant amplitude over all snapshots they would be
+fully coherent, the covariance would have rank one, and adaptive methods would fail.
+
+`compute_covariance_matrix(X)` implements
 
 ```python
 R = (X @ X.conj().T) / K
 ```
 
-where:
+and symmetrises the result. Example:
 
-- `X` contains multiple snapshots,
-- `.conj().T` computes the conjugate transpose,
-- `R` is the spatial covariance matrix.
+```bash
+python examples/run_covariance_demo.py
+```
+
+With two sources and four antennas the output shows two large eigenvalues and two equal to the
+noise power. That pattern is what every method of the next sections exploits.
 
 ---
+
+# 10. Adaptive Beamforming Methods
+
+Delay-and-Sum always has the same sidelobes. Adaptive methods look at the received data and move
+the nulls where the interference is.
+
+The details, costs, limitations and validation of each method are in
+[docs/theory/adaptive_algorithms.md](docs/theory/adaptive_algorithms.md). This section gives the
+ideas.
+
+## 10.1 MVDR
+
+Minimise the output power while keeping a unit response toward the target:
+
+$$\min_{\mathbf{w}} \ \mathbf{w}^{H}\mathbf{R}\,\mathbf{w} \quad \text{subject to} \quad \mathbf{w}^{H}\mathbf{a}(\theta)=1$$
+
+The solution is
+
+$$\mathbf{w}_{MVDR} = \frac{\mathbf{R}^{-1}\mathbf{a}(\theta)}{\mathbf{a}^{H}(\theta)\mathbf{R}^{-1}\mathbf{a}(\theta)}$$
+
+Since the target cannot be reduced, everything removed is interference and noise. No interferer
+direction is needed.
+
+```python
+from dsp.covariance_matrix import compute_covariance_matrix
+from examples.common import WAVELENGTH, reference_array
+from simulations.beamforming.mvdr import MVDRBeamformer
+from simulations.scenarios.snapshot_generator import generate_snapshot_matrix
+
+array = reference_array()
+X = generate_snapshot_matrix(
+    array, WAVELENGTH, desired_angle=20, interference_angle=-25,
+    desired_amplitude=1.0, interference_amplitude=10.0,
+    noise_power=1.0, num_snapshots=2000, rng=0,
+)
+mvdr = MVDRBeamformer(array, relative_loading=1e-2)
+weights = mvdr.compute_weights(compute_covariance_matrix(X), 20, WAVELENGTH)
+```
+
+In practice never use it without **diagonal loading**, for two reasons:
+
+- with few snapshots the covariance is badly estimated;
+- if the target is not exactly where we think, MVDR treats it as interference and cancels it.
+
+![Pointing error](assets/images/mvdr/pointing_error.png)
+
+## 10.2 LMS
+
+When a reference signal is known (a pilot, a preamble), the weights can be learned sample by
+sample:
+
+$$e = d - \mathbf{w}^{H}\mathbf{x}, \qquad \mathbf{w} \leftarrow \mathbf{w} + \mu\,\mathbf{x}\,e^{*}$$
+
+It costs two products per antenna. The step must satisfy $0<\mu<2/\lambda_{max}$. A sudden strong
+interferer breaks that condition; **NLMS** divides the step by the input power and is immune to
+it.
+
+![Learning curves](assets/images/beamforming/adaptive_learning_curves.png)
+
+## 10.3 RLS
+
+RLS solves the least-squares problem exactly at each sample, with a memory of about
+$1/(1-\lambda)$ samples. It converges in roughly twice the number of antennas, whatever the
+environment, at a cost proportional to $N^2$.
+
+Two practical warnings: keep $\mathbf{P}$ Hermitian in single precision, and freeze the adaptation
+when there is no signal.
+
+## 10.4 Null Steering
+
+If the interferer directions are known, nulls can be imposed without any data:
+
+$$\mathbf{w} = \mathbf{C}(\mathbf{C}^{H}\mathbf{C})^{-1}\mathbf{f}$$
+
+where the columns of $\mathbf{C}$ are the steering vectors and $\mathbf{f}=[1,0,\dots]^{T}$. The depth
+is limited by calibration: about −43 dB for 1° of phase error and −23 dB for 10° (four antennas,
+simulated).
+
+**LCMV** combines both worlds: constraints where something is known, data for the rest.
+
+---
+
+# 11. DOA Estimation
+
+Where do signals come from? Details are in
+[docs/theory/doa_estimation.md](docs/theory/doa_estimation.md).
+
+## 11.1 MUSIC
+
+The eigenvectors of $\mathbf{R}$ split into a signal subspace and a noise subspace. Steering vectors
+of the sources are orthogonal to the noise subspace:
+
+$$P(\theta) = \frac{N}{\lVert \mathbf{U}_n^{H}\mathbf{a}(\theta)\rVert^{2}}$$
+
+Peaks are sharp, so sources closer than one beamwidth can be separated.
+
+![Spectra](assets/images/music/spectra_comparison.png)
+
+```bash
+python examples/run_music_demo.py
+```
+
+Root-MUSIC does the same without a grid. In the simulations of this project its error is within
+about 6 % of the Cramér–Rao bound.
+
+## 11.2 ESPRIT
+
+On a uniform array, the last $N-1$ antennas see the same thing as the first $N-1$ with a phase
+rotation that depends on the angle. ESPRIT reads this rotation directly: no grid, no peak search.
+
+$$\theta = \arcsin\!\left(-\frac{\arg z}{kd}\right), \qquad z=e^{-jkd\sin\theta}$$
+
+The minus sign follows from the convention of section 5.
+
+## 11.3 How many sources?
+
+Both methods need the number of sources. MDL estimates it from the eigenvalues. It must be applied
+*before* diagonal loading.
+
+---
+
+# 12. AI-Assisted RF Analysis
+
+The array says *where*; the waveform says *what*. The `ai/` folder contains a complete small
+chain:
+
+```text
+IQ ──► unit power ──► spectrogram ──► CNN (23 910 parameters) ──► class ──► smoothing
+```
+
+Six classes: noise, CW, chirp, QPSK, band-limited noise, pulsed. On synthetic test data (3000
+examples, −5 to 20 dB):
+
+| Method | Accuracy | from −5 to 0 dB |
+|---|---:|---:|
+| Hand-crafted features + linear discriminant | 91.2 % | 65.7 % |
+| CNN | 99.2 % | 94.8 % |
+
+Three limits, all measured: the data are synthetic; unseen waveforms are classified confidently
+as one of the six; nothing has been tested on recordings. See [ai/README.md](ai/README.md).
+
+---
+
+# 13. Step-by-Step Code Implementation
+
+Reading order for the code, each step runnable:
+
+| Step | File | Demo |
+|---:|---|---|
+| 1 | `dsp/steering.py` | `run_steering_vector_demo.py` |
+| 2 | `simulations/beamforming/delay_and_sum.py` | `run_delay_and_sum_demo.py` |
+| 3 | `simulations/scenarios/multi_source.py` | `run_multi_source_demo.py` |
+| 4 | `dsp/covariance_matrix.py` | `run_covariance_demo.py` |
+| 5 | `simulations/beamforming/null_steering.py` | `run_null_steering_demo.py` |
+| 6 | `simulations/beamforming/mvdr.py` | `run_mvdr_demo.py` |
+| 7 | `simulations/scenarios/spatiotemporal_signal.py` | `run_spatiotemporal_demo.py`, `run_mvdr_from_timeseries_demo.py` |
+| 8 | `simulations/beamforming/lms.py`, `rls.py` | `run_lms_demo.py`, `run_rls_demo.py` |
+| 9 | `simulations/doa/` | `run_music_demo.py` |
+| 10 | `embedded/common/pipeline.py` | `run_full_pipeline.py` |
+| 11 | `ai/` | `run_ai_detection.py` |
+
+Three habits that prevented or revealed bugs in this project:
+
+1. **Define the phase convention once.** Before, two modules used opposite signs; the beamformer
+   attenuated its own target by 46 dB and every test passed.
+2. **Score against the true scene**, never against the algorithm's own covariance.
+3. **Break the code on purpose** and check that a test fails (`scripts/mutation_check.py`).
+
+---
+
+# 14. Realtime Beam Scan Simulation
+
+```bash
+python examples/run_realtime_beam_scan.py              # window
+python examples/run_realtime_beam_scan.py --save x.gif # file
+```
+
+![Beam scan](assets/gifs/realtime_beam_scan.gif)
+
+The live view of the whole adaptive chain is the dashboard:
+
+```bash
+python -m dashboard.app
+```
+
+![Dashboard](assets/images/realtime/dashboard.png)
+
+---
+
+# 15. Embedded Hardware Architecture
+
+```text
+antennas ─► coherent receiver ─► ABF1 frames ─► calibration ─► covariance ─► weights ─► output
+            (not built)          (specified)    └──────────── implemented and simulated ───┘
+```
+
+| Level | Runs | Implementation |
+|---|---|---|
+| Sample rate | weight application, covariance | `embedded/core` (C99) |
+| Block rate | MVDR weights | `embedded/core` |
+| Block rate | order, DOA, LCMV, status | `embedded/common` (Python) |
+
+Real hardware fails in ways a simulation does not: clocks unlock, ADCs clip, frames are lost.
+Each of these has a flag in the frame, a reaction in the pipeline and a test. See
+[signal_pipeline.md](docs/architecture/signal_pipeline.md).
+
+Nothing has run on a Raspberry Pi, a Jetson or an FPGA. Target by target:
+[embedded_targets.md](docs/architecture/embedded_targets.md).
+
+---
+
+# 16. Antenna Array Design
+
+| Choice | Effect |
+|---|---|
+| Spacing $d=\lambda/2$ | no ambiguity over ±90° |
+| More elements | narrower beam, more nulls, more cost |
+| Linear geometry | ESPRIT and smoothing available, ±90° only |
+| Circular geometry | 360°, MUSIC only |
+
+Four elements at 2.4 GHz give a 26° beam, three degrees of freedom for nulls and an 18.75 cm
+array. Errors that matter, in simulation: 1° of channel phase is 0.35 mm of path length in air.
+Geometry and tolerances: [antenna_array.md](docs/hardware/antenna_array.md); what a receiver must
+guarantee: [requirements.md](docs/hardware/requirements.md).
+
+---
+
+# 17. Safety, Legal and Ethical Notes
+
+The project receives; it does not transmit. Reception is itself regulated in many countries, and
+a radiating calibration source is a transmitter. See
+[legal_and_ethics.md](docs/safety/legal_and_ethics.md).
+
+---
+
+# 18. Roadmap
+
+Completed work, limits and next steps: [docs/ROADMAP.md](docs/ROADMAP.md). What was tested and
+how: [docs/VALIDATION.md](docs/VALIDATION.md).
