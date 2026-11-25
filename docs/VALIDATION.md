@@ -65,8 +65,9 @@ Same scenes, original code (`8f91f28`) against this version.
 | README quick start | fails | works |
 | Tests able to see the phase bug | 0 | several |
 
-The first and fourth rows also change scene (noise definition, interferer at −25°); the cause of
-the improvement is the phase and coherence fix, verified by mutation.
+The first row is the same physical scene: the old `noise_power=0.02` actually produced 0.04. In the
+fourth row the interferer also moved from −40° to −25° (audit D25); the cause of the improvement is
+the uncorrelated sources, verified by mutation.
 
 ## Simulated performance
 
