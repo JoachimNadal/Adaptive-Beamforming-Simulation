@@ -284,7 +284,7 @@ Coherent interference defeats every covariance method except those that impose t
 ### Computing time
 
 Python, one thread, i7-9700K, K = 256, covariance included. Small-matrix NumPy overhead dominates: these
-ratios are not operation counts. Study 3 measures C.
+ratios are not operation counts. See [study 3](../c_port/REPORT.md) for C.
 
 <!-- cost -->
 
