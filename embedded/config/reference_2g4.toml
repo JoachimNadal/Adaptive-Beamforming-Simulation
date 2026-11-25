@@ -1,0 +1,18 @@
+# Reference array of the project: 4 elements, half wavelength at 2.4 GHz.
+# These are the simulated values. They do not describe a physical device.
+
+[array]
+num_elements = 4
+spacing_m = 0.0625
+carrier_hz = 2.4e9
+target_deg = 0.0
+
+[processing]
+block_size = 256
+covariance_beta = 0.5
+relative_loading = 1e-2
+max_interferers = 2
+guard_deg = 6.0
+min_interferer_inr_db = 3.0
+derivative_constraint = true
+min_wng_ratio = 0.1
