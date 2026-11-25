@@ -1,4 +1,4 @@
-import numpy as np
+from simulations.channels.awgn import complex_noise
 
 
 def simulate_single_source_snapshot(
@@ -7,21 +7,9 @@ def simulate_single_source_snapshot(
     angle,
     amplitude=1.0,
     noise_power=0.0,
-    unite="deg"
+    unite="deg",
+    rng=None,
 ):
-    steering_vector = antenna_array.compute_steering_vector(
-        theta=angle,
-        wavelength=wavelength,
-        unite=unite
-    )
-
-    noise_std = np.sqrt(noise_power)
-
-    noise = noise_std * (
-        np.random.normal(0, 1, antenna_array.num_elements)
-        + 1j * np.random.normal(0, 1, antenna_array.num_elements)
-    )
-
-    x = steering_vector * amplitude + noise
-
-    return x
+    """One snapshot ``a(angle) * amplitude + n`` with ``E|n_m|^2 = noise_power``."""
+    a = antenna_array.compute_steering_vector(angle, wavelength, unite)
+    return a * amplitude + complex_noise(antenna_array.num_elements, noise_power, rng)

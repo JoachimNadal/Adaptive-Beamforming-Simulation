@@ -1,6 +1,6 @@
 import numpy as np
 
-from simulations.scenarios.multi_source import simulate_multi_source_snapshot
+from simulations.channels.awgn import complex_noise, make_rng
 
 
 def generate_snapshot_matrix(
@@ -12,22 +12,24 @@ def generate_snapshot_matrix(
     interference_amplitude,
     noise_power,
     num_snapshots,
-    unite="deg"
+    unite="deg",
+    rng=None,
+    coherent=False,
 ):
+    """Snapshot matrix ``(num_antennas, num_snapshots)`` of two sources in white noise.
 
-    X = np.zeros((antenna_array.num_elements, num_snapshots),dtype=complex)
-
-    for i in range(num_snapshots):
-
-        X[:, i] = simulate_multi_source_snapshot(
-            antenna_array,
-            wavelength,
-            desired_angle,
-            interference_angle,
-            desired_amplitude,
-            interference_amplitude,
-            noise_power,
-            unite = unite
-        )
-
-    return X
+    Each source is an independent circular Gaussian process whose RMS value is the given
+    amplitude. ``coherent=True`` keeps both amplitudes constant over time instead: the
+    source covariance is then rank 1 and MVDR cancels the wanted signal. It is kept to
+    demonstrate that failure, which was the only behaviour before Phase 1.
+    """
+    rng = make_rng(rng)
+    A = antenna_array.compute_steering_matrix(
+        [desired_angle, interference_angle], wavelength, unite
+    )
+    amplitudes = np.array([[desired_amplitude], [interference_amplitude]])
+    if coherent:
+        S = amplitudes * np.ones((2, num_snapshots))
+    else:
+        S = amplitudes * complex_noise((2, num_snapshots), 1.0, rng)
+    return A @ S + complex_noise((antenna_array.num_elements, num_snapshots), noise_power, rng)

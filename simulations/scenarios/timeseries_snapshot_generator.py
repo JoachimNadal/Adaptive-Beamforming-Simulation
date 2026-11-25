@@ -1,10 +1,4 @@
-import numpy as np
-
-
-def generate_snapshots_from_timeseries(
-    X_time,
-    snapshot_step=1
-):
+def generate_snapshots_from_timeseries(X_time, snapshot_step=1):
     """
     Convert a spatio-temporal IQ signal matrix into a snapshot matrix.
 
@@ -29,4 +23,3 @@ def generate_snapshots_from_timeseries(
         raise ValueError("snapshot_step must be a positive integer.")
 
     return X_time[:, ::snapshot_step]
-

@@ -1,4 +1,4 @@
-import numpy as np
+from simulations.channels.awgn import complex_noise
 
 
 def simulate_multi_source_snapshot(
@@ -9,18 +9,15 @@ def simulate_multi_source_snapshot(
     desired_amplitude,
     interference_amplitude,
     noise_power,
-    unite = "deg"
+    unite="deg",
+    rng=None,
 ):
-    a1 = antenna_array.compute_steering_vector(desired_angle, wavelength, unite=unite)
-    a2 = antenna_array.compute_steering_vector(interference_angle, wavelength, unite=unite)
+    """One snapshot of two sources with the given complex amplitudes, plus noise.
 
-    noise_std = np.sqrt(noise_power)
-
-    noise = noise_std * (
-        np.random.normal(0, 1, antenna_array.num_elements)
-        + 1j * np.random.normal(0, 1, antenna_array.num_elements)
-    )
-
-    x = a1 * desired_amplitude + a2 * interference_amplitude + noise
-
-    return x
+    Amplitudes are deterministic, so stacking several of these snapshots yields fully
+    coherent sources. Use ``generate_snapshot_matrix`` to estimate a covariance.
+    """
+    a1 = antenna_array.compute_steering_vector(desired_angle, wavelength, unite)
+    a2 = antenna_array.compute_steering_vector(interference_angle, wavelength, unite)
+    noise = complex_noise(antenna_array.num_elements, noise_power, rng)
+    return a1 * desired_amplitude + a2 * interference_amplitude + noise

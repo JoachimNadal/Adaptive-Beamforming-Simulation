@@ -1,5 +1,6 @@
 import numpy as np
-import math
+
+from simulations.channels.awgn import complex_noise
 
 
 def simulate_spatiotemporal_sources(
@@ -13,55 +14,22 @@ def simulate_spatiotemporal_sources(
     desired_amplitude,
     interference_amplitude,
     noise_power,
-    unite="deg"
+    unite="deg",
+    rng=None,
 ):
-    if unite == "deg":
-        desired_angle = math.radians(desired_angle)
-        interference_angle = math.radians(interference_angle)
+    """Two complex tones received by the array, as ``(num_antennas, num_samples)`` IQ.
 
-    k = 2 * math.pi / wavelength
-    noise_std = math.sqrt(noise_power)
-
-    num_antennas = antenna_array.num_elements
-    num_samples = len(time_vector)
-
-    X = np.zeros((num_antennas, num_samples), dtype=complex)
-
-    for antenna_idx in range(num_antennas):
-        spatial_phase_desired = (
-            antenna_idx
-            * k
-            * antenna_array.spacing
-            * math.sin(desired_angle)
+    The spatial phase comes from the array object itself, so it cannot disagree with the
+    steering vectors used by the beamformers, and any geometry is supported.
+    """
+    t = np.asarray(time_vector)
+    A = antenna_array.compute_steering_matrix(
+        [desired_angle, interference_angle], wavelength, unite
+    )
+    S = np.stack(
+        (
+            desired_amplitude * np.exp(2j * np.pi * desired_frequency * t),
+            interference_amplitude * np.exp(2j * np.pi * interference_frequency * t),
         )
-
-        spatial_phase_interference = (
-            antenna_idx
-            * k
-            * antenna_array.spacing
-            * math.sin(interference_angle)
-        )
-
-        for time_idx in range(num_samples):
-            t = time_vector[time_idx]
-
-            desired_signal = desired_amplitude * np.exp(
-                1j * (2 * math.pi * desired_frequency * t + spatial_phase_desired)
-            )
-
-            interference_signal = interference_amplitude * np.exp(
-                1j * (2 * math.pi * interference_frequency * t + spatial_phase_interference)
-            )
-
-            noise = noise_std * (
-                np.random.normal(0, 1)
-                + 1j * np.random.normal(0, 1)
-            )
-
-            X[antenna_idx, time_idx] = (
-                desired_signal
-                + interference_signal
-                + noise
-            )
-
-    return X
+    )
+    return A @ S + complex_noise((antenna_array.num_elements, t.size), noise_power, rng)

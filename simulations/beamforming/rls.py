@@ -1,53 +1,38 @@
 import numpy as np
-import matplotlib.pyplot as plt
+
+from dsp.adaptive_weights import rls_update
+from simulations.beamforming.base import Beamformer, plot_learning_curve
 
 
-class RLSBeamformer:
+class RLSBeamformer(Beamformer):
+    """Recursive least squares beamformer trained on a reference signal.
+
+    ``lambda_factor`` sets the memory, about ``1 / (1 - lambda)`` snapshots. ``P`` starts
+    at ``I / delta``; small ``delta`` trusts the data sooner.
+    """
 
     def __init__(self, antenna_array, lambda_factor=0.99, delta=1.0):
-        self.antenna_array = antenna_array
+        if not 0 < lambda_factor <= 1:
+            raise ValueError("lambda_factor must be in (0, 1]")
+        if delta <= 0:
+            raise ValueError("delta must be positive")
+        super().__init__(antenna_array)
         self.lambda_factor = lambda_factor
         self.delta = delta
 
     def train(self, X, desired_signal):
-        
+        """Adapt over all snapshots; returns final weights and squared a-priori errors."""
         num_antennas, num_samples = X.shape
-
-        w = np.zeros(num_antennas,dtype=complex)
-
-        P = (1/self.delta)*np.eye(num_antennas,dtype=complex)
-
-        errors = []
-
+        w = np.zeros(num_antennas, dtype=complex)
+        P = np.eye(num_antennas, dtype=complex) / self.delta
+        errors = np.empty(num_samples)
         for n in range(num_samples):
-            x_n = X[:, n]
-
-            y_n = np.vdot(w, x_n)
-
-            e_n = desired_signal[n] - y_n
-
-            Px = P @ x_n
-
-            denominator = self.lambda_factor + np.vdot(x_n, Px)
-
-            k_n = Px / denominator
-
-            w = w + k_n * np.conjugate(e_n)
-
-            P = (P - np.outer(k_n, np.conjugate(x_n)) @ P) / self.lambda_factor
-
-            errors.append(abs(e_n) ** 2)
-
+            x = X[:, n]
+            e = desired_signal[n] - np.vdot(w, x)
+            w, P = rls_update(w, P, x, e, self.lambda_factor)
+            errors[n] = abs(e) ** 2
         self.weights = w
+        return w, errors
 
-        return w, np.array(errors)
-    
-    def plot_learning_curve(self, errors):
-        iterations = np.arange(len(errors))
-
-        plt.plot(iterations, errors)
-        plt.xlabel("Iteration")
-        plt.ylabel("Squared Error")
-        plt.title("RLS Learning Curve")
-        plt.grid(True)
-        plt.show()
+    def plot_learning_curve(self, errors, ax=None):
+        return plot_learning_curve(errors, "RLSBeamformer learning curve", ax)
