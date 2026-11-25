@@ -50,3 +50,15 @@ Loss means SINR in dB below the optimum of the true scene, averaged over trials 
 | H4.4 | 5° RMS channel phase error brings success below 90 % | stays above |
 | H4.5 | MVDR on the minimum-redundancy array gains ≥ 3 dB over the uniform array for an interferer 5–12° from the target, and loses < 1 dB on average beyond 15° | either part fails |
 | H4.6 | A 10 dB spread between source powers brings the weakest-source success below 90 % at K = 1000 | stays above |
+
+## Priority 1, second round
+
+Registered **after** the first round of results (which showed that explicit nulls and reconstruction
+collapse with 1° of channel error) and **before** the methods below were implemented or run.
+
+| ID | Hypothesis | Refuted if |
+|---|---|---|
+| H1.7 | The minimum-norm eigencanceler, which nulls the *measured* interference subspace, keeps the loss ≤ 1 dB for channel errors up to 10° RMS (N ∈ {4, 8}, K = 256, INR 40 dB, 10 dB target, pointing 0 and 2°) | any of these points exceeds 1 dB |
+| H1.8 | Keeping the Phase 1 pipeline but replacing relative by noise-referenced loading reduces its loss at 1–5° RMS by ≥ 3 dB | smaller reduction at any of 1, 2, 5° |
+| H1.9 | The reduced-rank sidelobe canceller (principal components of the blocked covariance) needs about twice the number of *interferers* in snapshots, not twice the number of antennas: ≤ 1.5 dB loss at K = N, INR 40 dB, 0 dB target, N ∈ {4, 8} | exceeds 1.5 dB |
+| H1.10 | No single method is within 1 dB of the best one in every experiment | one is |
