@@ -1,15 +1,18 @@
-from simulations.antenna_array.linear_array import LinearArray
+"""Conventional beam steered to 30 degrees."""
+
+from dsp.signal_metrics import half_power_beamwidth, peak_sidelobe_db
+from examples.common import WAVELENGTH, reference_array, show
 from simulations.beamforming.delay_and_sum import DelayAndSumBeamformer
 
 
-array = LinearArray(
-    num_elements=4,
-    spacing=6.25
-)
+def main():
+    beamformer = DelayAndSumBeamformer(reference_array())
+    angles, gain = beamformer.compute_beam_pattern(30, WAVELENGTH)
+    print(f"beamwidth {half_power_beamwidth(angles, gain):.1f} deg")
+    print(f"peak sidelobe {peak_sidelobe_db(gain):.1f} dB")
+    beamformer.plot_polar_beam_pattern(30, WAVELENGTH)
+    show()
 
-beamformer = DelayAndSumBeamformer(array)
 
-beamformer.plot_polar_beam_pattern(
-    theta_target=30,
-    wavelength=12.5
-)
+if __name__ == "__main__":
+    main()

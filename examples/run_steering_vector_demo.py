@@ -1,19 +1,17 @@
-from simulations.antenna_array.linear_array import LinearArray
+"""Steering vector of the reference array for a source at 30 degrees."""
+
+import numpy as np
+
+from examples.common import WAVELENGTH, reference_array, show
 
 
-array = LinearArray(
-    num_elements=4,
-    spacing=6.25
-)
+def main():
+    array = reference_array()
+    a = array.compute_steering_vector(30, WAVELENGTH, unite="deg")
+    print("a(30 deg) =", np.round(a, 3), " (expected 1, -j, -1, +j)")
+    array.plot_steering_phases(30, WAVELENGTH, unite="deg")
+    show()
 
-print(array.compute_steering_vector(
-    theta=30,
-    wavelength=12.5,
-    unite="deg"
-))
 
-array.plot_steering_phases(
-    theta=30,
-    wavelength=12.5,
-    unite="deg"
-)
+if __name__ == "__main__":
+    main()
