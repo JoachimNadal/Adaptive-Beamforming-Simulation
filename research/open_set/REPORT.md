@@ -24,9 +24,11 @@ python -m research.open_set.report
    QPSK but miss chirps and OFDM.
 4. **The CNN mislabels what it has not seen in training receivers.** A DC offset drops accuracy to 71 %.
    Training with simulated receiver impairments removes this (97 %), makes 100 % of real white noise
-   windows `noise` (91 % before) and keeps false alarms below 10 %, at the price of lower sensitivity to
+   windows `noise` (91 % before) and keeps the false alarms of the embedding detectors below 9 % (up to
+   11 % for hand-crafted features), at the price of lower sensitivity to
    unseen signals (mean detection 56 % instead of 70 %).
-5. **Curating the real data mattered.** 20 of 81 files were not receiver recordings at all.
+5. **Curating the real data mattered.** 20 of 81 files sit on the 8-bit quantisation floor; most are
+   visibly generated rather than received.
 
 ## 1. Theory
 
@@ -73,8 +75,8 @@ and may discard what distinguishes a new one.
 ### Curation of the recordings
 
 Decided from signal statistics, before any detector was run. 21 of 81 files were excluded: 20 whose
-floor sits on the 8-bit quantisation step with a kurtosis near 1.4 instead of 2 (generated or undriven),
-and one duplicate. Noise windows (within 1 dB of the 20th percentile of power) are `noise_white` when
+floor sits on the 8-bit quantisation step with a kurtosis near 1.4 instead of 2 (mostly generated or
+undriven; three have a kurtosis near 2 and may be low-gain recordings), and one duplicate. Noise windows (within 1 dB of the 20th percentile of power) are `noise_white` when
 kurtosis is 1.8–2.3 and flatness above −0.6 dB (34 recordings) and `noise_other` otherwise (26), which
 may contain weak bursts or coloured noise: flagging those is not necessarily wrong. Signal windows are
 6 dB above the floor. At most 40 windows per file and kind; intervals resample whole recordings.
