@@ -99,12 +99,65 @@ def _pipeline(X, c):
     return pipeline.process(IQFrame(X, 0, 0, 1e6, c.config.carrier_hz)).weights
 
 
+def _interference_subspace(S, snapshots, a):
+    """Signal eigenvectors, minus the one that is mostly the target.
+
+    An eigenvector is attributed to the target if more than half of its energy lies along the
+    nominal steering vector.
+    """
+    n = S.shape[0]
+    order = min(estimate_order_mdl(S, snapshots), n - 1)
+    _, vectors = np.linalg.eigh(S)
+    Q = vectors[:, n - order :]
+    along = np.abs(Q.conj().T @ a) ** 2 / np.vdot(a, a).real
+    return Q[:, along < 0.5]
+
+
+def _eigencanceler(X, c):
+    """Minimum-norm weights orthogonal to the measured interference subspace."""
+    Q = _interference_subspace(compute_covariance_matrix(X), X.shape[1], c.a)
+    w = c.a - Q @ (Q.conj().T @ c.a)
+    return w / np.vdot(w, c.a).conj()
+
+
+def _reduced_rank_gsc(X, c):
+    """Sidelobe canceller restricted to the principal components of the blocked data."""
+    S = compute_covariance_matrix(X)
+    # orthonormal basis of the space orthogonal to the target
+    B = np.linalg.svd(c.a[:, None], full_matrices=True)[0][:, 1:]
+    quiescent = c.a / c.n
+    Sb = B.conj().T @ S @ B
+    order = min(estimate_order_mdl(Sb, X.shape[1]), c.n - 2) if c.n > 2 else 1
+    if order == 0:
+        return quiescent
+    values, vectors = np.linalg.eigh(Sb)
+    U, power = vectors[:, -order:], values[-order:]
+    adaptive = (U / power) @ (U.conj().T @ (B.conj().T @ (S @ quiescent)))
+    return quiescent - B @ adaptive
+
+
+class _NoiseLoadedPipeline(BeamformingPipeline):
+    """Phase 1 pipeline with loading proportional to the noise (baseline file untouched)."""
+
+    def _solve_lcmv(self, R, interferers, loading, result):
+        snapshots = result.output.size * self._covariance.effective_blocks
+        return super()._solve_lcmv(R, interferers, 10 * est.noise_power(R, snapshots), result)
+
+
+def _pipeline_noise(X, c):
+    pipeline = _NoiseLoadedPipeline(
+        replace(c.config, block_size=max(X.shape[1], c.n)), np.ones(c.n)
+    )
+    return pipeline.process(IQFrame(X, 0, 0, 1e6, c.config.carrier_hz)).weights
+
+
 METHODS = {
     "delay-and-sum": lambda X, c: das_weights(c.a),
     "sample": _sample,
     "relative 1e-2": _relative,
     "relative 1e-2 + derivative": _relative_derivative,
     "Phase 1 pipeline": _pipeline,
+    "pipeline, noise loading": _pipeline_noise,
     "noise x10": _noise,
     "noise x10 + derivative": _noise_derivative,
     "Ledoit-Wolf": lambda X, c: mvdr_weights(est.ledoit_wolf(X), c.a),
@@ -114,5 +167,7 @@ METHODS = {
     "sign": _sign,
     "Tyler": lambda X, c: mvdr_weights(est.regularized_tyler(X), c.a),
     "eigenspace": _eigenspace,
+    "eigencanceler": _eigencanceler,
+    "reduced-rank GSC": _reduced_rank_gsc,
     "reconstruction": _reconstruction,
 }

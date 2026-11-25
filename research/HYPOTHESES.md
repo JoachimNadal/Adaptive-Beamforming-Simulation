@@ -62,3 +62,16 @@ collapse with 1° of channel error) and **before** the methods below were implem
 | H1.8 | Keeping the Phase 1 pipeline but replacing relative by noise-referenced loading reduces its loss at 1–5° RMS by ≥ 3 dB | smaller reduction at any of 1, 2, 5° |
 | H1.9 | The reduced-rank sidelobe canceller (principal components of the blocked covariance) needs about twice the number of *interferers* in snapshots, not twice the number of antennas: ≤ 1.5 dB loss at K = N, INR 40 dB, 0 dB target, N ∈ {4, 8} | exceeds 1.5 dB |
 | H1.10 | No single method is within 1 dB of the best one in every experiment | one is |
+
+## Priority 1, held-out validation
+
+A hybrid was designed after looking at rounds 1 and 2 (eigenspace projection; eigencanceler when MDL
+saturates). Choosing it on the same scenes would be selection bias, so it is judged on **new random
+scenes**: N ∈ {4, 8}, 1 to N − 2 interferers at random angles at least 12° from the target, INR
+0–60 dB, SNR −5 to 10 dB, pointing error ±2°, channel errors 0–5° RMS, K from 4N to 256, Gaussian or
+impulsive noise. 2000 scenes, seeds never used before. Registered before the run.
+
+| ID | Hypothesis | Refuted if |
+|---|---|---|
+| H1.11 | The hybrid has the smallest 90th-percentile loss of all methods and it is ≤ 3 dB | another method has a smaller one, or it exceeds 3 dB |
+| H1.12 | The Phase 1 pipeline has a 90th-percentile loss ≥ 5 dB on these scenes | less than 5 dB |
