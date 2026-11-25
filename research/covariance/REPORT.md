@@ -7,9 +7,14 @@ python -m research.covariance.run
 python -m research.covariance.report
 ```
 
+> **Update.** On measured channel vectors ([study 5](../measured/REPORT.md)) the ranking changes: noise-referenced
+> loading is worse than relative loading and eigenspace projection is best. The results below hold for the
+> simulated mismatches they were drawn from.
+
 ## Summary
 
-1. **Noise-referenced loading is the recommended default.** MVDR with a loading of 10 to 30 times the
+1. **Noise-referenced loading is the best default in these simulations** (not on measured channels, see
+   above). MVDR with a loading of 10 to 30 times the
    estimated noise has the smallest 90th-percentile loss on 2 × 2000 held-out random scenes: 5.1–5.8 dB,
    against 15 dB for the relative loading used so far and **23–24 dB for the Phase 1 pipeline**.
 2. **The Phase 1 pipeline is fragile.** Its explicit nulls use the nominal manifold. At 40 dB INR, 1° of
