@@ -108,3 +108,26 @@ uniformly over a 10 dB range below 10 dB SNR, K = 500, channel phase `p` RMS, el
 |---|---|---|
 | H4.7 | Mild (g = 18, p = 2°, c = 0.05): success ≥ 70 %. Severe (g = 14, p = 5°, c = 0.1): success < 40 % | either part fails |
 | H4.8 | In the same scenes with only **two** sources, the 4-element minimum-redundancy array has a smaller RMSE than the 4-element uniform array, in both cases | it does not, in one of them |
+
+## Study 5 — Measured array data (third-party measurement)
+
+Not in the original list. The receiver survey found public measurements of a phase-coherent 2.4 GHz
+half-wavelength array: dataset espargos-0001 (Euchner and ten Brink, doi:10.18419/DARUS-4352, CC BY 4.0).
+Four arrays of 2 × 4 elements, Wi-Fi channel state information, transmitter position measured by
+tachymeter. This is **not** a validation of any hardware of this project, but the first time its
+algorithms see measured phases.
+
+Registered before any file was downloaded. Two files: `static_middle` (calibration, choice of the sign
+and element-order conventions, which are not documented) and `meanders_ns1_continued` (evaluation, never
+used for a choice). The 117 subcarriers and 10 consecutive packets are the snapshots of one estimate. A
+row of 4 elements is a uniform array; angles are the sine towards the published right vector, converted
+to an angle from the broadside of the row.
+
+| ID | Hypothesis | Refuted if |
+|---|---|---|
+| H5.1 | Used as published, root-MUSIC (one source) on a 4-element row has a median error ≤ 5° and a 90th percentile ≤ 15° on the evaluation file | either part fails |
+| H5.2 | Gain/phase calibration from the single static position reduces the median error by ≥ 30 % | smaller reduction |
+| H5.3 | Phase between elements of one array, averaged over 10 packets, drifts by ≤ 1° RMS over the static file | larger |
+| H5.4 | After that calibration, the phases at other positions still differ from a plane wave by more than 5° RMS (median over positions and arrays): requirement R1 is not met by this environment | smaller |
+| H5.5 | With measured channel vectors as target and interferer (synthetic waveforms, 10 dB target, 40 dB INR, K = 64) and a plane-wave look direction from geometry, noise-referenced loading (factor 10) has a smaller 90th-percentile SINR loss than relative loading 1e-2 | it does not |
+| H5.6 | Same scenes with a 20 dB target: eigenspace projection has a smaller 90th-percentile loss than noise-referenced loading | it does not |
