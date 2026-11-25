@@ -5,6 +5,7 @@
 | Baseline audit | [PROJECT_AUDIT.md](PROJECT_AUDIT.md) |
 | What was tested, with results | [VALIDATION.md](VALIDATION.md) |
 | Done, limits, next | [ROADMAP.md](ROADMAP.md) |
+| **Phase 2 R&D** | [roadmap](RND_ROADMAP.md) · [studies](../research/README.md) |
 | **Architecture** | [system](architecture/system_architecture.md) · [pipeline](architecture/signal_pipeline.md) · [IQ protocol](architecture/iq_frame_protocol.md) · [targets](architecture/embedded_targets.md) · [decisions](architecture/decisions.md) |
 | **Theory** | [beamforming](theory/beamforming.md) · [adaptive algorithms](theory/adaptive_algorithms.md) · [DOA](theory/doa_estimation.md) · [RF environment](theory/rf_interference.md) · [course errata](theory/course_errata.md) |
 | **Hardware** | [status](hardware/README.md) · [requirements](hardware/requirements.md) · [array](hardware/antenna_array.md) · [error budget](hardware/error_budget_results.md) |

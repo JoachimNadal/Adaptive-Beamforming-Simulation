@@ -42,6 +42,7 @@ Audit items and their resolution:
 
 ## Phase 2 — R&D
 
-Separate programme, not started before Phase 1 is pushed. Candidate directions: robust and
+Separate programme, on its own branch: [RND_ROADMAP.md](RND_ROADMAP.md) and
+[research/](../research/README.md). Candidate directions at the end of Phase 1: robust and
 noise-referenced loading, wideband processing, sparse arrays, fixed-point study, calibration
 drift tracking, open-set classification, first receiver hardware.
