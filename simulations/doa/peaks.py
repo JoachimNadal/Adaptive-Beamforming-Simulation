@@ -13,7 +13,7 @@ def find_spectrum_peaks(angles, spectrum, max_peaks, min_separation=0.0):
     """
     angles, s = np.asarray(angles, dtype=float), np.log(np.asarray(spectrum, dtype=float))
     interior = np.flatnonzero((s[1:-1] >= s[:-2]) & (s[1:-1] > s[2:])) + 1
-    selected = []
+    selected: list[int] = []
     for i in interior[np.argsort(s[interior])[::-1]]:
         if len(selected) == max_peaks:
             break

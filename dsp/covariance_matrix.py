@@ -67,6 +67,7 @@ class RecursiveCovariance:
     def reset(self):
         self._sum = np.zeros((self.num_antennas, self.num_antennas), dtype=complex)
         self._weight = 0.0
+        self._weight_squared = 0.0
 
     def update(self, X):
         R = compute_covariance_matrix(X)
@@ -74,7 +75,13 @@ class RecursiveCovariance:
             raise ValueError(f"expected {self.num_antennas} antennas, got {R.shape[0]}")
         self._sum = self.beta * self._sum + (1 - self.beta) * R
         self._weight = self.beta * self._weight + (1 - self.beta)
+        self._weight_squared = self.beta**2 * self._weight_squared + (1 - self.beta) ** 2
         return self.value
+
+    @property
+    def effective_blocks(self):
+        """Number of equally weighted blocks with the same estimation variance."""
+        return self._weight**2 / self._weight_squared if self._weight else 0.0
 
     @property
     def value(self):
