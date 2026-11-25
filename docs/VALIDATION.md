@@ -15,7 +15,7 @@ verified.
 
 | Check | Where | Result |
 |---|---|---|
-| Unit and integration tests | PC | 250 passed, 0 failed, 0 skipped |
+| Unit and integration tests | PC | 249 passed, 0 failed, 0 skipped |
 | Statement coverage (`dsp`, `simulations`, `embedded`, `ai`, `dashboard`) | PC | 96 % |
 | Mutation check, 18 injected bugs | PC | 18 caught |
 | Lint and format (`ruff`) | PC | clean |
@@ -122,4 +122,26 @@ cmake --build build && ctest --test-dir build --output-on-failure
 
 ## CI results
 
-Filled in after the first run on GitHub.
+First run: [45603333830](https://github.com/JoachimNadal/Adaptive-Beamforming-Simulation/actions/runs/45603333830).
+8 jobs out of 9 passed; the benchmark did not compile with the newer Clang of the x86-64 runner
+(enum/double arithmetic, warnings as errors). Fixed in the following commit; later runs are on the
+[Actions page](https://github.com/JoachimNadal/Adaptive-Beamforming-Simulation/actions).
+
+| Job | Result of the first run |
+|---|---|
+| Python 3.11 and 3.13, Ubuntu x86-64 | 248 passed, 1 skipped (no PyTorch) |
+| Python 3.12, Windows | 248 passed, 1 skipped |
+| Python 3.12, Ubuntu **arm64** | 248 passed, 1 skipped, including C core against Python |
+| C core, GCC and Clang, **arm64**: tests, address and UB sanitizers | pass |
+| C core, GCC, x86-64: tests, sanitizers | pass |
+| C core, Clang, x86-64 | build failure in the benchmark, fixed |
+| cppcheck, `gcc -fanalyzer` | clean |
+
+Throughput on the arm64 CI runner (GCC, one core of a cloud server; **not** a Raspberry Pi or
+Jetson):
+
+| N | apply (MS/s) | covariance (MS/s) | MVDR (µs) | RLS (µs/sample) |
+|---:|---:|---:|---:|---:|
+| 4 | 247 | 77 | 0.11 | 0.08 |
+| 8 | 126 | 28 | 0.29 | 0.20 |
+| 16 | 64 | 9.0 | 1.2 | 0.62 |

@@ -92,7 +92,7 @@ the choice:
 | GCC 13, `-Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wdouble-promotion -Werror` | clean |
 | Unit tests on the development PC | pass |
 | Cross-compiled and linked with Zig/Clang for aarch64, armhf, riscv64, x86-64 Linux | success, not executed |
-| CI on native arm64 runners, GCC and Clang, with sanitizers | see the Actions page |
+| CI on native arm64 runners, GCC and Clang, with sanitizers | pass, see [VALIDATION.md](../VALIDATION.md#ci-results) |
 | Bare-metal Cortex-M | not built: no C library with the toolchain used |
 
 ## Sources

@@ -123,7 +123,7 @@ graph LR
 ## Testing
 
 ```bash
-pytest                                # 250 tests with PyTorch, CMake and a compiler installed
+pytest                                # 249 tests with PyTorch, CMake and a compiler installed
 ruff check . && ruff format --check . && mypy
 python scripts/mutation_check.py      # injects 18 known bugs, all must be caught
 
