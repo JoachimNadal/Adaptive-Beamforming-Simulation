@@ -1,0 +1,71 @@
+{
+ "data": {
+  "N=16": {
+   "Ledoit-Wolf": 279.64999753749,
+   "OAS": 175.30000332044438,
+   "Phase 1 pipeline": 2231.550002761651,
+   "Toeplitz-FB": 810.6000022962689,
+   "Tyler": 3278.0000037746504,
+   "clipped": 672.0000019413419,
+   "delay-and-sum": 1.7999991541728377,
+   "eigencanceler": 463.65000162040815,
+   "eigenspace": 424.84999721636996,
+   "noise x10": 558.6999977822416,
+   "noise x10 + derivative": 620.7999977050349,
+   "pipeline, noise loading": 2597.3000010708347,
+   "reconstruction": 309.7500011790544,
+   "reduced-rank GSC": 524.3499981588684,
+   "relative 1e-2": 141.7500025127083,
+   "relative 1e-2 + derivative": 194.20000171521679,
+   "sample": 127.45000276481733,
+   "sign": 213.44999549910426
+  },
+  "N=4": {
+   "Ledoit-Wolf": 151.15000860532746,
+   "OAS": 96.24999802326784,
+   "Phase 1 pipeline": 1140.7499987399206,
+   "Toeplitz-FB": 366.1499940790236,
+   "Tyler": 1041.3499985588714,
+   "clipped": 256.59999664640054,
+   "delay-and-sum": 1.7999991541728377,
+   "eigencanceler": 147.44999498361722,
+   "eigenspace": 129.2000088142231,
+   "noise x10": 213.34999473765492,
+   "noise x10 + derivative": 293.0000046035275,
+   "pipeline, noise loading": 1309.9499919917434,
+   "reconstruction": 148.2499937992543,
+   "reduced-rank GSC": 157.7500006533228,
+   "relative 1e-2": 74.09999670926481,
+   "relative 1e-2 + derivative": 121.90000416012481,
+   "sample": 68.04999429732561,
+   "sign": 114.30000449763611
+  },
+  "N=8": {
+   "Ledoit-Wolf": 183.60000831307843,
+   "OAS": 118.30000585177913,
+   "Phase 1 pipeline": 1410.3000066825189,
+   "Toeplitz-FB": 492.6000037812628,
+   "Tyler": 1493.6500010662712,
+   "clipped": 360.6999962357804,
+   "delay-and-sum": 1.7999991541728377,
+   "eigencanceler": 248.94999660318717,
+   "eigenspace": 257.70000502234325,
+   "noise x10": 340.899990987964,
+   "noise x10 + derivative": 392.95000169659033,
+   "pipeline, noise loading": 1714.8500046459958,
+   "reconstruction": 183.24999837204814,
+   "reduced-rank GSC": 250.34999998752028,
+   "relative 1e-2": 87.75000605965033,
+   "relative 1e-2 + derivative": 143.19999900180846,
+   "sample": 81.14999945973977,
+   "sign": 139.74999455967918
+  }
+ },
+ "environment": {
+  "commit": "de72f70",
+  "machine": "AMD64",
+  "numpy": "2.4.6",
+  "python": "3.11.18",
+  "system": "Windows"
+ }
+}

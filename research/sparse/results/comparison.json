@@ -1,0 +1,407 @@
+{
+ "data": {
+  "MRA-4 separation=12": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.13453678840224467
+   },
+   "crb_deg": 0.07038073624717335,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.07121337131571112
+   }
+  },
+  "MRA-4 separation=16": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.13691005963323283
+   },
+   "crb_deg": 0.04999832458220285,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.0496749961655394
+   }
+  },
+  "MRA-4 separation=2": {
+   "coarray": {
+    "resolved": 0.485,
+    "rmse_deg": 0.6996795231345944
+   },
+   "crb_deg": 0.4541436330411509,
+   "direct": {
+    "resolved": 0.19,
+    "rmse_deg": 0.41298549071117197
+   }
+  },
+  "MRA-4 separation=4": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.33823848523433037
+   },
+   "crb_deg": 0.19528663269846752,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.26808577024566504
+   }
+  },
+  "MRA-4 separation=6": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.165928410575107
+   },
+   "crb_deg": 0.13587456088811534,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.16134031894357415
+   }
+  },
+  "MRA-4 separation=8": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.1398652227287858
+   },
+   "crb_deg": 0.10657556651529737,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.12036753201459024
+   }
+  },
+  "MRA-8 separation=12": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.02028586004654459
+   },
+   "crb_deg": 0.007954806347604928,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.0029491587781099865
+   }
+  },
+  "MRA-8 separation=16": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.012802413112362682
+   },
+   "crb_deg": 0.007690767384172069,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.0029111805333891547
+   }
+  },
+  "MRA-8 separation=2": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.03344125764968273
+   },
+   "crb_deg": 0.022719134042583286,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.020804447824884
+   }
+  },
+  "MRA-8 separation=4": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.037835701621518746
+   },
+   "crb_deg": 0.010685814318503562,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.005610535613073536
+   }
+  },
+  "MRA-8 separation=6": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.007773252564635098
+   },
+   "crb_deg": 0.007617069836517833,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.0027400867732033977
+   }
+  },
+  "MRA-8 separation=8": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.03148373718484715
+   },
+   "crb_deg": 0.008905198699494136,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.003609365186502205
+   }
+  },
+  "ULA-4 separation=12": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.2515073309626193
+   },
+   "crb_deg": 0.24353137792894405,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.27561383232822606
+   }
+  },
+  "ULA-4 separation=16": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.2388506029683276
+   },
+   "crb_deg": 0.19205170802199323,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.20906508321960074
+   }
+  },
+  "ULA-4 separation=2": {
+   "coarray": {
+    "resolved": 0.17,
+    "rmse_deg": 0.574359704148296
+   },
+   "crb_deg": 2.4487417413464336,
+   "direct": {
+    "resolved": 0.0,
+    "rmse_deg": NaN
+   }
+  },
+  "ULA-4 separation=4": {
+   "coarray": {
+    "resolved": 0.815,
+    "rmse_deg": 0.9063148398910073
+   },
+   "crb_deg": 0.8012613312321549,
+   "direct": {
+    "resolved": 0.23,
+    "rmse_deg": 0.7198593044855417
+   }
+  },
+  "ULA-4 separation=6": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.6025482627840281
+   },
+   "crb_deg": 0.470788497837306,
+   "direct": {
+    "resolved": 0.965,
+    "rmse_deg": 0.7148860618501196
+   }
+  },
+  "ULA-4 separation=8": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.38549985033206624
+   },
+   "crb_deg": 0.34506753185732447,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.4647599292157209
+   }
+  },
+  "ULA-8 separation=12": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.1065245682392284
+   },
+   "crb_deg": 0.04103215571609906,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.03816184503692449
+   }
+  },
+  "ULA-8 separation=16": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.11162276077177724
+   },
+   "crb_deg": 0.031751404417531534,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.030857692952036966
+   }
+  },
+  "ULA-8 separation=2": {
+   "coarray": {
+    "resolved": 0.94,
+    "rmse_deg": 0.37030752394244437
+   },
+   "crb_deg": 0.21751397967870806,
+   "direct": {
+    "resolved": 0.23,
+    "rmse_deg": 0.3325985030393571
+   }
+  },
+  "ULA-8 separation=4": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.13717369787340775
+   },
+   "crb_deg": 0.1083431392270496,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.15437737161864026
+   }
+  },
+  "ULA-8 separation=6": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.09554693389219716
+   },
+   "crb_deg": 0.07897227969636521,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.08370636562324046
+   }
+  },
+  "ULA-8 separation=8": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.09877166384020156
+   },
+   "crb_deg": 0.06115169135288009,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.06499311263036597
+   }
+  },
+  "nested-4 separation=12": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.18033180022030382
+   },
+   "crb_deg": 0.0981820881120118,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.10019962957502591
+   }
+  },
+  "nested-4 separation=16": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.17841806194974424
+   },
+   "crb_deg": 0.07187564465800413,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.07306017134133753
+   }
+  },
+  "nested-4 separation=2": {
+   "coarray": {
+    "resolved": 0.22,
+    "rmse_deg": 0.6932756120068858
+   },
+   "crb_deg": 0.686124248785565,
+   "direct": {
+    "resolved": 0.09,
+    "rmse_deg": 0.5255884403366914
+   }
+  },
+  "nested-4 separation=4": {
+   "coarray": {
+    "resolved": 0.96,
+    "rmse_deg": 0.8002048607479014
+   },
+   "crb_deg": 0.2708635089151077,
+   "direct": {
+    "resolved": 0.97,
+    "rmse_deg": 0.38049217282450176
+   }
+  },
+  "nested-4 separation=6": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.41412272106999654
+   },
+   "crb_deg": 0.18100766920807568,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.22522377970801738
+   }
+  },
+  "nested-4 separation=8": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.2542249774252029
+   },
+   "crb_deg": 0.14245979405740977,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.16894415986032238
+   }
+  },
+  "nested-8 separation=12": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.02987114334569186
+   },
+   "crb_deg": 0.010545882674369044,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.0043822510610774575
+   }
+  },
+  "nested-8 separation=16": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.03246467955497369
+   },
+   "crb_deg": 0.011092402068675192,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.005225183042198848
+   }
+  },
+  "nested-8 separation=2": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.0696900299792041
+   },
+   "crb_deg": 0.03370955194220731,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.038510135162435254
+   }
+  },
+  "nested-8 separation=4": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.048829729662409165
+   },
+   "crb_deg": 0.01723903601851326,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.014044787863176792
+   }
+  },
+  "nested-8 separation=6": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.04650578827437756
+   },
+   "crb_deg": 0.011217761594705288,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.005061210751717977
+   }
+  },
+  "nested-8 separation=8": {
+   "coarray": {
+    "resolved": 1.0,
+    "rmse_deg": 0.04685730397039685
+   },
+   "crb_deg": 0.0107859310863343,
+   "direct": {
+    "resolved": 1.0,
+    "rmse_deg": 0.005551966098442367
+   }
+  }
+ },
+ "environment": {
+  "commit": "f0af966",
+  "machine": "AMD64",
+  "numpy": "2.4.6",
+  "python": "3.11.18",
+  "system": "Windows"
+ }
+}

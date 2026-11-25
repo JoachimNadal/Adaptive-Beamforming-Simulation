@@ -1,0 +1,856 @@
+{
+ "data": {
+  "impaired": {
+   "4-bit ADC": {
+    "accuracy": 0.9816666666666667,
+    "false_alarm": {
+     "CNN Mahalanobis": 0.06333333333333334,
+     "CNN k-NN": 0.050833333333333335,
+     "energy": 0.028333333333333332,
+     "extended Mahalanobis": 0.07083333333333333,
+     "extended k-NN": 0.07083333333333333,
+     "features Mahalanobis": 0.056666666666666664,
+     "features k-NN": 0.030833333333333334,
+     "fusion": 0.07416666666666667,
+     "softmax": 0.029166666666666667,
+     "spectrogram residual": 0.10916666666666666
+    }
+   },
+   "DC offset": {
+    "accuracy": 0.975,
+    "false_alarm": {
+     "CNN Mahalanobis": 0.03666666666666667,
+     "CNN k-NN": 0.0875,
+     "energy": 0.075,
+     "extended Mahalanobis": 0.07666666666666666,
+     "extended k-NN": 0.06333333333333334,
+     "features Mahalanobis": 0.10333333333333333,
+     "features k-NN": 0.11083333333333334,
+     "fusion": 0.0525,
+     "softmax": 0.0425,
+     "spectrogram residual": 0.0
+    }
+   },
+   "IQ imbalance": {
+    "accuracy": 0.9841666666666666,
+    "false_alarm": {
+     "CNN Mahalanobis": 0.06833333333333333,
+     "CNN k-NN": 0.04416666666666667,
+     "energy": 0.02666666666666667,
+     "extended Mahalanobis": 0.04833333333333333,
+     "extended k-NN": 0.03666666666666667,
+     "features Mahalanobis": 0.04583333333333333,
+     "features k-NN": 0.030833333333333334,
+     "fusion": 0.058333333333333334,
+     "softmax": 0.030833333333333334,
+     "spectrogram residual": 0.11333333333333333
+    }
+   },
+   "band edge": {
+    "accuracy": 0.9916666666666667,
+    "false_alarm": {
+     "CNN Mahalanobis": 0.06833333333333333,
+     "CNN k-NN": 0.06,
+     "energy": 0.04083333333333333,
+     "extended Mahalanobis": 0.08333333333333333,
+     "extended k-NN": 0.05333333333333334,
+     "features Mahalanobis": 0.0825,
+     "features k-NN": 0.05416666666666667,
+     "fusion": 0.08333333333333333,
+     "softmax": 0.0275,
+     "spectrogram residual": 0.0
+    }
+   },
+   "clipping": {
+    "accuracy": 0.975,
+    "false_alarm": {
+     "CNN Mahalanobis": 0.060833333333333336,
+     "CNN k-NN": 0.051666666666666666,
+     "energy": 0.029166666666666667,
+     "extended Mahalanobis": 0.050833333333333335,
+     "extended k-NN": 0.035833333333333335,
+     "features Mahalanobis": 0.041666666666666664,
+     "features k-NN": 0.029166666666666667,
+     "fusion": 0.06583333333333333,
+     "softmax": 0.04,
+     "spectrogram residual": 0.12416666666666666
+    }
+   },
+   "frequency offset": {
+    "accuracy": 0.9808333333333333,
+    "false_alarm": {
+     "CNN Mahalanobis": 0.065,
+     "CNN k-NN": 0.043333333333333335,
+     "energy": 0.028333333333333332,
+     "extended Mahalanobis": 0.059166666666666666,
+     "extended k-NN": 0.03,
+     "features Mahalanobis": 0.055,
+     "features k-NN": 0.0375,
+     "fusion": 0.06333333333333334,
+     "softmax": 0.028333333333333332,
+     "spectrogram residual": 0.11333333333333333
+    }
+   },
+   "multipath": {
+    "accuracy": 0.9433333333333334,
+    "false_alarm": {
+     "CNN Mahalanobis": 0.059166666666666666,
+     "CNN k-NN": 0.085,
+     "energy": 0.0825,
+     "extended Mahalanobis": 0.09833333333333333,
+     "extended k-NN": 0.07833333333333334,
+     "features Mahalanobis": 0.105,
+     "features k-NN": 0.060833333333333336,
+     "fusion": 0.07666666666666666,
+     "softmax": 0.0675,
+     "spectrogram residual": 0.005833333333333334
+    }
+   },
+   "phase noise": {
+    "accuracy": 0.9841666666666666,
+    "false_alarm": {
+     "CNN Mahalanobis": 0.06416666666666666,
+     "CNN k-NN": 0.045,
+     "energy": 0.0275,
+     "extended Mahalanobis": 0.059166666666666666,
+     "extended k-NN": 0.035,
+     "features Mahalanobis": 0.050833333333333335,
+     "features k-NN": 0.035833333333333335,
+     "fusion": 0.06333333333333334,
+     "softmax": 0.0275,
+     "spectrogram residual": 0.11333333333333333
+    }
+   }
+  },
+  "known": {
+   "accuracy": 0.9833333333333333,
+   "count": 1200,
+   "false_alarm": {
+    "CNN Mahalanobis": 0.06333333333333334,
+    "CNN k-NN": 0.049166666666666664,
+    "energy": 0.02666666666666667,
+    "extended Mahalanobis": 0.056666666666666664,
+    "extended k-NN": 0.034166666666666665,
+    "features Mahalanobis": 0.055,
+    "features k-NN": 0.03916666666666667,
+    "fusion": 0.0725,
+    "softmax": 0.024166666666666666,
+    "spectrogram residual": 0.11166666666666666
+   },
+   "interval": {
+    "CNN Mahalanobis": [
+     0.05089761961852045,
+     0.07855595633366462
+    ],
+    "CNN k-NN": [
+     0.038306862401225425,
+     0.06290379521353053
+    ],
+    "energy": [
+     0.018951689995045318,
+     0.037402567907323235
+    ],
+    "extended Mahalanobis": [
+     0.04494425660511418,
+     0.07121853424710424
+    ],
+    "extended k-NN": [
+     0.02528427905424529,
+     0.04602211208558573
+    ],
+    "features Mahalanobis": [
+     0.04346339392077032,
+     0.06937670065645646
+    ],
+    "features k-NN": [
+     0.029580443045648386,
+     0.05169403691915761
+    ],
+    "fusion": [
+     0.059152175113607874,
+     0.08857623035103132
+    ],
+    "softmax": [
+     0.016878255322052452,
+     0.0344919581678286
+    ],
+    "spectrogram residual": [
+     0.09507092807505928,
+     0.13074083985188392
+    ]
+   }
+  },
+  "real": {
+   "noise_other": {
+    "flagged": {
+     "CNN Mahalanobis": 0.026881720430107527,
+     "CNN k-NN": 0.060215053763440864,
+     "energy": 0.432258064516129,
+     "extended Mahalanobis": 0.2118279569892473,
+     "extended k-NN": 0.28817204301075267,
+     "features Mahalanobis": 0.1827956989247312,
+     "features k-NN": 0.31827956989247314,
+     "fusion": 0.046236559139784944,
+     "softmax": 0.2903225806451613,
+     "spectrogram residual": 0.002150537634408602
+    },
+    "interval": {
+     "CNN Mahalanobis": [
+      0.0,
+      0.07862897879205309
+     ],
+     "CNN k-NN": [
+      0.003208044690197594,
+      0.15394505441867307
+     ],
+     "energy": [
+      0.2948960884460539,
+      0.5820270632368703
+     ],
+     "extended Mahalanobis": [
+      0.10165745856353592,
+      0.35577162027833004
+     ],
+     "extended k-NN": [
+      0.15939035444145777,
+      0.4481188573438324
+     ],
+     "features Mahalanobis": [
+      0.07238106397937662,
+      0.3195315303193397
+     ],
+     "features k-NN": [
+      0.18087916692532124,
+      0.4810422729123629
+     ],
+     "fusion": [
+      0.0,
+      0.12157487320878949
+     ],
+     "softmax": [
+      0.18226989412568306,
+      0.41066534757853956
+     ],
+     "spectrogram residual": [
+      0.0,
+      0.005562200808437947
+     ]
+    },
+    "predicted": [
+     573,
+     98,
+     4,
+     40,
+     141,
+     74
+    ],
+    "recordings": 26,
+    "windows": 930
+   },
+   "noise_recordings": 60,
+   "noise_white": {
+    "flagged": {
+     "CNN Mahalanobis": 0.0,
+     "CNN k-NN": 0.0,
+     "energy": 0.02623688155922039,
+     "extended Mahalanobis": 0.010494752623688156,
+     "extended k-NN": 0.010494752623688156,
+     "features Mahalanobis": 0.0037481259370314842,
+     "features k-NN": 0.006746626686656672,
+     "fusion": 0.0,
+     "softmax": 0.005247376311844078,
+     "spectrogram residual": 0.013493253373313344
+    },
+    "interval": {
+     "CNN Mahalanobis": [
+      0.0,
+      0.0
+     ],
+     "CNN k-NN": [
+      0.0,
+      0.0
+     ],
+     "energy": [
+      0.0074403378916622406,
+      0.054056560269468285
+     ],
+     "extended Mahalanobis": [
+      0.0007535370075527931,
+      0.023793151208593953
+     ],
+     "extended k-NN": [
+      0.0007535370075527931,
+      0.024683511834210047
+     ],
+     "features Mahalanobis": [
+      0.0,
+      0.011338082888223367
+     ],
+     "features k-NN": [
+      0.0,
+      0.017295192285850577
+     ],
+     "fusion": [
+      0.0,
+      0.0
+     ],
+     "softmax": [
+      0.0,
+      0.01504947598156707
+     ],
+     "spectrogram residual": [
+      0.004552265764402839,
+      0.026709716607253096
+     ]
+    },
+    "predicted": [
+     1334,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "recordings": 34,
+    "windows": 1334
+   },
+   "recordings": {
+    "excluded": 21,
+    "used": 60
+   },
+   "signal_adsb": {
+    "auroc_vs_known": {
+     "CNN Mahalanobis": 0.8654583333333333,
+     "CNN k-NN": 0.9689166666666668,
+     "energy": 0.8291875,
+     "extended Mahalanobis": 0.8819375,
+     "extended k-NN": 0.9808125,
+     "features Mahalanobis": 0.8332708333333333,
+     "features k-NN": 0.994,
+     "fusion": 0.8938229166666667,
+     "softmax": 0.8614791666666668,
+     "spectrogram residual": 0.49839583333333337
+    },
+    "auroc_vs_real_noise": {
+     "CNN Mahalanobis": 0.9821444346289752,
+     "CNN k-NN": 0.982310070671378,
+     "energy": 0.44076855123674913,
+     "extended Mahalanobis": 0.8928224381625441,
+     "extended k-NN": 0.903809628975265,
+     "features Mahalanobis": 0.8854681978798586,
+     "features k-NN": 0.9127208480565372,
+     "fusion": 0.9762091431095405,
+     "softmax": 0.6707597173144876,
+     "spectrogram residual": 0.06699425795053005
+    },
+    "flagged": {
+     "CNN Mahalanobis": 0.225,
+     "CNN k-NN": 0.875,
+     "energy": 0.325,
+     "extended Mahalanobis": 0.375,
+     "extended k-NN": 0.875,
+     "features Mahalanobis": 0.325,
+     "features k-NN": 0.975,
+     "fusion": 0.3,
+     "softmax": 0.35,
+     "spectrogram residual": 0.0
+    },
+    "interval": {
+     "CNN Mahalanobis": null,
+     "CNN k-NN": null,
+     "energy": null,
+     "extended Mahalanobis": null,
+     "extended k-NN": null,
+     "features Mahalanobis": null,
+     "features k-NN": null,
+     "fusion": null,
+     "softmax": null,
+     "spectrogram residual": null
+    },
+    "predicted": [
+     0,
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "recordings": 1,
+    "windows": 40
+   },
+   "signal_ism": {
+    "auroc_vs_known": {
+     "CNN Mahalanobis": 0.9104407191448007,
+     "CNN k-NN": 0.9466540330417881,
+     "energy": 0.4859825072886297,
+     "extended Mahalanobis": 0.9533848396501458,
+     "extended k-NN": 0.9770830903790086,
+     "features Mahalanobis": 0.9071093294460643,
+     "features k-NN": 0.9569254130223518,
+     "fusion": 0.9465386297376093,
+     "softmax": 0.6197704081632652,
+     "spectrogram residual": 0.3575770165208941
+    },
+    "auroc_vs_real_noise": {
+     "CNN Mahalanobis": 0.979640513449196,
+     "CNN k-NN": 0.9709235183220184,
+     "energy": 0.1151049768721219,
+     "extended Mahalanobis": 0.9240833839845882,
+     "extended k-NN": 0.9107035974409956,
+     "features Mahalanobis": 0.9027485603024652,
+     "features k-NN": 0.8869085392864869,
+     "fusion": 0.976456824526883,
+     "softmax": 0.36728461197704726,
+     "spectrogram residual": 0.04157815574488251
+    },
+    "flagged": {
+     "CNN Mahalanobis": 0.6192419825072887,
+     "CNN k-NN": 0.7795918367346939,
+     "energy": 0.036151603498542274,
+     "extended Mahalanobis": 0.8495626822157435,
+     "extended k-NN": 0.8932944606413994,
+     "features Mahalanobis": 0.6909620991253644,
+     "features k-NN": 0.753935860058309,
+     "fusion": 0.8425655976676385,
+     "softmax": 0.11137026239067055,
+     "spectrogram residual": 0.0
+    },
+    "interval": {
+     "CNN Mahalanobis": [
+      0.5170982313517698,
+      0.7120345929611059
+     ],
+     "CNN k-NN": [
+      0.6995836583851225,
+      0.8541063316284909
+     ],
+     "energy": [
+      0.020223598892877795,
+      0.05583081060695412
+     ],
+     "extended Mahalanobis": [
+      0.7787128850456637,
+      0.9135400635018632
+     ],
+     "extended k-NN": [
+      0.8279302890454214,
+      0.9480301317073702
+     ],
+     "features Mahalanobis": [
+      0.596376571191736,
+      0.7800810569088514
+     ],
+     "features k-NN": [
+      0.6881994597300377,
+      0.8191844908598708
+     ],
+     "fusion": [
+      0.7555211558307533,
+      0.9138026501699317
+     ],
+     "softmax": [
+      0.06774121561878987,
+      0.15855044345898003
+     ],
+     "spectrogram residual": [
+      0.0,
+      0.0
+     ]
+    },
+    "predicted": [
+     33,
+     78,
+     33,
+     26,
+     79,
+     1466
+    ],
+    "recordings": 59,
+    "windows": 1715
+   }
+  },
+  "unseen": {
+   "AM": {
+    "auroc": {
+     "CNN Mahalanobis": 0.5786833333333333,
+     "CNN k-NN": 0.5401069444444444,
+     "energy": 0.6328916666666667,
+     "extended Mahalanobis": 0.8517777777777777,
+     "extended k-NN": 0.9510666666666666,
+     "features Mahalanobis": 0.924025,
+     "features k-NN": 0.9810749999999999,
+     "fusion": 0.7200875,
+     "softmax": 0.6765986111111111,
+     "spectrogram residual": 0.27765555555555554
+    },
+    "detected": {
+     "CNN Mahalanobis": 0.0,
+     "CNN k-NN": 0.01,
+     "energy": 0.0,
+     "extended Mahalanobis": 0.44,
+     "extended k-NN": 0.68,
+     "features Mahalanobis": 0.5,
+     "features k-NN": 0.85,
+     "fusion": 0.02,
+     "softmax": 0.0,
+     "spectrogram residual": 0.0
+    },
+    "predicted": [
+     0,
+     299,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "chirp spread": {
+    "auroc": {
+     "CNN Mahalanobis": 0.9298111111111111,
+     "CNN k-NN": 0.9705138888888888,
+     "energy": 0.24738333333333334,
+     "extended Mahalanobis": 0.47128055555555554,
+     "extended k-NN": 0.7332111111111111,
+     "features Mahalanobis": 0.5220194444444444,
+     "features k-NN": 0.7089416666666667,
+     "fusion": 0.7227125,
+     "softmax": 0.7688388888888888,
+     "spectrogram residual": 0.4679027777777778
+    },
+    "detected": {
+     "CNN Mahalanobis": 0.64,
+     "CNN k-NN": 0.79,
+     "energy": 0.0,
+     "extended Mahalanobis": 0.0,
+     "extended k-NN": 0.0,
+     "features Mahalanobis": 0.03,
+     "features k-NN": 0.013333333333333334,
+     "fusion": 0.023333333333333334,
+     "softmax": 0.19333333333333333,
+     "spectrogram residual": 0.0
+    },
+    "predicted": [
+     1,
+     0,
+     144,
+     0,
+     51,
+     104
+    ]
+   },
+   "dsss": {
+    "auroc": {
+     "CNN Mahalanobis": 0.9069777777777777,
+     "CNN k-NN": 0.9531416666666667,
+     "energy": 0.5644416666666667,
+     "extended Mahalanobis": 0.9920277777777778,
+     "extended k-NN": 0.9886805555555557,
+     "features Mahalanobis": 0.5958666666666667,
+     "features k-NN": 0.8183055555555556,
+     "fusion": 0.9608458333333334,
+     "softmax": 0.7493666666666666,
+     "spectrogram residual": 0.20828333333333332
+    },
+    "detected": {
+     "CNN Mahalanobis": 0.6666666666666666,
+     "CNN k-NN": 0.74,
+     "energy": 0.0033333333333333335,
+     "extended Mahalanobis": 0.9766666666666667,
+     "extended k-NN": 0.9166666666666666,
+     "features Mahalanobis": 0.013333333333333334,
+     "features k-NN": 0.2866666666666667,
+     "fusion": 0.8266666666666667,
+     "softmax": 0.1,
+     "spectrogram residual": 0.0
+    },
+    "predicted": [
+     7,
+     0,
+     0,
+     279,
+     14,
+     0
+    ]
+   },
+   "gfsk": {
+    "auroc": {
+     "CNN Mahalanobis": 0.7017694444444444,
+     "CNN k-NN": 0.8673277777777777,
+     "energy": 0.880313888888889,
+     "extended Mahalanobis": 0.8119444444444445,
+     "extended k-NN": 0.9040722222222223,
+     "features Mahalanobis": 0.6007361111111111,
+     "features k-NN": 0.8946972222222223,
+     "fusion": 0.7688013888888888,
+     "softmax": 0.9304166666666667,
+     "spectrogram residual": 0.2269138888888889
+    },
+    "detected": {
+     "CNN Mahalanobis": 0.0033333333333333335,
+     "CNN k-NN": 0.41,
+     "energy": 0.11666666666666667,
+     "extended Mahalanobis": 0.30333333333333334,
+     "extended k-NN": 0.5666666666666667,
+     "features Mahalanobis": 0.04,
+     "features k-NN": 0.3566666666666667,
+     "fusion": 0.11333333333333333,
+     "softmax": 0.43333333333333335,
+     "spectrogram residual": 0.0
+    },
+    "predicted": [
+     0,
+     96,
+     8,
+     55,
+     118,
+     23
+    ]
+   },
+   "hopping": {
+    "auroc": {
+     "CNN Mahalanobis": 0.9166722222222222,
+     "CNN k-NN": 0.9801500000000001,
+     "energy": 0.24333333333333335,
+     "extended Mahalanobis": 0.8808666666666667,
+     "extended k-NN": 0.9519055555555556,
+     "features Mahalanobis": 0.5306888888888889,
+     "features k-NN": 0.6611555555555555,
+     "fusion": 0.9169111111111111,
+     "softmax": 0.6234763888888889,
+     "spectrogram residual": 0.6998222222222222
+    },
+    "detected": {
+     "CNN Mahalanobis": 0.5733333333333334,
+     "CNN k-NN": 0.8866666666666667,
+     "energy": 0.0,
+     "extended Mahalanobis": 0.55,
+     "extended k-NN": 0.71,
+     "features Mahalanobis": 0.0033333333333333335,
+     "features k-NN": 0.04,
+     "fusion": 0.61,
+     "softmax": 0.043333333333333335,
+     "spectrogram residual": 0.0
+    },
+    "predicted": [
+     0,
+     0,
+     5,
+     0,
+     0,
+     295
+    ]
+   },
+   "impulsive": {
+    "auroc": {
+     "CNN Mahalanobis": 0.9617055555555555,
+     "CNN k-NN": 0.9959388888888889,
+     "energy": 0.39514166666666667,
+     "extended Mahalanobis": 1.0,
+     "extended k-NN": 1.0,
+     "features Mahalanobis": 1.0,
+     "features k-NN": 1.0,
+     "fusion": 0.9905222222222223,
+     "softmax": 0.7381236111111111,
+     "spectrogram residual": 0.5015138888888889
+    },
+    "detected": {
+     "CNN Mahalanobis": 0.81,
+     "CNN k-NN": 1.0,
+     "energy": 0.0,
+     "extended Mahalanobis": 1.0,
+     "extended k-NN": 1.0,
+     "features Mahalanobis": 1.0,
+     "features k-NN": 1.0,
+     "fusion": 0.97,
+     "softmax": 0.11333333333333333,
+     "spectrogram residual": 0.0
+    },
+    "predicted": [
+     0,
+     0,
+     0,
+     0,
+     22,
+     278
+    ]
+   },
+   "mixture": {
+    "auroc": {
+     "CNN Mahalanobis": 0.6351916666666667,
+     "CNN k-NN": 0.7675638888888889,
+     "energy": 0.7433444444444445,
+     "extended Mahalanobis": 0.7223388888888889,
+     "extended k-NN": 0.8428694444444444,
+     "features Mahalanobis": 0.7649111111111111,
+     "features k-NN": 0.863786111111111,
+     "fusion": 0.6876763888888889,
+     "softmax": 0.9141638888888889,
+     "spectrogram residual": 0.20309722222222223
+    },
+    "detected": {
+     "CNN Mahalanobis": 0.0,
+     "CNN k-NN": 0.09666666666666666,
+     "energy": 0.04,
+     "extended Mahalanobis": 0.14666666666666667,
+     "extended k-NN": 0.3466666666666667,
+     "features Mahalanobis": 0.14333333333333334,
+     "features k-NN": 0.4,
+     "fusion": 0.013333333333333334,
+     "softmax": 0.20666666666666667,
+     "spectrogram residual": 0.0
+    },
+    "predicted": [
+     0,
+     5,
+     0,
+     269,
+     26,
+     0
+    ]
+   },
+   "multitone": {
+    "auroc": {
+     "CNN Mahalanobis": 0.8845694444444444,
+     "CNN k-NN": 0.8907527777777778,
+     "energy": 0.6439055555555555,
+     "extended Mahalanobis": 0.9165027777777778,
+     "extended k-NN": 0.9418777777777778,
+     "features Mahalanobis": 0.8040972222222222,
+     "features k-NN": 0.902186111111111,
+     "fusion": 0.916375,
+     "softmax": 0.5869305555555556,
+     "spectrogram residual": 0.21941944444444444
+    },
+    "detected": {
+     "CNN Mahalanobis": 0.4866666666666667,
+     "CNN k-NN": 0.5366666666666666,
+     "energy": 0.016666666666666666,
+     "extended Mahalanobis": 0.6066666666666667,
+     "extended k-NN": 0.5233333333333333,
+     "features Mahalanobis": 0.25333333333333335,
+     "features k-NN": 0.5366666666666666,
+     "fusion": 0.5766666666666667,
+     "softmax": 0.05,
+     "spectrogram residual": 0.0
+    },
+    "predicted": [
+     0,
+     292,
+     0,
+     0,
+     8,
+     0
+    ]
+   },
+   "ofdm": {
+    "auroc": {
+     "CNN Mahalanobis": 0.7761277777777777,
+     "CNN k-NN": 0.872786111111111,
+     "energy": 0.5886277777777777,
+     "extended Mahalanobis": 0.5084194444444444,
+     "extended k-NN": 0.59365,
+     "features Mahalanobis": 0.48888055555555554,
+     "features k-NN": 0.6790388888888889,
+     "fusion": 0.6546680555555556,
+     "softmax": 0.697523611111111,
+     "spectrogram residual": 0.21479722222222222
+    },
+    "detected": {
+     "CNN Mahalanobis": 0.22333333333333333,
+     "CNN k-NN": 0.47,
+     "energy": 0.0,
+     "extended Mahalanobis": 0.0,
+     "extended k-NN": 0.0,
+     "features Mahalanobis": 0.0,
+     "features k-NN": 0.13,
+     "fusion": 0.016666666666666666,
+     "softmax": 0.06,
+     "spectrogram residual": 0.0
+    },
+    "predicted": [
+     101,
+     0,
+     0,
+     1,
+     198,
+     0
+    ]
+   },
+   "pulsed chirp": {
+    "auroc": {
+     "CNN Mahalanobis": 0.9723666666666666,
+     "CNN k-NN": 0.9914416666666667,
+     "energy": 0.13848055555555555,
+     "extended Mahalanobis": 0.9890166666666667,
+     "extended k-NN": 0.9975472222222221,
+     "features Mahalanobis": 0.9470500000000001,
+     "features k-NN": 0.9999666666666667,
+     "fusion": 0.9892750000000001,
+     "softmax": 0.6051430555555555,
+     "spectrogram residual": 0.6827111111111112
+    },
+    "detected": {
+     "CNN Mahalanobis": 0.8666666666666667,
+     "CNN k-NN": 0.9766666666666667,
+     "energy": 0.0,
+     "extended Mahalanobis": 0.97,
+     "extended k-NN": 1.0,
+     "features Mahalanobis": 0.71,
+     "features k-NN": 1.0,
+     "fusion": 0.9433333333333334,
+     "softmax": 0.02,
+     "spectrogram residual": 0.0
+    },
+    "predicted": [
+     0,
+     0,
+     2,
+     0,
+     0,
+     298
+    ]
+   },
+   "triangular FM": {
+    "auroc": {
+     "CNN Mahalanobis": 0.7621166666666667,
+     "CNN k-NN": 0.8369888888888889,
+     "energy": 0.19029444444444443,
+     "extended Mahalanobis": 0.6680138888888889,
+     "extended k-NN": 0.7354527777777777,
+     "features Mahalanobis": 0.5525138888888889,
+     "features k-NN": 0.721175,
+     "fusion": 0.7304027777777778,
+     "softmax": 0.3496763888888889,
+     "spectrogram residual": 0.5435888888888889
+    },
+    "detected": {
+     "CNN Mahalanobis": 0.18,
+     "CNN k-NN": 0.2833333333333333,
+     "energy": 0.0,
+     "extended Mahalanobis": 0.09333333333333334,
+     "extended k-NN": 0.006666666666666667,
+     "features Mahalanobis": 0.043333333333333335,
+     "features k-NN": 0.03,
+     "fusion": 0.11333333333333333,
+     "softmax": 0.03,
+     "spectrogram residual": 0.0
+    },
+    "predicted": [
+     0,
+     0,
+     264,
+     0,
+     0,
+     36
+    ]
+   }
+  }
+ },
+ "environment": {
+  "commit": "21cf449",
+  "machine": "AMD64",
+  "numpy": "2.4.6",
+  "python": "3.11.18",
+  "system": "Windows"
+ }
+}

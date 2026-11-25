@@ -1,0 +1,3947 @@
+{
+ "data": {
+  "N=4 K=16 gaussian INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     1.1993362680922137,
+     1.4131103709578479
+    ],
+    "loss_db": 1.304391749367623,
+    "worst_decile_db": 2.569365875822884
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     1.2187383471080477,
+     1.4277776855457138
+    ],
+    "loss_db": 1.319550717390142,
+    "worst_decile_db": 2.6143590454048145
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     1.2115722170141565,
+     1.411571752806718
+    ],
+    "loss_db": 1.311870251282508,
+    "worst_decile_db": 2.692474451674483
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.36615428381651305,
+     0.4796056696392496
+    ],
+    "loss_db": 0.42268070148395087,
+    "worst_decile_db": 0.9561021043682052
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     2.6409176472757796,
+     2.9622357417059932
+    ],
+    "loss_db": 2.7971689555414376,
+    "worst_decile_db": 4.577905738161651
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     2.20360762512514,
+     2.4807159088541244
+    ],
+    "loss_db": 2.340428342044451,
+    "worst_decile_db": 3.8765434224657525
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     3.7149894814232063,
+     3.7149894814232063
+    ],
+    "loss_db": 3.7149894814232063,
+    "worst_decile_db": 3.714989481423206
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     1.1139814120708713,
+     1.3899578905713024
+    ],
+    "loss_db": 1.242023400075299,
+    "worst_decile_db": 3.0621561913880995
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.1475402665473,
+     1.442128704633853
+    ],
+    "loss_db": 1.2876695348224048,
+    "worst_decile_db": 2.7666848282627807
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.8126271066400416,
+     1.0080424195178443
+    ],
+    "loss_db": 0.9121238652779688,
+    "worst_decile_db": 2.0828035805431226
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.0869289966565554,
+     1.2736462641640118
+    ],
+    "loss_db": 1.1819391235641574,
+    "worst_decile_db": 2.296154800591443
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.41606785016348036,
+     0.5079881538246492
+    ],
+    "loss_db": 0.46204330970315377,
+    "worst_decile_db": 0.9052442179484665
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.3698932732298299,
+     0.4298753955483115
+    ],
+    "loss_db": 0.4004754218701213,
+    "worst_decile_db": 0.7276622046991376
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.9370884711273556,
+     1.1618389269990388
+    ],
+    "loss_db": 1.0465518050383302,
+    "worst_decile_db": 2.5583661676656617
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     2.3692788454707716,
+     2.649686052125658
+    ],
+    "loss_db": 2.5071875886294386,
+    "worst_decile_db": 4.038457708043554
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.796903410706474,
+     2.057879174688712
+    ],
+    "loss_db": 1.9269771975850931,
+    "worst_decile_db": 3.521871267280417
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     2.728930313494997,
+     3.049174713809902
+    ],
+    "loss_db": 2.888713422335699,
+    "worst_decile_db": 4.68900552835371
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     2.8556167160744312,
+     3.167177994902404
+    ],
+    "loss_db": 3.0095310411435183,
+    "worst_decile_db": 4.760118874185247
+   }
+  },
+  "N=4 K=16 gaussian INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     1.0710280525543194,
+     1.3074948732609726
+    ],
+    "loss_db": 1.1883915236223725,
+    "worst_decile_db": 2.901525107790486
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.9963649005178836,
+     1.2381143017931533
+    ],
+    "loss_db": 1.1175058519694256,
+    "worst_decile_db": 2.720955403881285
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.41420443394225454,
+     0.4970662960010526
+    ],
+    "loss_db": 0.4545524051861525,
+    "worst_decile_db": 0.8714851209945652
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.8903822183510991,
+     1.0892396197716459
+    ],
+    "loss_db": 0.9854146675730208,
+    "worst_decile_db": 2.1336396196050558
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     1.2067530624306477,
+     1.4678725732169648
+    ],
+    "loss_db": 1.33445312379253,
+    "worst_decile_db": 2.8768595098562506
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     2.200083383801442,
+     2.4870720121895507
+    ],
+    "loss_db": 2.342178863842635,
+    "worst_decile_db": 3.961205583906859
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     21.448218535888536,
+     21.448218535888536
+    ],
+    "loss_db": 21.448218535888536,
+    "worst_decile_db": 21.448218535888536
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.8903574911485943,
+     1.1167093543492776
+    ],
+    "loss_db": 0.9995900664093069,
+    "worst_decile_db": 2.416916160931453
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.1481922956206934,
+     1.4505518926581251
+    ],
+    "loss_db": 1.2961075875272334,
+    "worst_decile_db": 2.82284275702139
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.9158165276537423,
+     1.138892438533011
+    ],
+    "loss_db": 1.0265276944590143,
+    "worst_decile_db": 2.535009866467929
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.0860342733336856,
+     1.3132052626263735
+    ],
+    "loss_db": 1.1991683457233104,
+    "worst_decile_db": 2.682463084109634
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.42209848166535446,
+     0.5054017568983762
+    ],
+    "loss_db": 0.46289374827428564,
+    "worst_decile_db": 0.8889399202026267
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.5733631735638766,
+     0.6577966635133592
+    ],
+    "loss_db": 0.6146875241129213,
+    "worst_decile_db": 1.0636923390004458
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.9219423558603612,
+     1.1626072950909763
+    ],
+    "loss_db": 1.0398734901098492,
+    "worst_decile_db": 2.5923103166109565
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.9067346094458234,
+     1.130533039969397
+    ],
+    "loss_db": 1.0167848863676157,
+    "worst_decile_db": 2.5319920019624114
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.0866705748442818,
+     1.3132278244004072
+    ],
+    "loss_db": 1.2010678236811825,
+    "worst_decile_db": 2.667466923547388
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     2.707289137553805,
+     3.038449545160029
+    ],
+    "loss_db": 2.8718880829759783,
+    "worst_decile_db": 4.644019572970492
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     2.333387962210042,
+     2.791260039679479
+    ],
+    "loss_db": 2.560999932745661,
+    "worst_decile_db": 5.650644034759635
+   }
+  },
+  "N=4 K=16 impulsive INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     1.1787942085672793,
+     1.3998963229237538
+    ],
+    "loss_db": 1.2924780290726456,
+    "worst_decile_db": 2.3771662263742446
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     1.2341972647348378,
+     1.4603055077248106
+    ],
+    "loss_db": 1.3473370479035032,
+    "worst_decile_db": 2.4352439107516624
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     2.4668131077835582,
+     2.8799687124454665
+    ],
+    "loss_db": 2.66997772045309,
+    "worst_decile_db": 5.161777295112287
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.7180495576348139,
+     0.9569080126373027
+    ],
+    "loss_db": 0.8395027839558451,
+    "worst_decile_db": 2.266534555866981
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     3.3220329725823126,
+     3.7414445483410836
+    ],
+    "loss_db": 3.5418159878165065,
+    "worst_decile_db": 5.8259297259890275
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     4.582229326412161,
+     5.120987008518314
+    ],
+    "loss_db": 4.8322838482369175,
+    "worst_decile_db": 7.80400840502241
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     3.7149894814232063,
+     3.7149894814232063
+    ],
+    "loss_db": 3.7149894814232063,
+    "worst_decile_db": 3.714989481423206
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     1.6220077475646013,
+     2.036459755738184
+    ],
+    "loss_db": 1.83963055889344,
+    "worst_decile_db": 4.287798671578813
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.5922160531886609,
+     1.952880964172987
+    ],
+    "loss_db": 1.7687263801842241,
+    "worst_decile_db": 4.245248352882387
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     1.184466421904001,
+     1.4295107557134104
+    ],
+    "loss_db": 1.3069287542503187,
+    "worst_decile_db": 2.6769242750057085
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.2704816968532915,
+     1.4967559655393365
+    ],
+    "loss_db": 1.38475603628794,
+    "worst_decile_db": 2.5585559736906403
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.8641227651885863,
+     1.1062599815367327
+    ],
+    "loss_db": 0.9864718925474911,
+    "worst_decile_db": 2.3760312841768956
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.6549332433730554,
+     0.7563238565383834
+    ],
+    "loss_db": 0.7031528407390728,
+    "worst_decile_db": 1.1544085758453182
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     1.5060972238200867,
+     1.8736537068684973
+    ],
+    "loss_db": 1.6905440882698788,
+    "worst_decile_db": 3.847625195060538
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     3.1666229453139083,
+     3.557133113407135
+    ],
+    "loss_db": 3.3570043256759696,
+    "worst_decile_db": 5.446267928388352
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     2.5407214667967195,
+     2.905344443713335
+    ],
+    "loss_db": 2.720546778107533,
+    "worst_decile_db": 4.793434834660981
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     4.9508793138601765,
+     5.534497004283817
+    ],
+    "loss_db": 5.229422813560638,
+    "worst_decile_db": 8.779915953089315
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     4.121453845184458,
+     4.572765965499391
+    ],
+    "loss_db": 4.338969852893407,
+    "worst_decile_db": 6.871871530771873
+   }
+  },
+  "N=4 K=16 impulsive INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     1.0875495174516767,
+     1.3294388728097204
+    ],
+    "loss_db": 1.2024920810966424,
+    "worst_decile_db": 2.7324718790655544
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     1.0306981569813127,
+     1.2673762542098057
+    ],
+    "loss_db": 1.1429222629544775,
+    "worst_decile_db": 2.491870840308237
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.6268526317571452,
+     0.816821841276689
+    ],
+    "loss_db": 0.7200474066376958,
+    "worst_decile_db": 1.8922136875938909
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     2.429229088253162,
+     2.8001667732477205
+    ],
+    "loss_db": 2.620236146143431,
+    "worst_decile_db": 4.697487430551574
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     1.0505656688489053,
+     1.2996518636605408
+    ],
+    "loss_db": 1.170741568574203,
+    "worst_decile_db": 2.7275653953445596
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     4.614644218080045,
+     5.147876695210937
+    ],
+    "loss_db": 4.866959767899864,
+    "worst_decile_db": 7.781080025238712
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     21.448218535888536,
+     21.448218535888536
+    ],
+    "loss_db": 21.448218535888536,
+    "worst_decile_db": 21.448218535888536
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     1.313935830662764,
+     1.6363763133706786
+    ],
+    "loss_db": 1.4852191038236775,
+    "worst_decile_db": 3.261840353929018
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.552962819322642,
+     1.9093137595522691
+    ],
+    "loss_db": 1.7274969429252431,
+    "worst_decile_db": 3.881181162978009
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     1.2056381458423877,
+     1.455808294983869
+    ],
+    "loss_db": 1.3318975921050837,
+    "worst_decile_db": 2.643316525700279
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.3142422560742955,
+     1.5601764409360248
+    ],
+    "loss_db": 1.4361199342103368,
+    "worst_decile_db": 2.772079490548083
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.8660300987330076,
+     1.1129525464746488
+    ],
+    "loss_db": 0.9890531051656327,
+    "worst_decile_db": 2.4093194124762363
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.7495789101762687,
+     0.8777819389052836
+    ],
+    "loss_db": 0.811815708291777,
+    "worst_decile_db": 1.4320553076466211
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     1.5007141412982146,
+     1.8599859454222296
+    ],
+    "loss_db": 1.6757042221395633,
+    "worst_decile_db": 3.8411248606827537
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.9245968395224079,
+     1.1465973534509457
+    ],
+    "loss_db": 1.0350556566950257,
+    "worst_decile_db": 2.306402617000583
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.1228174091051308,
+     1.3432921373465414
+    ],
+    "loss_db": 1.231572471683398,
+    "worst_decile_db": 2.4090921100460156
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     4.988734384471113,
+     5.576992455102202
+    ],
+    "loss_db": 5.264788930879311,
+    "worst_decile_db": 8.789012629931861
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     2.1209832999287888,
+     2.590914379093886
+    ],
+    "loss_db": 2.3569682944345365,
+    "worst_decile_db": 5.878173090118294
+   }
+  },
+  "N=4 K=16 student INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     1.218924582332433,
+     1.4529490797665425
+    ],
+    "loss_db": 1.3357300321896368,
+    "worst_decile_db": 2.6876778982698872
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     1.2442938636017051,
+     1.457388814273273
+    ],
+    "loss_db": 1.3521079758814127,
+    "worst_decile_db": 2.6500350433027964
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     1.8286923049874557,
+     2.1670041391779984
+    ],
+    "loss_db": 1.9928722348913896,
+    "worst_decile_db": 4.108397247330956
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.4290986389036558,
+     0.5614323433025364
+    ],
+    "loss_db": 0.4959838458421367,
+    "worst_decile_db": 1.3759969626772486
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     3.042878642292525,
+     3.3946593365791466
+    ],
+    "loss_db": 3.214067301442479,
+    "worst_decile_db": 5.315322453466661
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     2.877507817716254,
+     3.3014569952937127
+    ],
+    "loss_db": 3.089896814144026,
+    "worst_decile_db": 5.508638838778403
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     3.7149894814232063,
+     3.7149894814232063
+    ],
+    "loss_db": 3.7149894814232063,
+    "worst_decile_db": 3.714989481423206
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     1.2107211301854062,
+     1.4998814317749418
+    ],
+    "loss_db": 1.349353916051287,
+    "worst_decile_db": 3.3869164169314248
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.2937795695181618,
+     1.5627611766753726
+    ],
+    "loss_db": 1.4319104720590745,
+    "worst_decile_db": 3.107298629705604
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.9229938849517498,
+     1.1258323081232733
+    ],
+    "loss_db": 1.0313860332690725,
+    "worst_decile_db": 2.3081606424730063
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.1009007094390864,
+     1.2936299626049959
+    ],
+    "loss_db": 1.1984645130510676,
+    "worst_decile_db": 2.4644496731638905
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.6067749762386591,
+     0.7761753208151531
+    ],
+    "loss_db": 0.6891375827085043,
+    "worst_decile_db": 1.9256782569945285
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.4455433359869385,
+     0.5231696287744639
+    ],
+    "loss_db": 0.4843542416984723,
+    "worst_decile_db": 0.884441872744183
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     1.2013661189087863,
+     1.4710828534146438
+    ],
+    "loss_db": 1.3391253575416304,
+    "worst_decile_db": 3.133461405516897
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     2.6869216288803837,
+     3.0384862274846105
+    ],
+    "loss_db": 2.8628337939163098,
+    "worst_decile_db": 4.7836160209579335
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.9948611317005798,
+     2.3062856550504898
+    ],
+    "loss_db": 2.1564248226516938,
+    "worst_decile_db": 3.8390739543452317
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     3.3346554068844005,
+     3.7760221716499975
+    ],
+    "loss_db": 3.551082244794233,
+    "worst_decile_db": 5.930134717779895
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     3.2175755679836,
+     3.619261378732653
+    ],
+    "loss_db": 3.4066292659959156,
+    "worst_decile_db": 5.78478138869957
+   }
+  },
+  "N=4 K=16 student INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     1.1086524408942016,
+     1.3530694299238049
+    ],
+    "loss_db": 1.2278930477573229,
+    "worst_decile_db": 2.878007164921441
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     1.0301412255502975,
+     1.271957658206937
+    ],
+    "loss_db": 1.155600283821178,
+    "worst_decile_db": 2.772832115610486
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.5620315901134152,
+     0.7215381954415526
+    ],
+    "loss_db": 0.6366301907564141,
+    "worst_decile_db": 1.65487028041069
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     1.3816208970673116,
+     1.660667932809688
+    ],
+    "loss_db": 1.5229864715059318,
+    "worst_decile_db": 3.0993990677476195
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     1.1557220370335222,
+     1.4160739365734893
+    ],
+    "loss_db": 1.2819686548043265,
+    "worst_decile_db": 2.8521497314396367
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     2.8949686120031703,
+     3.310894689486467
+    ],
+    "loss_db": 3.1027183314061335,
+    "worst_decile_db": 5.446279645430297
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     21.448218535888536,
+     21.448218535888536
+    ],
+    "loss_db": 21.448218535888536,
+    "worst_decile_db": 21.448218535888536
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     1.0138241748732766,
+     1.2555615544140988
+    ],
+    "loss_db": 1.1370791434711052,
+    "worst_decile_db": 2.8587893953129906
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.3038133500673381,
+     1.562554462615871
+    ],
+    "loss_db": 1.4332643071556526,
+    "worst_decile_db": 3.0837832334481057
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.9971100732790485,
+     1.2175976979513987
+    ],
+    "loss_db": 1.1076441436731586,
+    "worst_decile_db": 2.5322200999483853
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.1403369591762096,
+     1.3624076551834636
+    ],
+    "loss_db": 1.255577962868606,
+    "worst_decile_db": 2.684300168843409
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.6109038528524219,
+     0.776856675259305
+    ],
+    "loss_db": 0.6891452231138426,
+    "worst_decile_db": 1.8997844184261314
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.6206836158428526,
+     0.7167305522248757
+    ],
+    "loss_db": 0.6698231689929823,
+    "worst_decile_db": 1.139450891803208
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     1.1938151779731276,
+     1.4708213052229393
+    ],
+    "loss_db": 1.3321198246878974,
+    "worst_decile_db": 3.13208496092717
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.9331110355608097,
+     1.1549945108084363
+    ],
+    "loss_db": 1.0438716910743149,
+    "worst_decile_db": 2.4778716572425545
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.1188729628216765,
+     1.336322346858656
+    ],
+    "loss_db": 1.2306653380687704,
+    "worst_decile_db": 2.6461678497997547
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     3.345703643042045,
+     3.7955728398545583
+    ],
+    "loss_db": 3.5642265226990504,
+    "worst_decile_db": 5.8025415378670715
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     2.2680509010590395,
+     2.7431885002049885
+    ],
+    "loss_db": 2.4992673077730587,
+    "worst_decile_db": 6.020828736842823
+   }
+  },
+  "N=4 K=256 gaussian INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.19565528381809227,
+     0.23105518567812372
+    ],
+    "loss_db": 0.21272525067167336,
+    "worst_decile_db": 0.37998799570701924
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.19950967572912937,
+     0.23555932581130226
+    ],
+    "loss_db": 0.21695083605666066,
+    "worst_decile_db": 0.38676815878185045
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.2793073861233046,
+     0.30075297893799563
+    ],
+    "loss_db": 0.28994111357867247,
+    "worst_decile_db": 0.39073102065640475
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.24460352069216543,
+     0.2790389355265569
+    ],
+    "loss_db": 0.26154139829773626,
+    "worst_decile_db": 0.44548586637502174
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     0.22819672213982267,
+     0.26576506655315724
+    ],
+    "loss_db": 0.24701275034827638,
+    "worst_decile_db": 0.44857471644323965
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     0.20527959466231935,
+     0.24127206722324723
+    ],
+    "loss_db": 0.22269748267003003,
+    "worst_decile_db": 0.407299483493766
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     3.7149894814232063,
+     3.7149894814232063
+    ],
+    "loss_db": 3.7149894814232063,
+    "worst_decile_db": 3.714989481423206
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.17152661694876403,
+     0.21937452668560556
+    ],
+    "loss_db": 0.19559621449775955,
+    "worst_decile_db": 0.4217040224176874
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.08381957830567469,
+     0.10523536859931099
+    ],
+    "loss_db": 0.09464068471612372,
+    "worst_decile_db": 0.19886833180127514
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.27055975539369204,
+     0.31769421227178973
+    ],
+    "loss_db": 0.29323270050610206,
+    "worst_decile_db": 0.5268711592389642
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.8824005197073598,
+     0.9408797031670677
+    ],
+    "loss_db": 0.9112751366480687,
+    "worst_decile_db": 1.169706035806095
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.2260949629023625,
+     0.23712241250807364
+    ],
+    "loss_db": 0.23174319220264192,
+    "worst_decile_db": 0.2953979142109505
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.31095345312184003,
+     0.32488952944002686
+    ],
+    "loss_db": 0.3181731715600331,
+    "worst_decile_db": 0.3874662452420855
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.07317480072348241,
+     0.09386385096729616
+    ],
+    "loss_db": 0.08369864785732282,
+    "worst_decile_db": 0.18776294676111485
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.1903909302553255,
+     0.22484378984495876
+    ],
+    "loss_db": 0.2069922626933776,
+    "worst_decile_db": 0.370610955029544
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.3190203434862721,
+     0.346425305101966
+    ],
+    "loss_db": 0.33254223733169336,
+    "worst_decile_db": 0.47703553663994036
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     0.21906016609551518,
+     0.25832467176684626
+    ],
+    "loss_db": 0.23824849159609976,
+    "worst_decile_db": 0.42566973128181257
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     0.33151135036834944,
+     0.3798582714632689
+    ],
+    "loss_db": 0.35523852862729655,
+    "worst_decile_db": 0.5953513622536524
+   }
+  },
+  "N=4 K=256 gaussian INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.07960867649255016,
+     0.10030631364692234
+    ],
+    "loss_db": 0.08965224082290305,
+    "worst_decile_db": 0.1948638439731225
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.08132726987706618,
+     0.10205415293876395
+    ],
+    "loss_db": 0.09138426630306892,
+    "worst_decile_db": 0.1976610745273878
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.22659118726994892,
+     0.23147638672126097
+    ],
+    "loss_db": 0.22892511706007038,
+    "worst_decile_db": 0.2552974537501942
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.12666316602213895,
+     0.1622538250439594
+    ],
+    "loss_db": 0.1440166522589927,
+    "worst_decile_db": 0.3478945484595658
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     0.10462219254866716,
+     0.1325871808217942
+    ],
+    "loss_db": 0.11842890246482549,
+    "worst_decile_db": 0.27481328056404014
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     0.2057433849722876,
+     0.24143986957628472
+    ],
+    "loss_db": 0.22287038252281738,
+    "worst_decile_db": 0.3984494146466547
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     21.448218535888536,
+     21.448218535888536
+    ],
+    "loss_db": 21.448218535888536,
+    "worst_decile_db": 21.448218535888536
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.07335762157878888,
+     0.09351045429278441
+    ],
+    "loss_db": 0.08361328284156544,
+    "worst_decile_db": 0.17202234052851229
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.08434300522625221,
+     0.10530309096307419
+    ],
+    "loss_db": 0.09462020211455444,
+    "worst_decile_db": 0.1974647888854386
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.08021882028761351,
+     0.10197425812186543
+    ],
+    "loss_db": 0.09075383858267748,
+    "worst_decile_db": 0.20333389346101707
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.30712859570148027,
+     0.33302919611478576
+    ],
+    "loss_db": 0.31986598064570543,
+    "worst_decile_db": 0.46829629640065623
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.22660332025160126,
+     0.23149081269993335
+    ],
+    "loss_db": 0.22893427657107096,
+    "worst_decile_db": 0.2552806098664197
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.5522582349407068,
+     0.571567520582235
+    ],
+    "loss_db": 0.5621816656225385,
+    "worst_decile_db": 0.6617218628724661
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.07367767691300572,
+     0.09409560496155675
+    ],
+    "loss_db": 0.08371462883112017,
+    "worst_decile_db": 0.1809366280177105
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.08015781863377125,
+     0.101711725300597
+    ],
+    "loss_db": 0.09062075072620705,
+    "worst_decile_db": 0.20519209237118255
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.3070416902111699,
+     0.3329127284750406
+    ],
+    "loss_db": 0.3198193440258906,
+    "worst_decile_db": 0.4660612648534112
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     0.2197280716197288,
+     0.2586946124918577
+    ],
+    "loss_db": 0.23841026098334012,
+    "worst_decile_db": 0.4230995365085779
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     0.5209948452900958,
+     0.6171310154770824
+    ],
+    "loss_db": 0.5703250843067385,
+    "worst_decile_db": 1.0817790281324444
+   }
+  },
+  "N=4 K=256 impulsive INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.5068940387192761,
+     0.5842936973412151
+    ],
+    "loss_db": 0.5456551422432692,
+    "worst_decile_db": 0.9683507561593367
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.5304948855491968,
+     0.6127676604045079
+    ],
+    "loss_db": 0.5717859230206571,
+    "worst_decile_db": 0.9989965966220522
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.477871192152737,
+     0.5491057079127694
+    ],
+    "loss_db": 0.5136994969723145,
+    "worst_decile_db": 0.8843150154965018
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.15155846768251666,
+     0.18456188697281167
+    ],
+    "loss_db": 0.1683856817378446,
+    "worst_decile_db": 0.33954538854236926
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     0.37795090116487234,
+     0.44289533135519354
+    ],
+    "loss_db": 0.41009758974317884,
+    "worst_decile_db": 0.7284460636036144
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     0.5974097697148141,
+     0.6915506867713643
+    ],
+    "loss_db": 0.6440820242922414,
+    "worst_decile_db": 1.162742659891627
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     3.7149894814232063,
+     3.7149894814232063
+    ],
+    "loss_db": 3.7149894814232063,
+    "worst_decile_db": 3.714989481423206
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.21647061043307822,
+     0.265950165175849
+    ],
+    "loss_db": 0.241339482945351,
+    "worst_decile_db": 0.4683422874421176
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.26024396814416906,
+     0.3176134121340235
+    ],
+    "loss_db": 0.2885778809960405,
+    "worst_decile_db": 0.5740961547461555
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.19434443831134338,
+     0.23599738304769635
+    ],
+    "loss_db": 0.21614121287341626,
+    "worst_decile_db": 0.4203895339389456
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.6504535404233435,
+     0.72518101034634
+    ],
+    "loss_db": 0.6899391803370776,
+    "worst_decile_db": 1.0742621829738215
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.19598234049157717,
+     0.22996177068605678
+    ],
+    "loss_db": 0.21327240865294644,
+    "worst_decile_db": 0.38156907398513523
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.3348069335788819,
+     0.37055277316244845
+    ],
+    "loss_db": 0.35200631526669196,
+    "worst_decile_db": 0.5509396780251591
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.24819170732486076,
+     0.31043735329473326
+    ],
+    "loss_db": 0.27929788760227886,
+    "worst_decile_db": 0.6079828833330101
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.4917606542873177,
+     0.5666815494117502
+    ],
+    "loss_db": 0.52937097812451,
+    "worst_decile_db": 0.9323995415542095
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.4809408027061518,
+     0.5423000684907345
+    ],
+    "loss_db": 0.511363684632608,
+    "worst_decile_db": 0.8817941157223506
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     0.6126759084157701,
+     0.7109200435090491
+    ],
+    "loss_db": 0.6621927724738459,
+    "worst_decile_db": 1.2056632001077443
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     0.46775341036249213,
+     0.5386776912435212
+    ],
+    "loss_db": 0.5025988976972134,
+    "worst_decile_db": 0.8813947521859811
+   }
+  },
+  "N=4 K=256 impulsive INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.08682094863297432,
+     0.10827836975511548
+    ],
+    "loss_db": 0.0976980424909199,
+    "worst_decile_db": 0.21119145751412813
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.09395511131069337,
+     0.11543373954776544
+    ],
+    "loss_db": 0.10480442900460266,
+    "worst_decile_db": 0.2184078514782314
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.10779426512054462,
+     0.1332697329119646
+    ],
+    "loss_db": 0.12116101294782876,
+    "worst_decile_db": 0.24290511478794966
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.19788052314860072,
+     0.2677088498606143
+    ],
+    "loss_db": 0.23250466503712208,
+    "worst_decile_db": 0.6418260050081016
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     0.0936382848428373,
+     0.11989572775431676
+    ],
+    "loss_db": 0.10653024862338524,
+    "worst_decile_db": 0.22266340496685522
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     0.590263869170235,
+     0.6838698867794895
+    ],
+    "loss_db": 0.6371317566364182,
+    "worst_decile_db": 1.1734186826659911
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     21.448218535888536,
+     21.448218535888536
+    ],
+    "loss_db": 21.448218535888536,
+    "worst_decile_db": 21.448218535888536
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.09767490329111254,
+     0.1214417910319126
+    ],
+    "loss_db": 0.1096158295616429,
+    "worst_decile_db": 0.2254496967595846
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.2518455990589589,
+     0.3081476849692088
+    ],
+    "loss_db": 0.27967906202687387,
+    "worst_decile_db": 0.5465815105935519
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.08216995159713497,
+     0.10416252586030682
+    ],
+    "loss_db": 0.09302909283917916,
+    "worst_decile_db": 0.20477811434696813
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.29779743419183125,
+     0.3222203821390893
+    ],
+    "loss_db": 0.30950802055410304,
+    "worst_decile_db": 0.4430255815181539
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.11047950918184418,
+     0.13571086851129285
+    ],
+    "loss_db": 0.12375686448497888,
+    "worst_decile_db": 0.24341822771628224
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.5490834548352259,
+     0.5930759540287069
+    ],
+    "loss_db": 0.5707023641946208,
+    "worst_decile_db": 0.7969815133532765
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.24167049943830574,
+     0.3027658247687637
+    ],
+    "loss_db": 0.2716921787715485,
+    "worst_decile_db": 0.6112220449987461
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.07945106185836247,
+     0.10137129965198574
+    ],
+    "loss_db": 0.09049309218025975,
+    "worst_decile_db": 0.20705447113693917
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.30395216712177564,
+     0.3294078050684659
+    ],
+    "loss_db": 0.3164143416721407,
+    "worst_decile_db": 0.4575985639710383
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     0.6062217960998727,
+     0.7035767299249713
+    ],
+    "loss_db": 0.6551813582625825,
+    "worst_decile_db": 1.176499723775119
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     0.44895558010990105,
+     0.5489849527021944
+    ],
+    "loss_db": 0.5000848049239647,
+    "worst_decile_db": 1.0207228384595626
+   }
+  },
+  "N=4 K=256 student INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.3250260700027523,
+     0.3884146478293747
+    ],
+    "loss_db": 0.35649230360286666,
+    "worst_decile_db": 0.6382747207365457
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.3376639768567845,
+     0.4113671637053532
+    ],
+    "loss_db": 0.37462859661643694,
+    "worst_decile_db": 0.6694387784690174
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.3444584651352139,
+     0.4080784971499127
+    ],
+    "loss_db": 0.37533188372584225,
+    "worst_decile_db": 0.613157020718262
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.17154155059594278,
+     0.20239526166026944
+    ],
+    "loss_db": 0.18669704558170658,
+    "worst_decile_db": 0.3333336832257955
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     0.26624302306785635,
+     0.306679237484348
+    ],
+    "loss_db": 0.2863609907711163,
+    "worst_decile_db": 0.46757125678980493
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     0.3584532824243502,
+     0.43865969322365167
+    ],
+    "loss_db": 0.3985432042055679,
+    "worst_decile_db": 0.7063842173662692
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     3.7149894814232063,
+     3.7149894814232063
+    ],
+    "loss_db": 3.7149894814232063,
+    "worst_decile_db": 3.714989481423206
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.20015018792496114,
+     0.2753502906109746
+    ],
+    "loss_db": 0.23730230112371217,
+    "worst_decile_db": 0.4781043673336221
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.16005798616472638,
+     0.21576207527332872
+    ],
+    "loss_db": 0.18753505017322003,
+    "worst_decile_db": 0.40188511111132674
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.2099167645039631,
+     0.25010830298738634
+    ],
+    "loss_db": 0.22913519082607792,
+    "worst_decile_db": 0.41711409282942313
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.7194568591376691,
+     0.7798788788186966
+    ],
+    "loss_db": 0.7483977891844227,
+    "worst_decile_db": 1.029226819963265
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.20853665729998694,
+     0.23650662503563094
+    ],
+    "loss_db": 0.22139332280279464,
+    "worst_decile_db": 0.326746586160323
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.3452065677051579,
+     0.3749214623016383
+    ],
+    "loss_db": 0.36015220277196425,
+    "worst_decile_db": 0.51325743948303
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.15605955231482452,
+     0.21181757045110486
+    ],
+    "loss_db": 0.18303977730024085,
+    "worst_decile_db": 0.42217621118962645
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.31698906997582516,
+     0.387450334267509
+    ],
+    "loss_db": 0.3524670917811318,
+    "worst_decile_db": 0.6241524447178612
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.4004459119944853,
+     0.4657950940332546
+    ],
+    "loss_db": 0.4338169366400182,
+    "worst_decile_db": 0.649541911374893
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     0.38176660346465985,
+     0.46248287516148934
+    ],
+    "loss_db": 0.4217605473175636,
+    "worst_decile_db": 0.7441633390480673
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     0.35879097454685516,
+     0.41043910941806544
+    ],
+    "loss_db": 0.38468695207949716,
+    "worst_decile_db": 0.6652673804133369
+   }
+  },
+  "N=4 K=256 student INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.08245772175101851,
+     0.10586761320286682
+    ],
+    "loss_db": 0.09449951013477284,
+    "worst_decile_db": 0.2115591032169904
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.0872025406287129,
+     0.1112778549779501
+    ],
+    "loss_db": 0.09968116789931081,
+    "worst_decile_db": 0.21757823016220118
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.15721498458086955,
+     0.1819814896198872
+    ],
+    "loss_db": 0.16974559304616682,
+    "worst_decile_db": 0.2457977034761191
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.15796924741313037,
+     0.20756208661690967
+    ],
+    "loss_db": 0.18009293690492373,
+    "worst_decile_db": 0.46580385390759127
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     0.10073241547447646,
+     0.12699375211756267
+    ],
+    "loss_db": 0.11301618366186206,
+    "worst_decile_db": 0.26116531889672484
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     0.3579532812065586,
+     0.4379402009162888
+    ],
+    "loss_db": 0.39746429383848436,
+    "worst_decile_db": 0.7100972297455586
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     21.448218535888536,
+     21.448218535888536
+    ],
+    "loss_db": 21.448218535888536,
+    "worst_decile_db": 21.448218535888536
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.09022821894464592,
+     0.13538635673045638
+    ],
+    "loss_db": 0.11057958016323145,
+    "worst_decile_db": 0.23108647324198034
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.15741598067194223,
+     0.2120668261123137
+    ],
+    "loss_db": 0.18496266518909116,
+    "worst_decile_db": 0.4040053202508053
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.07854873420216787,
+     0.10211990635962098
+    ],
+    "loss_db": 0.09051161221108239,
+    "worst_decile_db": 0.2041852240058671
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.29818460874210423,
+     0.3224577791848625
+    ],
+    "loss_db": 0.30997008518233277,
+    "worst_decile_db": 0.4202234948788417
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.15808086852121517,
+     0.1827728943252298
+    ],
+    "loss_db": 0.17063011574063133,
+    "worst_decile_db": 0.24591395744665695
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.5734449756116565,
+     0.6177855267312203
+    ],
+    "loss_db": 0.5960180715345086,
+    "worst_decile_db": 0.775108806368397
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.1557063111743335,
+     0.21152725270567654
+    ],
+    "loss_db": 0.1833232881916415,
+    "worst_decile_db": 0.4402737559514627
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.07866116717253546,
+     0.10228926607682963
+    ],
+    "loss_db": 0.09037601734756824,
+    "worst_decile_db": 0.21051201599506383
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.3037129651269359,
+     0.329916306886665
+    ],
+    "loss_db": 0.3164211875099816,
+    "worst_decile_db": 0.4466235812239212
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     0.3811738358328734,
+     0.4621437127568453
+    ],
+    "loss_db": 0.4206838211355167,
+    "worst_decile_db": 0.7525138098960814
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     0.4517838571130641,
+     0.5464339170136968
+    ],
+    "loss_db": 0.49928416072794346,
+    "worst_decile_db": 1.0773558559772287
+   }
+  },
+  "N=8 K=256 gaussian INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.8097602156794945,
+     0.8825897832831687
+    ],
+    "loss_db": 0.8465131152411443,
+    "worst_decile_db": 1.1825370193063243
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.8178950976574071,
+     0.8916688611856846
+    ],
+    "loss_db": 0.8551531715908823,
+    "worst_decile_db": 1.1949060067865496
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.5547846950697722,
+     0.618451588025787
+    ],
+    "loss_db": 0.5853662331082015,
+    "worst_decile_db": 0.8976524891078107
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.12145923389365211,
+     0.1307560703785053
+    ],
+    "loss_db": 0.12606933272430856,
+    "worst_decile_db": 0.16981904765310551
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     0.8607474568269762,
+     0.9400695993249489
+    ],
+    "loss_db": 0.9016202099840902,
+    "worst_decile_db": 1.287996256034074
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     0.7912886214944628,
+     0.8613307209016002
+    ],
+    "loss_db": 0.8261968994572559,
+    "worst_decile_db": 1.1370984370968458
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     4.993631126127227,
+     4.993631126127227
+    ],
+    "loss_db": 4.993631126127227,
+    "worst_decile_db": 4.993631126127227
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.26274903636591806,
+     0.3322046649760851
+    ],
+    "loss_db": 0.29584730534169207,
+    "worst_decile_db": 0.6929116430890219
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.12319830242833989,
+     0.15499025630672666
+    ],
+    "loss_db": 0.13886317270621093,
+    "worst_decile_db": 0.2867393809624451
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.1816500066423015,
+     0.22877658369490347
+    ],
+    "loss_db": 0.20481704016660762,
+    "worst_decile_db": 0.43541001053884704
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.1977418151572941,
+     0.24712409380955513
+    ],
+    "loss_db": 0.22234124865372729,
+    "worst_decile_db": 0.4689139757755363
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.016161334869657373,
+     0.017126065867904036
+    ],
+    "loss_db": 0.0166353899869824,
+    "worst_decile_db": 0.020772586369077875
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.2933119647516417,
+     0.2957459665877422
+    ],
+    "loss_db": 0.2945664252936429,
+    "worst_decile_db": 0.30480035518626103
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.10761045420272487,
+     0.13993272213379945
+    ],
+    "loss_db": 0.1234267696979091,
+    "worst_decile_db": 0.2769417735372259
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.761496888081061,
+     0.8306747217894351
+    ],
+    "loss_db": 0.7963781448807085,
+    "worst_decile_db": 1.1090611729353805
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.6619606709632384,
+     0.7289137590442876
+    ],
+    "loss_db": 0.6955047571884748,
+    "worst_decile_db": 1.0029771186480883
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     0.9148458914833859,
+     0.9975448457809826
+    ],
+    "loss_db": 0.9562885129262516,
+    "worst_decile_db": 1.3523374159949433
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     0.9989917928584902,
+     1.087926770876997
+    ],
+    "loss_db": 1.043661384346208,
+    "worst_decile_db": 1.539880029655748
+   }
+  },
+  "N=8 K=256 gaussian INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.13851018923868205,
+     0.16945196864182366
+    ],
+    "loss_db": 0.1534567719506934,
+    "worst_decile_db": 0.3069699130393811
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.14441301975438176,
+     0.17519275604123047
+    ],
+    "loss_db": 0.1592240093298146,
+    "worst_decile_db": 0.31293019159525015
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.014672826558444233,
+     0.015457422652893231
+    ],
+    "loss_db": 0.015037688307885603,
+    "worst_decile_db": 0.019009061558653714
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.13995321535645022,
+     0.18623878843373345
+    ],
+    "loss_db": 0.16237916329499444,
+    "worst_decile_db": 0.4166757545862726
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     0.1812269678494482,
+     0.220871390051463
+    ],
+    "loss_db": 0.19919565009109078,
+    "worst_decile_db": 0.3671378013629844
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     0.7901134492970844,
+     0.8608399308683277
+    ],
+    "loss_db": 0.8255880239224882,
+    "worst_decile_db": 1.1449922975064217
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     23.41304141699339,
+     23.41304141699339
+    ],
+    "loss_db": 23.41304141699339,
+    "worst_decile_db": 23.41304141699339
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.10982382296639423,
+     0.14133405952504607
+    ],
+    "loss_db": 0.12501447436081414,
+    "worst_decile_db": 0.27122849426857726
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.12316126274100521,
+     0.15423260625087273
+    ],
+    "loss_db": 0.13813013897862547,
+    "worst_decile_db": 0.2908164604789081
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.11481606015461544,
+     0.14661278729357735
+    ],
+    "loss_db": 0.13004472934020278,
+    "worst_decile_db": 0.273401224777636
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.12171183451329064,
+     0.15389409238405385
+    ],
+    "loss_db": 0.137044885682521,
+    "worst_decile_db": 0.27647697390355935
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.014756726367865946,
+     0.015535522213837263
+    ],
+    "loss_db": 0.015127143729946432,
+    "worst_decile_db": 0.019323392810872773
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.2579524831780421,
+     0.26038266324516546
+    ],
+    "loss_db": 0.25921974827263733,
+    "worst_decile_db": 0.27027043634869785
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.1075900154127272,
+     0.13898902920812123
+    ],
+    "loss_db": 0.1225906609606901,
+    "worst_decile_db": 0.2780032944497512
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.11470827613422355,
+     0.14649225753322653
+    ],
+    "loss_db": 0.1299745757418145,
+    "worst_decile_db": 0.27067395634318103
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.12160809221533084,
+     0.15378764586758883
+    ],
+    "loss_db": 0.1369923925493002,
+    "worst_decile_db": 0.27339030981585916
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     0.9149493477347799,
+     0.9972466330822725
+    ],
+    "loss_db": 0.9559353035560658,
+    "worst_decile_db": 1.3500914583243255
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     1.1644294149192984,
+     1.315995392102939
+    ],
+    "loss_db": 1.2390333057801177,
+    "worst_decile_db": 2.0043382809718318
+   }
+  },
+  "N=8 K=256 impulsive INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     1.5951735955498845,
+     1.7656233954005676
+    ],
+    "loss_db": 1.6812505577027557,
+    "worst_decile_db": 2.5318909263587672
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     1.645028000226268,
+     1.8206665175742769
+    ],
+    "loss_db": 1.7341845433499115,
+    "worst_decile_db": 2.615999818960298
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     1.3382593879350613,
+     1.490271984459879
+    ],
+    "loss_db": 1.4109813144708327,
+    "worst_decile_db": 2.202199960296613
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.05019710696680138,
+     0.0635591290005885
+    ],
+    "loss_db": 0.05650077850816203,
+    "worst_decile_db": 0.10430706021399186
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     1.6173287120363693,
+     1.7709855302782218
+    ],
+    "loss_db": 1.6950010835240588,
+    "worst_decile_db": 2.4872881209349678
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     1.9037495874200645,
+     2.1153515934176896
+    ],
+    "loss_db": 2.0093424722499793,
+    "worst_decile_db": 3.028677882732797
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     4.993631126127227,
+     4.993631126127227
+    ],
+    "loss_db": 4.993631126127227,
+    "worst_decile_db": 4.993631126127227
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.30262326617449187,
+     0.372658824176385
+    ],
+    "loss_db": 0.33523801637805717,
+    "worst_decile_db": 0.6972791082207492
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.1995783163737879,
+     1.3856817869538824
+    ],
+    "loss_db": 1.2915798867430177,
+    "worst_decile_db": 2.383520301864928
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.2084505833009942,
+     0.24665872716943768
+    ],
+    "loss_db": 0.22668492776936172,
+    "worst_decile_db": 0.44031644706820744
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.20452430272960534,
+     0.24047362170579964
+    ],
+    "loss_db": 0.22179551185186308,
+    "worst_decile_db": 0.4183410979640624
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.1507212539656844,
+     0.18913522507076203
+    ],
+    "loss_db": 0.16923577041515936,
+    "worst_decile_db": 0.3685006839227412
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.2879973699231139,
+     0.29768742492023537
+    ],
+    "loss_db": 0.29305318079853804,
+    "worst_decile_db": 0.34357568832880764
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     1.2328651065321872,
+     1.4220858874959872
+    ],
+    "loss_db": 1.3249420495508444,
+    "worst_decile_db": 2.4374836779029265
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     1.4780720365976177,
+     1.6330363431676616
+    ],
+    "loss_db": 1.5557490306439896,
+    "worst_decile_db": 2.3417582657848754
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.2900493595787568,
+     1.4338215690817664
+    ],
+    "loss_db": 1.363818594763377,
+    "worst_decile_db": 2.045047154116306
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     1.9643578992525497,
+     2.182735765870367
+    ],
+    "loss_db": 2.073376544374247,
+    "worst_decile_db": 3.1198285698500987
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     1.5644764574423404,
+     1.7049200301577634
+    ],
+    "loss_db": 1.6320095259672598,
+    "worst_decile_db": 2.452769347486792
+   }
+  },
+  "N=8 K=256 impulsive INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.1717371671910532,
+     0.20249260614813713
+    ],
+    "loss_db": 0.18647579376086978,
+    "worst_decile_db": 0.34651485908656604
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.182057048658596,
+     0.21374769544982866
+    ],
+    "loss_db": 0.19727954464545977,
+    "worst_decile_db": 0.3628343431204111
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.07366167728099272,
+     0.10201121039813604
+    ],
+    "loss_db": 0.08763137193380878,
+    "worst_decile_db": 0.26329228912440805
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.6475719392710396,
+     0.8507721712567264
+    ],
+    "loss_db": 0.7518103885566012,
+    "worst_decile_db": 1.7616692876054516
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     0.16714516245299169,
+     0.2088639094584195
+    ],
+    "loss_db": 0.1864920307246059,
+    "worst_decile_db": 0.42774454986706906
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     1.90049311293988,
+     2.114489650550219
+    ],
+    "loss_db": 2.00714964694583,
+    "worst_decile_db": 3.0252474732137538
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     23.41304141699339,
+     23.41304141699339
+    ],
+    "loss_db": 23.41304141699339,
+    "worst_decile_db": 23.41304141699339
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.1476839099416416,
+     0.18007452475450955
+    ],
+    "loss_db": 0.16337329132007497,
+    "worst_decile_db": 0.32340195364143476
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.1969415469140992,
+     1.384027987451852
+    ],
+    "loss_db": 1.288730871976501,
+    "worst_decile_db": 2.394059494927311
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.20162746064864945,
+     0.23798789315647811
+    ],
+    "loss_db": 0.21894280135634553,
+    "worst_decile_db": 0.40067369453849566
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.19601496986859732,
+     0.2312020144073548
+    ],
+    "loss_db": 0.21280174242793218,
+    "worst_decile_db": 0.3877556672112931
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.14255836698226848,
+     0.1799682220468868
+    ],
+    "loss_db": 0.1609414446601395,
+    "worst_decile_db": 0.35111259148980134
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.2659827258139592,
+     0.2762220097370076
+    ],
+    "loss_db": 0.2713795963495595,
+    "worst_decile_db": 0.3285244699691978
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     1.2297631619362615,
+     1.4192188306070523
+    ],
+    "loss_db": 1.3219734570799302,
+    "worst_decile_db": 2.448531334444892
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.12786953961490904,
+     0.15809319701414593
+    ],
+    "loss_db": 0.14218827713741408,
+    "worst_decile_db": 0.29605889714071365
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.13417253604448287,
+     0.16394034140332275
+    ],
+    "loss_db": 0.1481262403372355,
+    "worst_decile_db": 0.2984047009484727
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     1.9626266916280437,
+     2.1810174767561232
+    ],
+    "loss_db": 2.071456439982774,
+    "worst_decile_db": 3.113347082422268
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     0.953523231852413,
+     1.1098828006269987
+    ],
+    "loss_db": 1.0307690451529137,
+    "worst_decile_db": 1.7913694141676193
+   }
+  },
+  "N=8 K=256 student INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     1.0807314422013845,
+     1.1873552346914316
+    ],
+    "loss_db": 1.1314501486595432,
+    "worst_decile_db": 1.650733953985199
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     1.1093904056127424,
+     1.2184792098051624
+    ],
+    "loss_db": 1.1617346630908048,
+    "worst_decile_db": 1.7059706967152821
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.7856263095980826,
+     0.8770310570855222
+    ],
+    "loss_db": 0.8302236458154238,
+    "worst_decile_db": 1.312658480457034
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.08143175657219051,
+     0.09068726171047828
+    ],
+    "loss_db": 0.08604136943651265,
+    "worst_decile_db": 0.12701449273229506
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     1.1786691545614514,
+     1.2940035559639709
+    ],
+    "loss_db": 1.2362457421726007,
+    "worst_decile_db": 1.8280418783657995
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     1.0768187514886862,
+     1.1865611320783294
+    ],
+    "loss_db": 1.1309570419074124,
+    "worst_decile_db": 1.6780313488456833
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     4.993631126127227,
+     4.993631126127227
+    ],
+    "loss_db": 4.993631126127227,
+    "worst_decile_db": 4.993631126127227
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.2899143267710421,
+     0.3740053876343564
+    ],
+    "loss_db": 0.3313458722266454,
+    "worst_decile_db": 0.6845629305297027
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.312124730758614,
+     0.3960266434862182
+    ],
+    "loss_db": 0.3519295189831748,
+    "worst_decile_db": 0.7801422137909925
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.16194984530796716,
+     0.20238515090796225
+    ],
+    "loss_db": 0.18219350484030258,
+    "worst_decile_db": 0.39601972734946655
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.1727827415452242,
+     0.21408951069018475
+    ],
+    "loss_db": 0.1933387084134874,
+    "worst_decile_db": 0.4127121109328087
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.026682574507666257,
+     0.03598904485633984
+    ],
+    "loss_db": 0.030529747603308198,
+    "worst_decile_db": 0.04276459869620574
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.2859189544844807,
+     0.2910440854913629
+    ],
+    "loss_db": 0.2883730611227394,
+    "worst_decile_db": 0.3117017714920238
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.31206489584389774,
+     0.4012110437785975
+    ],
+    "loss_db": 0.35454966064923166,
+    "worst_decile_db": 0.8171446164093256
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     1.019866972016032,
+     1.1214712201108339
+    ],
+    "loss_db": 1.068626692356153,
+    "worst_decile_db": 1.5399191402064074
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.8849086686895111,
+     0.9804784032708795
+    ],
+    "loss_db": 0.9312161436826104,
+    "worst_decile_db": 1.4133381606586752
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     1.2666919756785202,
+     1.3880321063991208
+    ],
+    "loss_db": 1.3246778621997148,
+    "worst_decile_db": 1.9367502665986944
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     1.2309738965040935,
+     1.3386142360079571
+    ],
+    "loss_db": 1.2850522693291788,
+    "worst_decile_db": 1.8127380931051853
+   }
+  },
+  "N=8 K=256 student INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.1510149448086723,
+     0.18246172579104036
+    ],
+    "loss_db": 0.16621699874882737,
+    "worst_decile_db": 0.32279163823766155
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.15945922615295652,
+     0.19138841387873404
+    ],
+    "loss_db": 0.17541872508376147,
+    "worst_decile_db": 0.32670262481385554
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.019007475228579235,
+     0.026106647013877375
+    ],
+    "loss_db": 0.021936775053610757,
+    "worst_decile_db": 0.02914961496197835
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.19693865831852478,
+     0.2587723080230085
+    ],
+    "loss_db": 0.2266025947429366,
+    "worst_decile_db": 0.5738565330678278
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     0.1699306288052779,
+     0.2090814919146412
+    ],
+    "loss_db": 0.18814408997491422,
+    "worst_decile_db": 0.36992330902067294
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     1.0740457870911309,
+     1.1852473449784384
+    ],
+    "loss_db": 1.1287338659008739,
+    "worst_decile_db": 1.6579183977880416
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     23.41304141699339,
+     23.41304141699339
+    ],
+    "loss_db": 23.41304141699339,
+    "worst_decile_db": 23.41304141699339
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.1338058102672433,
+     0.19360650490631717
+    ],
+    "loss_db": 0.16270176237152392,
+    "worst_decile_db": 0.32801297865418383
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.310499853064214,
+     0.3932059169824412
+    ],
+    "loss_db": 0.3498403095437564,
+    "worst_decile_db": 0.7992527333284176
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.12332629908255234,
+     0.15211450659686712
+    ],
+    "loss_db": 0.1377081784626384,
+    "worst_decile_db": 0.2766080862362651
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.12854490901980056,
+     0.15745824396969513
+    ],
+    "loss_db": 0.14270397686917907,
+    "worst_decile_db": 0.28074078121738755
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.02515439350884934,
+     0.03429531294611155
+    ],
+    "loss_db": 0.028835191304101265,
+    "worst_decile_db": 0.041538718745805704
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.25738490564027017,
+     0.26283178532294527
+    ],
+    "loss_db": 0.25997969426912565,
+    "worst_decile_db": 0.2840145809848408
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.3099800468730334,
+     0.39737029197215407
+    ],
+    "loss_db": 0.3513854590805696,
+    "worst_decile_db": 0.8192884059917783
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.11600807262043036,
+     0.1448548444478997
+    ],
+    "loss_db": 0.13022122838857145,
+    "worst_decile_db": 0.2767065900933862
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.12224124357225001,
+     0.15108769784645987
+    ],
+    "loss_db": 0.13635640839855379,
+    "worst_decile_db": 0.2821426314515379
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     1.2658473398675267,
+     1.3867465227764497
+    ],
+    "loss_db": 1.3227418431281313,
+    "worst_decile_db": 1.9415445341617992
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     1.0580169743054206,
+     1.2133296379668472
+    ],
+    "loss_db": 1.135946617648245,
+    "worst_decile_db": 2.0947005037509725
+   }
+  },
+  "N=8 K=32 gaussian INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     2.519494303826956,
+     2.743926859430682
+    ],
+    "loss_db": 2.6321964067677723,
+    "worst_decile_db": 3.910465016266509
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     2.5507637134623344,
+     2.7583421531805277
+    ],
+    "loss_db": 2.6540648163139786,
+    "worst_decile_db": 3.8739637275673933
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     3.014882006034656,
+     3.2906607185771795
+    ],
+    "loss_db": 3.155274766469362,
+    "worst_decile_db": 4.580845867077176
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.1482565938206164,
+     0.17448782981779426
+    ],
+    "loss_db": 0.1617827186065297,
+    "worst_decile_db": 0.280871636208722
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     4.339739237822978,
+     4.63190612366015
+    ],
+    "loss_db": 4.488369896450444,
+    "worst_decile_db": 6.144487276211811
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     3.2294455052109012,
+     3.449797885788046
+    ],
+    "loss_db": 3.3387272545193665,
+    "worst_decile_db": 4.608782591402677
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     4.993631126127227,
+     4.993631126127227
+    ],
+    "loss_db": 4.993631126127227,
+    "worst_decile_db": 4.993631126127227
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.9480988145185516,
+     1.189923249240705
+    ],
+    "loss_db": 1.0665469255420914,
+    "worst_decile_db": 2.3843045439607105
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.8452746159348103,
+     1.0279956791057654
+    ],
+    "loss_db": 0.9342204436100133,
+    "worst_decile_db": 2.0224627689597616
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.7368874229235701,
+     0.908219599131579
+    ],
+    "loss_db": 0.8244090625927387,
+    "worst_decile_db": 1.866934226476279
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.733131175918427,
+     0.908291679680928
+    ],
+    "loss_db": 0.8218772573444013,
+    "worst_decile_db": 1.9051928450411761
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.0650735859749171,
+     0.07280606584837912
+    ],
+    "loss_db": 0.06895487056642213,
+    "worst_decile_db": 0.10776520265518703
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.2968659699898954,
+     0.30540978734508034
+    ],
+    "loss_db": 0.3013528523085306,
+    "worst_decile_db": 0.3412710416370391
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.738246231432624,
+     0.9291932304811461
+    ],
+    "loss_db": 0.8306924244224225,
+    "worst_decile_db": 1.9114627343504065
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     4.069768080873834,
+     4.36603633416133
+    ],
+    "loss_db": 4.216078333830227,
+    "worst_decile_db": 5.832120756639495
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     3.6033117902127993,
+     3.886715752273128
+    ],
+    "loss_db": 3.745173107762822,
+    "worst_decile_db": 5.256462091556198
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     4.817388458852187,
+     5.164305172224733
+    ],
+    "loss_db": 4.988828481064295,
+    "worst_decile_db": 6.932367879353491
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     4.718608727729224,
+     5.034570183182843
+    ],
+    "loss_db": 4.873496376308079,
+    "worst_decile_db": 6.512590396956163
+   }
+  },
+  "N=8 K=32 gaussian INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.7448387214818322,
+     0.9342859161791319
+    ],
+    "loss_db": 0.838014653298282,
+    "worst_decile_db": 2.0409614586529043
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.7477326188013054,
+     0.9375074620440232
+    ],
+    "loss_db": 0.8418290645922912,
+    "worst_decile_db": 2.041339371315708
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.05910525640279421,
+     0.06837306538558786
+    ],
+    "loss_db": 0.06372778366803536,
+    "worst_decile_db": 0.10006671029427716
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.5736530209576363,
+     0.7325754048579814
+    ],
+    "loss_db": 0.6493925946978997,
+    "worst_decile_db": 1.6511280824215289
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     1.1212905566345897,
+     1.334062784745696
+    ],
+    "loss_db": 1.225304078615995,
+    "worst_decile_db": 2.6561011893032545
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     3.221581912185316,
+     3.445379038642686
+    ],
+    "loss_db": 3.33322720847155,
+    "worst_decile_db": 4.600484809292547
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     23.41304141699339,
+     23.41304141699339
+    ],
+    "loss_db": 23.41304141699339,
+    "worst_decile_db": 23.41304141699339
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.7391588447259937,
+     0.9330221507719844
+    ],
+    "loss_db": 0.8311564983143317,
+    "worst_decile_db": 1.9725348260523723
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     0.8451332674567388,
+     1.0337860770192324
+    ],
+    "loss_db": 0.936697394618517,
+    "worst_decile_db": 2.151645189262079
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.7889668125558276,
+     0.9839770414431852
+    ],
+    "loss_db": 0.8845384848514037,
+    "worst_decile_db": 2.0198675917482953
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.7849122935410573,
+     0.9791978734056187
+    ],
+    "loss_db": 0.8801953964776432,
+    "worst_decile_db": 2.0217900327638594
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.06348439798073444,
+     0.07087936944906481
+    ],
+    "loss_db": 0.06724252171907939,
+    "worst_decile_db": 0.10419393160828744
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.2619826449892833,
+     0.2706202795384
+    ],
+    "loss_db": 0.2665095688172756,
+    "worst_decile_db": 0.3119942306138134
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     0.7358716421201322,
+     0.9290127657547851
+    ],
+    "loss_db": 0.8294348681116628,
+    "worst_decile_db": 1.9968903387044867
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.7847625527353796,
+     0.9789386470686908
+    ],
+    "loss_db": 0.8801471144657304,
+    "worst_decile_db": 2.019423236953335
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.7810202837920444,
+     0.9744411480878795
+    ],
+    "loss_db": 0.8765198467509265,
+    "worst_decile_db": 2.0290558313967026
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     4.816672536971115,
+     5.157504225057501
+    ],
+    "loss_db": 4.984190174992417,
+    "worst_decile_db": 6.893973101170982
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     2.696284029542998,
+     3.127599302631069
+    ],
+    "loss_db": 2.90331614585687,
+    "worst_decile_db": 5.899422458384571
+   }
+  },
+  "N=8 K=32 impulsive INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     2.1975759249558076,
+     2.4289272840762286
+    ],
+    "loss_db": 2.3146077355841204,
+    "worst_decile_db": 3.5453006939186418
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     2.3236802291071554,
+     2.5528544548489998
+    ],
+    "loss_db": 2.4354240135169034,
+    "worst_decile_db": 3.635952289411086
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     4.379445754292418,
+     4.767027036682765
+    ],
+    "loss_db": 4.574362011390137,
+    "worst_decile_db": 6.544816928133593
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.5315224427340689,
+     0.6857033281819135
+    ],
+    "loss_db": 0.6009505488805302,
+    "worst_decile_db": 1.597270995305796
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     6.37646913427792,
+     6.752705635817737
+    ],
+    "loss_db": 6.561601570645364,
+    "worst_decile_db": 8.712267974290276
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     7.2005383387939546,
+     7.646744777174619
+    ],
+    "loss_db": 7.418399702295434,
+    "worst_decile_db": 9.642787511713582
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     4.993631126127227,
+     4.993631126127227
+    ],
+    "loss_db": 4.993631126127227,
+    "worst_decile_db": 4.993631126127227
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     1.5139824449079606,
+     1.8132514865005256
+    ],
+    "loss_db": 1.6625567500073433,
+    "worst_decile_db": 3.4308739156426467
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.836402944286151,
+     2.162670538373313
+    ],
+    "loss_db": 1.9953697495165397,
+    "worst_decile_db": 4.144807807917453
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     1.4290506164429364,
+     1.6354647374039708
+    ],
+    "loss_db": 1.5261085900650855,
+    "worst_decile_db": 2.7695222040826217
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.4081827405435423,
+     1.620461483918316
+    ],
+    "loss_db": 1.5079370024032526,
+    "worst_decile_db": 2.6441547020435303
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.7939087511840313,
+     0.9502412174509351
+    ],
+    "loss_db": 0.8664451642314366,
+    "worst_decile_db": 1.73946141755942
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.2698220697026856,
+     0.284413873545003
+    ],
+    "loss_db": 0.2773161054464989,
+    "worst_decile_db": 0.3363081720584538
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     1.8343064717489077,
+     2.166027883876925
+    ],
+    "loss_db": 1.9959018038133078,
+    "worst_decile_db": 4.1377713836111205
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     5.235336118083926,
+     5.593982022000143
+    ],
+    "loss_db": 5.408956934205568,
+    "worst_decile_db": 7.298346093023067
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     4.728639741123473,
+     5.101659034693824
+    ],
+    "loss_db": 4.903027323838718,
+    "worst_decile_db": 6.900903753531525
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     8.757009968650518,
+     9.355661493452695
+    ],
+    "loss_db": 9.055068616118987,
+    "worst_decile_db": 11.932253372584796
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     7.092888790811212,
+     7.586449731403132
+    ],
+    "loss_db": 7.3298112503809145,
+    "worst_decile_db": 9.705422275691596
+   }
+  },
+  "N=8 K=32 impulsive INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.7453931912899848,
+     0.9521752390064274
+    ],
+    "loss_db": 0.8443270307618842,
+    "worst_decile_db": 1.9624827733658614
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.7514735917623796,
+     0.9540538856941783
+    ],
+    "loss_db": 0.8475422868873228,
+    "worst_decile_db": 1.9573600133760434
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.12115072804312886,
+     0.18393748677716712
+    ],
+    "loss_db": 0.14868948036786483,
+    "worst_decile_db": 0.3570216836023038
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     2.976902483225733,
+     3.562414061378928
+    ],
+    "loss_db": 3.2436653872072063,
+    "worst_decile_db": 7.859808909935182
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     1.0262177089185258,
+     1.2644021881184393
+    ],
+    "loss_db": 1.1396216136316628,
+    "worst_decile_db": 2.6342510386541234
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     7.193579232646412,
+     7.637354661174583
+    ],
+    "loss_db": 7.41026356392319,
+    "worst_decile_db": 9.643187973560902
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     23.41304141699339,
+     23.41304141699339
+    ],
+    "loss_db": 23.41304141699339,
+    "worst_decile_db": 23.41304141699339
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     1.2721238173343523,
+     1.5295699524507345
+    ],
+    "loss_db": 1.3976663221287722,
+    "worst_decile_db": 2.741503520646546
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.8308803280212984,
+     2.157564615154099
+    ],
+    "loss_db": 1.9901141227592742,
+    "worst_decile_db": 4.0601157090899305
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     1.4438419801714797,
+     1.6564811506059935
+    ],
+    "loss_db": 1.5440461540220687,
+    "worst_decile_db": 2.8043134892014763
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     1.4238542501423712,
+     1.6409519595241595
+    ],
+    "loss_db": 1.526377902032205,
+    "worst_decile_db": 2.7425433052779864
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.7928671133883176,
+     0.9498767542131002
+    ],
+    "loss_db": 0.8656189219780336,
+    "worst_decile_db": 1.7395800665686691
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.26706972422612413,
+     0.2826162595496801
+    ],
+    "loss_db": 0.27509981654391447,
+    "worst_decile_db": 0.33798936034912974
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     1.8284224412611656,
+     2.1590411518300323
+    ],
+    "loss_db": 1.9899611052385722,
+    "worst_decile_db": 4.09932509895055
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.8115983811061072,
+     1.01030071877124
+    ],
+    "loss_db": 0.9061077111570005,
+    "worst_decile_db": 2.0043989714412658
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.8130704515332743,
+     1.0126664920035735
+    ],
+    "loss_db": 0.9066896397656709,
+    "worst_decile_db": 1.9773858344486193
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     8.742569400492174,
+     9.348192935352827
+    ],
+    "loss_db": 9.045574443353356,
+    "worst_decile_db": 11.894727353503637
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     2.550045853764202,
+     3.056837899075924
+    ],
+    "loss_db": 2.78654756965543,
+    "worst_decile_db": 6.488314633257996
+   }
+  },
+  "N=8 K=32 student INR=10": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     2.519205400179727,
+     2.7585953837636534
+    ],
+    "loss_db": 2.6388247873720565,
+    "worst_decile_db": 4.026205661091088
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     2.5917994467898797,
+     2.817202259436233
+    ],
+    "loss_db": 2.702091127459381,
+    "worst_decile_db": 3.9671690166514004
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     3.5979828471448374,
+     3.9772386879166146
+    ],
+    "loss_db": 3.777793864030245,
+    "worst_decile_db": 5.796045752212828
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     0.12654489961966764,
+     0.15662545019542598
+    ],
+    "loss_db": 0.1410541429876017,
+    "worst_decile_db": 0.28916484548000565
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     5.308958432725715,
+     5.6912322684557175
+    ],
+    "loss_db": 5.490967549005057,
+    "worst_decile_db": 7.681057168163541
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     4.1374247025352595,
+     4.467612320656443
+    ],
+    "loss_db": 4.296197831620672,
+    "worst_decile_db": 6.077425917587439
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     4.993631126127227,
+     4.993631126127227
+    ],
+    "loss_db": 4.993631126127227,
+    "worst_decile_db": 4.993631126127227
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     1.1315984398243513,
+     1.4328640722728105
+    ],
+    "loss_db": 1.2766468505429962,
+    "worst_decile_db": 2.891365591345338
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.1793800162668686,
+     1.4275266289965074
+    ],
+    "loss_db": 1.2918890705883488,
+    "worst_decile_db": 2.6769579379088295
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.8376297689206933,
+     1.0186439966290044
+    ],
+    "loss_db": 0.9237246183297275,
+    "worst_decile_db": 2.0257813553022017
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.8199349611247402,
+     0.9999192554318979
+    ],
+    "loss_db": 0.9058960398084672,
+    "worst_decile_db": 2.0179111855086367
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.154774172007887,
+     0.20584341448925642
+    ],
+    "loss_db": 0.1775261963777337,
+    "worst_decile_db": 0.3527983729596423
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.2838885214566494,
+     0.29552528006159023
+    ],
+    "loss_db": 0.2899611224625796,
+    "worst_decile_db": 0.3423261564918481
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     1.1916337659343095,
+     1.4638201290413837
+    ],
+    "loss_db": 1.3173910489276042,
+    "worst_decile_db": 2.8712319618603637
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     4.671337744222083,
+     5.015686040190623
+    ],
+    "loss_db": 4.835573363865893,
+    "worst_decile_db": 6.897622504910352
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     4.1216046712149375,
+     4.460601541326869
+    ],
+    "loss_db": 4.285750535714023,
+    "worst_decile_db": 6.196025308226474
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     6.049841308262216,
+     6.493148392892253
+    ],
+    "loss_db": 6.267348730295538,
+    "worst_decile_db": 8.91995494738002
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     5.697603345583173,
+     6.090457254524814
+    ],
+    "loss_db": 5.892138182638672,
+    "worst_decile_db": 7.917308714491307
+   }
+  },
+  "N=8 K=32 student INR=30": {
+   "Ledoit-Wolf": {
+    "failures": 0,
+    "interval_db": [
+     0.7506949093444015,
+     0.9453253119226898
+    ],
+    "loss_db": 0.843469966892736,
+    "worst_decile_db": 1.9948163966381227
+   },
+   "OAS": {
+    "failures": 0,
+    "interval_db": [
+     0.7550508030580086,
+     0.9524325463988952
+    ],
+    "loss_db": 0.8482899932564107,
+    "worst_decile_db": 1.9680229321443135
+   },
+   "Phase 1 pipeline": {
+    "failures": 0,
+    "interval_db": [
+     0.06388126930718889,
+     0.09186356374855553
+    ],
+    "loss_db": 0.07530204578189635,
+    "worst_decile_db": 0.13969641479496112
+   },
+   "Toeplitz-FB": {
+    "failures": 0,
+    "interval_db": [
+     1.097111447369567,
+     1.362299972856365
+    ],
+    "loss_db": 1.2308800859442977,
+    "worst_decile_db": 3.1518239293593986
+   },
+   "Tyler": {
+    "failures": 0,
+    "interval_db": [
+     1.0963550688158448,
+     1.3332261075279492
+    ],
+    "loss_db": 1.2143240145500898,
+    "worst_decile_db": 2.613517862676969
+   },
+   "clipped": {
+    "failures": 0,
+    "interval_db": [
+     4.126148759460503,
+     4.460577765559121
+    ],
+    "loss_db": 4.285741933009328,
+    "worst_decile_db": 6.084447156731661
+   },
+   "delay-and-sum": {
+    "failures": 0,
+    "interval_db": [
+     23.41304141699339,
+     23.41304141699339
+    ],
+    "loss_db": 23.41304141699339,
+    "worst_decile_db": 23.41304141699339
+   },
+   "eigencanceler": {
+    "failures": 0,
+    "interval_db": [
+     0.8971525183116822,
+     1.1297229301790723
+    ],
+    "loss_db": 1.0035487605671938,
+    "worst_decile_db": 2.252220853629985
+   },
+   "eigenspace": {
+    "failures": 0,
+    "interval_db": [
+     1.171776407229699,
+     1.4228000054427354
+    ],
+    "loss_db": 1.28690734145182,
+    "worst_decile_db": 2.6878738243759175
+   },
+   "noise x10": {
+    "failures": 0,
+    "interval_db": [
+     0.8910086770595582,
+     1.0870613319245435
+    ],
+    "loss_db": 0.9790157261759842,
+    "worst_decile_db": 2.135053042748888
+   },
+   "noise x10 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.8747765771921459,
+     1.0719649671619762
+    ],
+    "loss_db": 0.9638018886767018,
+    "worst_decile_db": 2.1498441542739495
+   },
+   "pipeline, noise loading": {
+    "failures": 0,
+    "interval_db": [
+     0.1527318801292969,
+     0.2030642359925231
+    ],
+    "loss_db": 0.17549436371529104,
+    "worst_decile_db": 0.3525889801028439
+   },
+   "reconstruction": {
+    "failures": 0,
+    "interval_db": [
+     0.2656362958198881,
+     0.2775085439648357
+    ],
+    "loss_db": 0.2718606816687717,
+    "worst_decile_db": 0.3292356139120198
+   },
+   "reduced-rank GSC": {
+    "failures": 0,
+    "interval_db": [
+     1.1952829531100304,
+     1.4614868558029055
+    ],
+    "loss_db": 1.3189042798571995,
+    "worst_decile_db": 2.876851027421465
+   },
+   "relative 1e-2": {
+    "failures": 0,
+    "interval_db": [
+     0.795156763154878,
+     0.9928428715590285
+    ],
+    "loss_db": 0.8839651416047724,
+    "worst_decile_db": 2.0935892986175646
+   },
+   "relative 1e-2 + derivative": {
+    "failures": 0,
+    "interval_db": [
+     0.7933294537907538,
+     0.9909757562843475
+    ],
+    "loss_db": 0.8826082741742381,
+    "worst_decile_db": 2.0708136101967427
+   },
+   "sample": {
+    "failures": 0,
+    "interval_db": [
+     6.052165050239484,
+     6.4921577600809295
+    ],
+    "loss_db": 6.27043608056998,
+    "worst_decile_db": 8.897169797656684
+   },
+   "sign": {
+    "failures": 0,
+    "interval_db": [
+     2.685596807817917,
+     3.1563869916723952
+    ],
+    "loss_db": 2.9078183424934116,
+    "worst_decile_db": 6.30280704891296
+   }
+  }
+ },
+ "environment": {
+  "commit": "de72f70",
+  "machine": "AMD64",
+  "numpy": "2.4.6",
+  "python": "3.11.18",
+  "system": "Windows"
+ }
+}

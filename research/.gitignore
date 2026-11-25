@@ -1,0 +1,2 @@
+# The root .gitignore excludes results/; the numbers behind the reports are versioned.
+!results/

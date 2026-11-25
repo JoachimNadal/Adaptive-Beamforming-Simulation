@@ -1,0 +1,101 @@
+{
+ "data": {
+  "mild sources=2 MRA-4": {
+   "interval": [
+    0.9545979351700657,
+    0.9863650562602375
+   ],
+   "median_error_deg": 0.4250772995995664,
+   "rmse_deg": 3.5589141232263994,
+   "success": 0.975
+  },
+  "mild sources=2 ULA-4": {
+   "interval": [
+    0.825287326885749,
+    0.8928160086794825
+   ],
+   "median_error_deg": 0.8752153297911505,
+   "rmse_deg": 1.6882895229475572,
+   "success": 0.8625
+  },
+  "mild sources=2 nested-4": {
+   "interval": [
+    0.9181319717303434,
+    0.9634017781359406
+   ],
+   "median_error_deg": 0.5790241736147124,
+   "rmse_deg": 1.1252557845428341,
+   "success": 0.945
+  },
+  "mild sources=5 MRA-4": {
+   "interval": [
+    0.5994796194705074,
+    0.6927141515525868
+   ],
+   "median_error_deg": 0.676893393780249,
+   "rmse_deg": 3.97525125668288,
+   "success": 0.6475
+  },
+  "mild sources=5 nested-4": {
+   "interval": [
+    0.40931270985864554,
+    0.5064958645923273
+   ],
+   "median_error_deg": 1.0766537963023946,
+   "rmse_deg": 3.3020788578438824,
+   "success": 0.4575
+  },
+  "severe sources=2 MRA-4": {
+   "interval": [
+    0.9035727207806045,
+    0.9531988451006718
+   ],
+   "median_error_deg": 0.5873868978578614,
+   "rmse_deg": 5.282153149668426,
+   "success": 0.9325
+  },
+  "severe sources=2 ULA-4": {
+   "interval": [
+    0.5689683892522508,
+    0.6637961402068244
+   ],
+   "median_error_deg": 1.4652340652803961,
+   "rmse_deg": 4.231275520581938,
+   "success": 0.6175
+  },
+  "severe sources=2 nested-4": {
+   "interval": [
+    0.8035644342063322,
+    0.8749194069828867
+   ],
+   "median_error_deg": 0.8176897758732267,
+   "rmse_deg": 2.7346179255701064,
+   "success": 0.8425
+  },
+  "severe sources=5 MRA-4": {
+   "interval": [
+    0.23589351571381517,
+    0.3233396093530428
+   ],
+   "median_error_deg": 1.5536690842077938,
+   "rmse_deg": 7.114397857230117,
+   "success": 0.2775
+  },
+  "severe sources=5 nested-4": {
+   "interval": [
+    0.06358653632567662,
+    0.11926139216905993
+   ],
+   "median_error_deg": 2.80054852398192,
+   "rmse_deg": 6.880292464875888,
+   "success": 0.0875
+  }
+ },
+ "environment": {
+  "commit": "66fd57e",
+  "machine": "AMD64",
+  "numpy": "2.4.6",
+  "python": "3.11.18",
+  "system": "Windows"
+ }
+}

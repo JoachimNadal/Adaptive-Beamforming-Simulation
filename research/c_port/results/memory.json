@@ -1,0 +1,55 @@
+{
+ "data": {
+  "f32": {
+   "code_bytes": {
+    "bss": 0,
+    "data": 0,
+    "text": 20760
+   },
+   "largest_frames": {
+    "abf_covariance_update": 2144,
+    "abf_mvdr_weights": 2400,
+    "abfp_calibrate": 416,
+    "abfp_process": 480,
+    "abfp_root_music": 1424,
+    "source_powers": 2544
+   },
+   "stack_chains_bytes": {
+    "LCMV": 592,
+    "root-MUSIC": 2176,
+    "selection": 3184,
+    "square root": 944
+   },
+   "state_bytes": 12804
+  },
+  "f64": {
+   "code_bytes": {
+    "bss": 0,
+    "data": 0,
+    "text": 21516
+   },
+   "largest_frames": {
+    "abf_covariance_update": 2144,
+    "abf_mvdr_weights": 2400,
+    "abfp_calibrate": 576,
+    "abfp_process": 784,
+    "abfp_root_music": 1440,
+    "source_powers": 4912
+   },
+   "stack_chains_bytes": {
+    "LCMV": 944,
+    "root-MUSIC": 2496,
+    "selection": 5904,
+    "square root": 1408
+   },
+   "state_bytes": 25296
+  }
+ },
+ "environment": {
+  "commit": "7659e02",
+  "machine": "AMD64",
+  "numpy": "2.4.6",
+  "python": "3.11.18",
+  "system": "Windows"
+ }
+}

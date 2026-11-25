@@ -1,0 +1,245 @@
+{
+ "data": {
+  "band_noise": {
+   "accuracy": 0.995,
+   "auroc": {
+    "CNN Mahalanobis": 0.723345,
+    "CNN k-NN": 0.75318,
+    "energy": 0.31805,
+    "extended Mahalanobis": 0.88134,
+    "extended k-NN": 0.8734400000000001,
+    "features Mahalanobis": 0.80684,
+    "features k-NN": 0.9045925,
+    "fusion": 0.815625,
+    "softmax": 0.32551749999999996,
+    "spectrogram residual": 0.21479499999999999
+   },
+   "detected": {
+    "CNN Mahalanobis": 0.24,
+    "CNN k-NN": 0.215,
+    "energy": 0.1,
+    "extended Mahalanobis": 0.73,
+    "extended k-NN": 0.7,
+    "features Mahalanobis": 0.48,
+    "features k-NN": 0.75,
+    "fusion": 0.465,
+    "softmax": 0.11,
+    "spectrogram residual": 0.0
+   },
+   "false_alarm": {
+    "CNN Mahalanobis": 0.039,
+    "CNN k-NN": 0.05,
+    "energy": 0.042,
+    "extended Mahalanobis": 0.056,
+    "extended k-NN": 0.06,
+    "features Mahalanobis": 0.066,
+    "features k-NN": 0.049,
+    "fusion": 0.062,
+    "softmax": 0.045,
+    "spectrogram residual": 0.05
+   }
+  },
+  "chirp": {
+   "accuracy": 0.973,
+   "auroc": {
+    "CNN Mahalanobis": 0.9624149999999999,
+    "CNN k-NN": 0.99245,
+    "energy": 0.6039500000000001,
+    "extended Mahalanobis": 0.941385,
+    "extended k-NN": 0.915925,
+    "features Mahalanobis": 0.741005,
+    "features k-NN": 0.902675,
+    "fusion": 0.9630675,
+    "softmax": 0.7930975,
+    "spectrogram residual": 0.733505
+   },
+   "detected": {
+    "CNN Mahalanobis": 0.805,
+    "CNN k-NN": 0.97,
+    "energy": 0.2,
+    "extended Mahalanobis": 0.805,
+    "extended k-NN": 0.76,
+    "features Mahalanobis": 0.315,
+    "features k-NN": 0.73,
+    "fusion": 0.83,
+    "softmax": 0.31,
+    "spectrogram residual": 0.0
+   },
+   "false_alarm": {
+    "CNN Mahalanobis": 0.059,
+    "CNN k-NN": 0.054,
+    "energy": 0.067,
+    "extended Mahalanobis": 0.049,
+    "extended k-NN": 0.054,
+    "features Mahalanobis": 0.066,
+    "features k-NN": 0.039,
+    "fusion": 0.076,
+    "softmax": 0.062,
+    "spectrogram residual": 0.052
+   }
+  },
+  "cw": {
+   "accuracy": 0.964,
+   "auroc": {
+    "CNN Mahalanobis": 0.982885,
+    "CNN k-NN": 0.989015,
+    "energy": 0.8700950000000001,
+    "extended Mahalanobis": 0.999265,
+    "extended k-NN": 0.99951,
+    "features Mahalanobis": 0.999745,
+    "features k-NN": 1.0,
+    "fusion": 0.9971125,
+    "softmax": 0.94149,
+    "spectrogram residual": 0.41628
+   },
+   "detected": {
+    "CNN Mahalanobis": 0.895,
+    "CNN k-NN": 0.95,
+    "energy": 0.305,
+    "extended Mahalanobis": 1.0,
+    "extended k-NN": 1.0,
+    "features Mahalanobis": 1.0,
+    "features k-NN": 1.0,
+    "fusion": 0.99,
+    "softmax": 0.61,
+    "spectrogram residual": 0.0
+   },
+   "false_alarm": {
+    "CNN Mahalanobis": 0.043,
+    "CNN k-NN": 0.048,
+    "energy": 0.062,
+    "extended Mahalanobis": 0.053,
+    "extended k-NN": 0.051,
+    "features Mahalanobis": 0.065,
+    "features k-NN": 0.046,
+    "fusion": 0.057,
+    "softmax": 0.063,
+    "spectrogram residual": 0.057
+   }
+  },
+  "noise": {
+   "accuracy": 0.977,
+   "auroc": {
+    "CNN Mahalanobis": 0.60384,
+    "CNN k-NN": 0.861225,
+    "energy": 0.995125,
+    "extended Mahalanobis": 0.839645,
+    "extended k-NN": 0.625845,
+    "features Mahalanobis": 0.534825,
+    "features k-NN": 0.5651575,
+    "fusion": 0.77088,
+    "softmax": 0.9823,
+    "spectrogram residual": 0.999915
+   },
+   "detected": {
+    "CNN Mahalanobis": 0.0,
+    "CNN k-NN": 0.075,
+    "energy": 1.0,
+    "extended Mahalanobis": 0.025,
+    "extended k-NN": 0.015,
+    "features Mahalanobis": 0.0,
+    "features k-NN": 0.025,
+    "fusion": 0.0,
+    "softmax": 0.955,
+    "spectrogram residual": 1.0
+   },
+   "false_alarm": {
+    "CNN Mahalanobis": 0.045,
+    "CNN k-NN": 0.054,
+    "energy": 0.057,
+    "extended Mahalanobis": 0.051,
+    "extended k-NN": 0.061,
+    "features Mahalanobis": 0.067,
+    "features k-NN": 0.049,
+    "fusion": 0.059,
+    "softmax": 0.061,
+    "spectrogram residual": 0.05
+   }
+  },
+  "pulsed": {
+   "accuracy": 0.965,
+   "auroc": {
+    "CNN Mahalanobis": 0.971705,
+    "CNN k-NN": 0.97492,
+    "energy": 0.6045499999999999,
+    "extended Mahalanobis": 1.0,
+    "extended k-NN": 0.99997,
+    "features Mahalanobis": 0.9999349999999999,
+    "features k-NN": 0.99993,
+    "fusion": 0.9960875,
+    "softmax": 0.725885,
+    "spectrogram residual": 0.6215700000000001
+   },
+   "detected": {
+    "CNN Mahalanobis": 0.855,
+    "CNN k-NN": 0.905,
+    "energy": 0.19,
+    "extended Mahalanobis": 1.0,
+    "extended k-NN": 1.0,
+    "features Mahalanobis": 1.0,
+    "features k-NN": 1.0,
+    "fusion": 0.985,
+    "softmax": 0.145,
+    "spectrogram residual": 0.0
+   },
+   "false_alarm": {
+    "CNN Mahalanobis": 0.06,
+    "CNN k-NN": 0.065,
+    "energy": 0.061,
+    "extended Mahalanobis": 0.039,
+    "extended k-NN": 0.05,
+    "features Mahalanobis": 0.051,
+    "features k-NN": 0.042,
+    "fusion": 0.049,
+    "softmax": 0.065,
+    "spectrogram residual": 0.05
+   }
+  },
+  "qpsk": {
+   "accuracy": 0.992,
+   "auroc": {
+    "CNN Mahalanobis": 0.5181549999999999,
+    "CNN k-NN": 0.698245,
+    "energy": 0.5981000000000001,
+    "extended Mahalanobis": 0.936515,
+    "extended k-NN": 0.908665,
+    "features Mahalanobis": 0.918025,
+    "features k-NN": 0.928705,
+    "fusion": 0.7518275,
+    "softmax": 0.61148,
+    "spectrogram residual": 0.27754500000000004
+   },
+   "detected": {
+    "CNN Mahalanobis": 0.04,
+    "CNN k-NN": 0.18,
+    "energy": 0.095,
+    "extended Mahalanobis": 0.75,
+    "extended k-NN": 0.67,
+    "features Mahalanobis": 0.7,
+    "features k-NN": 0.755,
+    "fusion": 0.185,
+    "softmax": 0.1,
+    "spectrogram residual": 0.0
+   },
+   "false_alarm": {
+    "CNN Mahalanobis": 0.043,
+    "CNN k-NN": 0.058,
+    "energy": 0.052,
+    "extended Mahalanobis": 0.048,
+    "extended k-NN": 0.054,
+    "features Mahalanobis": 0.069,
+    "features k-NN": 0.043,
+    "fusion": 0.058,
+    "softmax": 0.06,
+    "spectrogram residual": 0.051
+   }
+  }
+ },
+ "environment": {
+  "commit": "21cf449",
+  "machine": "AMD64",
+  "numpy": "2.4.6",
+  "python": "3.11.18",
+  "system": "Windows"
+ }
+}

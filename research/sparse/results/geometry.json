@@ -1,0 +1,303 @@
+{
+ "data": {
+  "4 elements, wavelength spacing": {
+   "aperture": 6,
+   "beamwidth_deg": NaN,
+   "coarray_weights": [
+    4,
+    0,
+    3,
+    0,
+    2,
+    0,
+    1
+   ],
+   "contiguous_lags": 0,
+   "elements": 4,
+   "grating_lobe": true,
+   "identifiable_sources": 0,
+   "num_elements_check": 4,
+   "positions": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "sidelobe_db": 0.0,
+   "unit_spacing_pairs": 0,
+   "worst_ambiguity": 1.0,
+   "worst_ambiguity_at_sine": 1.0
+  },
+  "MRA-4": {
+   "aperture": 6,
+   "beamwidth_deg": 12.170541034552667,
+   "coarray_weights": [
+    4,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "contiguous_lags": 6,
+   "elements": 4,
+   "grating_lobe": false,
+   "identifiable_sources": 6,
+   "num_elements_check": 4,
+   "positions": [
+    0,
+    1,
+    4,
+    6
+   ],
+   "sidelobe_db": -5.254641624486985,
+   "unit_spacing_pairs": 1,
+   "worst_ambiguity": 0.5460945774316659,
+   "worst_ambiguity_at_sine": 0.379
+  },
+  "MRA-8": {
+   "aperture": 23,
+   "beamwidth_deg": 3.387688914679189,
+   "coarray_weights": [
+    8,
+    1,
+    2,
+    2,
+    1,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "contiguous_lags": 23,
+   "elements": 8,
+   "grating_lobe": false,
+   "identifiable_sources": 23,
+   "num_elements_check": 8,
+   "positions": [
+    0,
+    1,
+    4,
+    10,
+    16,
+    18,
+    21,
+    23
+   ],
+   "sidelobe_db": -5.923377924222115,
+   "unit_spacing_pairs": 1,
+   "worst_ambiguity": 0.5056280532247931,
+   "worst_ambiguity_at_sine": 1.8960000000000001
+  },
+  "ULA-4": {
+   "aperture": 3,
+   "beamwidth_deg": 26.3229524101253,
+   "coarray_weights": [
+    4,
+    3,
+    2,
+    1
+   ],
+   "contiguous_lags": 3,
+   "elements": 4,
+   "grating_lobe": false,
+   "identifiable_sources": 3,
+   "num_elements_check": 4,
+   "positions": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "sidelobe_db": -11.303337791201054,
+   "unit_spacing_pairs": 3,
+   "worst_ambiguity": 0.2721652821827432,
+   "worst_ambiguity_at_sine": 0.7325
+  },
+  "ULA-7 (aperture of MRA-4)": {
+   "aperture": 6,
+   "beamwidth_deg": 14.671730106200034,
+   "coarray_weights": [
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "contiguous_lags": 6,
+   "elements": 7,
+   "grating_lobe": false,
+   "identifiable_sources": 6,
+   "num_elements_check": 7,
+   "positions": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "sidelobe_db": -12.652188560349117,
+   "unit_spacing_pairs": 6,
+   "worst_ambiguity": 0.23301857149153807,
+   "worst_ambiguity_at_sine": 1.5885
+  },
+  "ULA-8": {
+   "aperture": 7,
+   "beamwidth_deg": 12.802526409123963,
+   "coarray_weights": [
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+   ],
+   "contiguous_lags": 7,
+   "elements": 8,
+   "grating_lobe": false,
+   "identifiable_sources": 7,
+   "num_elements_check": 8,
+   "positions": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "sidelobe_db": -12.797363441426448,
+   "unit_spacing_pairs": 7,
+   "worst_ambiguity": 0.22915672603824644,
+   "worst_ambiguity_at_sine": 0.3595
+  },
+  "coprime-4": {
+   "aperture": 4,
+   "beamwidth_deg": 19.976385467805592,
+   "coarray_weights": [
+    4,
+    2,
+    2,
+    1,
+    1
+   ],
+   "contiguous_lags": 4,
+   "elements": 4,
+   "grating_lobe": false,
+   "identifiable_sources": 4,
+   "num_elements_check": 4,
+   "positions": [
+    0,
+    2,
+    3,
+    4
+   ],
+   "sidelobe_db": -6.020599913279624,
+   "unit_spacing_pairs": 2,
+   "worst_ambiguity": 0.5,
+   "worst_ambiguity_at_sine": 1.0
+  },
+  "nested-4": {
+   "aperture": 5,
+   "beamwidth_deg": 15.875879421422074,
+   "coarray_weights": [
+    4,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "contiguous_lags": 5,
+   "elements": 4,
+   "grating_lobe": false,
+   "identifiable_sources": 5,
+   "num_elements_check": 4,
+   "positions": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "sidelobe_db": -5.139239311497289,
+   "unit_spacing_pairs": 2,
+   "worst_ambiguity": 0.5533988145167719,
+   "worst_ambiguity_at_sine": 1.565
+  },
+  "nested-8": {
+   "aperture": 19,
+   "beamwidth_deg": 4.656165009012492,
+   "coarray_weights": [
+    8,
+    4,
+    3,
+    2,
+    1,
+    3,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "contiguous_lags": 19,
+   "elements": 8,
+   "grating_lobe": false,
+   "identifiable_sources": 19,
+   "num_elements_check": 8,
+   "positions": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    9,
+    14,
+    19
+   ],
+   "sidelobe_db": -5.4485365785848705,
+   "unit_spacing_pairs": 4,
+   "worst_ambiguity": 0.5340418930013623,
+   "worst_ambiguity_at_sine": 1.877
+  }
+ },
+ "environment": {
+  "commit": "66fd57e",
+  "machine": "AMD64",
+  "numpy": "2.4.6",
+  "python": "3.11.18",
+  "system": "Windows"
+ }
+}
