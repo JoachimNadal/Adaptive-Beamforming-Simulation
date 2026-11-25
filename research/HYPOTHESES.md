@@ -75,3 +75,13 @@ impulsive noise. 2000 scenes, seeds never used before. Registered before the run
 |---|---|---|
 | H1.11 | The hybrid has the smallest 90th-percentile loss of all methods and it is ≤ 3 dB | another method has a smaller one, or it exceeds 3 dB |
 | H1.12 | The Phase 1 pipeline has a 90th-percentile loss ≥ 5 dB on these scenes | less than 5 dB |
+
+## Priority 1, loading factor
+
+H1.11 was refuted: plain noise-referenced loading beats the hybrid. Its factor (10) was never tuned.
+It is now tuned on a **design set** (1000 scenes, own seeds) and judged on a **second held-out set**
+(2000 scenes, own seeds). Registered before both runs.
+
+| ID | Hypothesis | Refuted if |
+|---|---|---|
+| H1.13 | A factor chosen on the design set (with or without derivative constraint) reduces the 90th-percentile loss by ≥ 1 dB against factor 10 on the second held-out set | smaller reduction |
