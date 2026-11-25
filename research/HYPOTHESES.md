@@ -85,3 +85,12 @@ It is now tuned on a **design set** (1000 scenes, own seeds) and judged on a **s
 | ID | Hypothesis | Refuted if |
 |---|---|---|
 | H1.13 | A factor chosen on the design set (with or without derivative constraint) reduces the 90th-percentile loss by ≥ 1 dB against factor 10 on the second held-out set | smaller reduction |
+
+## Priority 3, second round
+
+Registered after the first C results (float32 miscounts sources from 60 dB INR because the noise
+eigenvalues drown in the rounding error of the covariance) and before the prototype was written.
+
+| ID | Hypothesis | Refuted if |
+|---|---|---|
+| H3.5 | Square-root processing in float32 (QR of the data instead of a covariance, SVD of the triangular factor) counts the sources correctly in ≥ 99 % of blocks and loses ≤ 0.1 dB against float64, up to 80 dB INR, for N ∈ {4, 8, 16} | any of these points fails |
