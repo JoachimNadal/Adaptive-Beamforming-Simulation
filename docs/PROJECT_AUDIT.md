@@ -100,9 +100,10 @@ Each one was reproduced on the unmodified code. "Measured" values come from exec
 | D8 | `linear_array.py` | Unknown unit strings are treated as radians | `unite="degrees"` silently gives wrong angles |
 | D9 | `mvdr.py` | `np.linalg.inv`, no loading, no conditioning check | With K = 2 < N returns meaningless weights without any error |
 | D10 | `null_steering.py` | Explicit inverse, one interferer only | Coincident directions raise a bare `LinAlgError` |
-| D11 | `rls.py` | `P` is never re-symmetrised, gain denominator is complex | Course §13.12 requires both for stability |
+| D11 | `rls.py` | `P` is never re-symmetrised | Harmless in double precision (asymmetry stays at 1e-16 after 20 000 updates). In single precision with a 40 dB interferer and λ = 0.9, `P` becomes indefinite (smallest eigenvalue −0.03) |
 | D12 | all pattern methods | 5° scan grid | Nulls and peaks between grid points are invisible |
 | D13 | `linear_array.py` vs beamformers | Default unit is `rad` in one and `deg` in the others | Source of D5 |
+| D25 | all examples and tests | The reference interferer (−40°, target 20°) lies almost in a natural null of the 4-element delay-and-sum beam | DAS alone rejects it by 32.6 dB, so the demo scene never shows what adaptation brings |
 
 ### Minor — engineering quality
 
@@ -188,6 +189,7 @@ be corrected here. The checks below were executed. Details and reproduction:
 | E3 | Listing 24.1 | Source counting uses the *loaded* covariance: on the book's own scenario it finds L = 2 in 200/200 trials, so **both jammers never receive an explicit null** |
 | E4 | Listing 24.1 | Takes the largest grid points instead of local maxima |
 | E5 | Listing 22.1 | Averages raw snapshots, which only works for a constant source; the eigenvector method of §22.2.3 is the general one |
+| E7 | Listing 23.1 | The derivative constraint is referenced to element 0, which costs **5.2 dB** of array gain (N = 8) compared with the same constraint referenced to the array centre |
 | E6 | Appendix C.1 | Refers to a script that is not in the repository |
 
 ---

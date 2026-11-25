@@ -55,8 +55,8 @@ Thumbs.db
 # =========================
 # Datasets
 # =========================
-datasets/raw/
-datasets/generated/
+ai/datasets/raw/
+ai/datasets/generated/
 
 # =========================
 # SDR / RF captures
@@ -93,6 +93,9 @@ htmlcov/
 *.out
 cmake-build-debug/
 cmake-build-release/
+*.exe
+*.dll
+*.obj
 
 # =========================
 # Qt
@@ -107,10 +110,16 @@ cmake-build-release/
 *.nvvp
 
 # =========================
-# Generated images/videos
+# Generated output (curated figures live in assets/ and ARE tracked)
 # =========================
 *.mp4
 *.avi
-*.png
-*.jpg
 results/
+outputs/
+
+# =========================
+# Tool caches
+# =========================
+.ruff_cache/
+.mypy_cache/
+coverage.xml

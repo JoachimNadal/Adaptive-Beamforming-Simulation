@@ -1,0 +1,2 @@
+# Editable install so that `python examples/<demo>.py` finds the packages.
+-e .
