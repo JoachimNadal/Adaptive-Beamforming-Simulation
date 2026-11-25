@@ -1,0 +1,423 @@
+{
+ "rtl_433_tests": {
+  "repository": "merbanan/rtl_433_tests",
+  "commit": "1bd5af52f389f0150bda566437e7d5e17e11fc7f",
+  "licence": "none stated; public regression captures, downloaded for local evaluation and not redistributed",
+  "sample_rate_hz": 250000,
+  "files": [
+   {
+    "path": "tests/124-spider/01_FR_1_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "d01a7c3fc6b431e09c8c8f26d113694188508a66"
+   },
+   {
+    "path": "tests/6sc2/02/g002_315.1M_250k.cu8",
+    "size": 393216,
+    "git_blob": "40842b4cd0f914fb0b23c3912e45b067e92e8f7e"
+   },
+   {
+    "path": "tests/EV1527-PIR-SGOOWAY/01/g016_433.92M_250k.cu8",
+    "size": 131072,
+    "git_blob": "0944906932a76f20a0274b2c368342b2b39c4e85"
+   },
+   {
+    "path": "tests/EV1527-Universal-Remote/g020_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "22793aad86ef57305133d2f41e66e14e03549c5a"
+   },
+   {
+    "path": "tests/EcoEye/01/g033_432.5M_250k.cu8",
+    "size": 131072,
+    "git_blob": "b414806fa9bc352de626c24cb807049c2d24e39c"
+   },
+   {
+    "path": "tests/EcoWitt-WH40/WH31_433.92M_250k.cu8",
+    "size": 131072,
+    "git_blob": "10db0af7a1b328ae3fc035dc7648f5a7c0352699"
+   },
+   {
+    "path": "tests/Elantra2012TPMS/g001_315M_250k.cu8",
+    "size": 262144,
+    "git_blob": "e39f9791e58a67ac8b74c3a8a514715a27ad8e90"
+   },
+   {
+    "path": "tests/Eurochron-EFTH800/g001_433.92M_250k.cu8",
+    "size": 131072,
+    "git_blob": "7577872606c319e93af472924616137d7264ebaa"
+   },
+   {
+    "path": "tests/Fanimation-Fan/01/g001_304.25M_250k.cu8",
+    "size": 262144,
+    "git_blob": "b9ea9192b6731f42e990e7aa7998a69a4ca242fc"
+   },
+   {
+    "path": "tests/IKEA_Sparsnas/01/g001_867.95M_250k.cu8",
+    "size": 131072,
+    "git_blob": "013b6c617e80b13deb2add4507fea531c11a5cc1"
+   },
+   {
+    "path": "tests/Jansite_TPMS/01/FL-08-22_433.92M_250k.cu8",
+    "size": 170208,
+    "git_blob": "6c1769fdcc52742dcba21755a326d9eb655db1d1"
+   },
+   {
+    "path": "tests/Jeep_TPMS/g031_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "ddb6113c4481aefb42e0efb8246168a86dd5a612"
+   },
+   {
+    "path": "tests/LiftMaster_4330E/g006_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "f472713b62da8217223baf8a5dd070e613011a7d"
+   },
+   {
+    "path": "tests/Microchip/HCS200/01/g001-BTN1_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "7a4f5c43522ca411d5d974ecd4f629bfcd203c54"
+   },
+   {
+    "path": "tests/NGE101/01/g001_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "475df31e192591eb4908e265c8b0f8a434740bbb"
+   },
+   {
+    "path": "tests/Nissan_TPMS/01/g001_315M_250k.cu8",
+    "size": 262144,
+    "git_blob": "c38318be0496f0dca5929149e71bef89d655767e"
+   },
+   {
+    "path": "tests/Opus-XT300/01/g005_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "53779014994fc4ee49e7581dac19d68135cd42db"
+   },
+   {
+    "path": "tests/Shenzhen Wale/WL-TH6R/01/test_1_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "e89df565844e241019558ce46c1a351fa405557a"
+   },
+   {
+    "path": "tests/SmarTire_TPMS/01/g013_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "228afecbe4f3b1c36f35c71e288ca53f174dca47"
+   },
+   {
+    "path": "tests/TFA-Drop-30.3233.01/g001_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "660c3f99620b8500c1adea6f624cc00f0e23afe8"
+   },
+   {
+    "path": "tests/TFA_30.3196_TempHumid/g001_868.33M_250k.cu8",
+    "size": 262144,
+    "git_blob": "26b418dafe7fc6b2118182527220cff4f9b1a424"
+   },
+   {
+    "path": "tests/TS-FT002/g001_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "ee88ed2ec235f0b0abf53f9009b94da320d470c9"
+   },
+   {
+    "path": "tests/Toyota_TPMS/02/0d5aee3_g007_433.92M_250k.cu8",
+    "size": 131072,
+    "git_blob": "d7c80c60457027aafed20b23467e3bde358b1cd3"
+   },
+   {
+    "path": "tests/XC-0324/02/g001_433.917M_250k.cu8",
+    "size": 131072,
+    "git_blob": "bd2c10908f1086cb1cab1736da1b99048dc41d03"
+   },
+   {
+    "path": "tests/abarth124_tpms/01/01_FR_1_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "d01a7c3fc6b431e09c8c8f26d113694188508a66"
+   },
+   {
+    "path": "tests/abmt/01/g003_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "99d1478cbd9799b4cab12574d4e042479c20d054"
+   },
+   {
+    "path": "tests/acurite/Acurite_3-in-1/02/g001_433.92M_250k.cu8",
+    "size": 131072,
+    "git_blob": "056207d237d90053a21a40595bdfde36dc3f56d1"
+   },
+   {
+    "path": "tests/adlm_fprf/01/g003_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "2153eed64c89b1f4cc971599c0b5334d4b5932cf"
+   },
+   {
+    "path": "tests/alecto_ws_1200/01/g002_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "f4d21b21226af729e827deebcc742e3229319348"
+   },
+   {
+    "path": "tests/allstar/firefly/01/firefly_00000000m_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "f4d0267b51426e3926101151cdb802003d2a04dd"
+   },
+   {
+    "path": "tests/alps/fwb1u545/01/lock_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "66eaf7eb6df006c097a4d0e5bff8358b01514220"
+   },
+   {
+    "path": "tests/ambient_weather/03/g002_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "a1d349dc8e34aa13d3d960679bba8dfb075269a2"
+   },
+   {
+    "path": "tests/ansonic/01/ansonic_3c2_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "d5ce70477f9121c3ec15d0fa835a9d64ac2543b1"
+   },
+   {
+    "path": "tests/archos-tbh/01/tbh_temp_001_433.901M_250k.cu8",
+    "size": 131072,
+    "git_blob": "271471f35f7a36107ffa3bc5835b17fd4a28e5eb"
+   },
+   {
+    "path": "tests/auriol/Auriol_AFT77B2/g001_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "5df492f8c91a9dd3e289b08cb90dfd541925d259"
+   },
+   {
+    "path": "tests/bcf-0019x2/bcf-0019x2-fan speed_button-3_high_305M_250k.cu8",
+    "size": 262144,
+    "git_blob": "36bf815408ba8f96c85ff1e1d1d531e07cbbff4b"
+   },
+   {
+    "path": "tests/bett/01/bett_0e38e_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "4b63d8310dc4d149877da6aa8d567ed6b37af752"
+   },
+   {
+    "path": "tests/blueline/01/gap_45364_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "7730d645920e23b5310727be06dab3210ed6dadf"
+   },
+   {
+    "path": "tests/bresser_5in1/01/g001_868.3M_250k.cu8",
+    "size": 131072,
+    "git_blob": "48f37423dc6d3a5d005b60a15fbfbf8babd1faa4"
+   },
+   {
+    "path": "tests/celsia-czc1/g001_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "b14e7fad7e789b0f07ec8afb5581860438054267"
+   },
+   {
+    "path": "tests/chamberlain/dip_code/01/cham_7bit_55_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "bf9487ac4b5e5770ccf6a1aa7b999e6283b94a25"
+   },
+   {
+    "path": "tests/clemsa/01/clemsa_0ce2c_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "97895c0f8e645597ae6b80885acbc2c76780507e"
+   },
+   {
+    "path": "tests/cmr113/g024_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "ff2392cecd7fc0a31a8fa879a662cbe35b3cd79f"
+   },
+   {
+    "path": "tests/code-alarm/frdpc2002/01/lock_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "f00d0616e2b578d5cebe3d20d7cee3c79db6efb3"
+   },
+   {
+    "path": "tests/companion_wtr001/01/g015_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "4503d9b2c8bbc59a82f0e5700f9758ff30442374"
+   },
+   {
+    "path": "tests/compustar/1wg3r/01/lock_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "dc36f171273d0584af4d97b919502743a633c7ea"
+   },
+   {
+    "path": "tests/continental_tpms/01/g001_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "2428c6bc4850640b03c01c8df2d25e8675f4dfdd"
+   },
+   {
+    "path": "tests/current_cost/03/cc_opti_counter.g006_433.92M_250k.cu8",
+    "size": 131072,
+    "git_blob": "64bedd6167d369603b33d991422b07eb9e142717"
+   },
+   {
+    "path": "tests/current_cost_envir/01/g001_433.92M_250k.cu8",
+    "size": 131072,
+    "git_blob": "370390ec5bb92ce89ce5072d6b4b003659e0dcde"
+   },
+   {
+    "path": "tests/directv/01/g001_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "35b69de9481f355170f508fa0358ff7e20d4d9a2"
+   },
+   {
+    "path": "tests/dish_remote_6.3/01/cancel_384M_250k.cu8",
+    "size": 262144,
+    "git_blob": "b4a158f1f083a44e534acb3f9b3a67f8c9a7ccbd"
+   },
+   {
+    "path": "tests/ecowitt/01/g3022_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "1b4faf9331959a41fed05f50f4eaec86d5283732"
+   },
+   {
+    "path": "tests/elplast/01/elplast_1a5c6_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "2d06c6beb9ea2e5800e61feba628c4929f06f1c4"
+   },
+   {
+    "path": "tests/elro/db270/01/elro_db270_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "83872268553af24bd6eddb24e93b09fd9e88d092"
+   },
+   {
+    "path": "tests/emax/01/g012_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "731682fc88d20b7bc11f9e91ce9941968d6f1e6b"
+   },
+   {
+    "path": "tests/en2058/01/g004_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "7778fcc499d855ffdf6eebfffd3411565dbbe31e"
+   },
+   {
+    "path": "tests/euroster/3000tx/01/g002_433.92M_250k.cu8",
+    "size": 131072,
+    "git_blob": "4673ba05c2149763bebfd79738cf56efb51634bb"
+   },
+   {
+    "path": "tests/excelvan/01/g001_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "bdd0b92e8c597d94926cb75cb284ff0f826a9f9a"
+   },
+   {
+    "path": "tests/feron/01/feron_1a2b_off_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "99374c2ba6e8bb0321b738591d0de036115115be"
+   },
+   {
+    "path": "tests/fineoffset/fineoffset_wh0530/01/g005_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "57e7de0ed311ec20739d89a91ef1a7b4e5e6eecd"
+   },
+   {
+    "path": "tests/fsl_scoreboard/01/g001_433.954M_250k.cu8",
+    "size": 393216,
+    "git_blob": "dd71affa62cda6e5b74b831beb778b94842730a0"
+   },
+   {
+    "path": "tests/fuzhou_emax/RainWind/g003_433.92M_250k.cu8",
+    "size": 131072,
+    "git_blob": "e4d3c4ce1b3ef4b3e22c8015abd6d17689151946"
+   },
+   {
+    "path": "tests/gangqi/01/gangqi_1a2b_arm_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "58bbc171f3c9cfe946c28b85968ba12fdd53e892"
+   },
+   {
+    "path": "tests/general_motors/ABO1502T/01/g006_314.9M_250k.cu8",
+    "size": 262144,
+    "git_blob": "6bea369363c20cfb40bce6be8bb911f4e9659a18"
+   },
+   {
+    "path": "tests/generic-4ch-black-remote-315mhz/01/g001_315M_250k.cu8",
+    "size": 131072,
+    "git_blob": "ac4c991f4785875462fc0c2112c62f2fb437e2dd"
+   },
+   {
+    "path": "tests/generic-4ch-black-remote-433mhz/01/g001_433.92M_250k.cu8",
+    "size": 131072,
+    "git_blob": "09164687237ef579713a21f742a98d706cc3d42a"
+   },
+   {
+    "path": "tests/generic_remote/02/button_a_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "c7c3b3c83b605893dd2106ea68885431f78c3611"
+   },
+   {
+    "path": "tests/govee_h5059/g001_912.275M_250k.cu8",
+    "size": 131072,
+    "git_blob": "3c3a6a5672f3f0e20a9e8b8f1eafa274c28bb8f5"
+   },
+   {
+    "path": "tests/govee_h5112/01/g001_912.375M_250k.cu8",
+    "size": 262144,
+    "git_blob": "8f9187bf6d532c517281c77ce357e1ee03593e3d"
+   },
+   {
+    "path": "tests/govee_h5310/g002_912.275M_250k.cu8",
+    "size": 131072,
+    "git_blob": "c7a2f2093f5c55d846ec9dbef817af7d8bae064a"
+   },
+   {
+    "path": "tests/hideki/05/g001_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "47d9ca20c6040ada69417f73fb63fc6d16bb8e1e"
+   },
+   {
+    "path": "tests/hollarm/01/hollarm_1a2b3c_arm_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "187927c24d09d491779b007d94c9e911a84af743"
+   },
+   {
+    "path": "tests/holman_ws5029/01/g003_917M_250k.cu8",
+    "size": 131072,
+    "git_blob": "b8ff77f61898a77875bde49d1e10def6610b6ac5"
+   },
+   {
+    "path": "tests/honeywell/2Gig-DW10/g001_344.975M_250k.cu8",
+    "size": 393216,
+    "git_blob": "9d0aba233c75b8af28dbcc5c1fe8cee00150fdf6"
+   },
+   {
+    "path": "tests/honeywell_5816/g002_344.975M_250k.cu8",
+    "size": 393216,
+    "git_blob": "cbfef4b425bf97cfe7eb02adc7c694dfb5bc0048"
+   },
+   {
+    "path": "tests/honeywell_5890PI/01/g002_344.975M_250k.cu8",
+    "size": 393216,
+    "git_blob": "db3d3afb8c7ffbe5c96f7c1cf6d0e5e66aca2e15"
+   },
+   {
+    "path": "tests/ido/117/01/ido_fedcb_btn8_433.92M_250k.cu8",
+    "size": 393216,
+    "git_blob": "0d292db83213ed02a251fc563dbb326e35b07b3c"
+   },
+   {
+    "path": "tests/interlogix/05/status_report_319.5M_250k.cu8",
+    "size": 393216,
+    "git_blob": "ed612638519da407d873c34dd6d321dc2f5cb69e"
+   },
+   {
+    "path": "tests/keeloq/01/g012_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "ea582fe5848863498f9443c932dd17141dfd8e7d"
+   },
+   {
+    "path": "tests/keyfinder/01/keyfinder_1a2b3_b1_433.92M_250k.cu8",
+    "size": 262144,
+    "git_blob": "e1bea115094da33a2fd7126838e23bb32da61ec0"
+   }
+  ]
+ },
+ "dump1090": {
+  "repository": "antirez/dump1090",
+  "commit": "efe64db3c6ba1520291331628a33c1e208e851a6",
+  "licence": "BSD-3-Clause",
+  "sample_rate_hz": 2000000,
+  "files": [
+   {
+    "path": "testfiles/modes1.bin",
+    "size": 713736,
+    "git_blob": "62f7f97e41c0ad19d03f7bfd16da920c9b6b096b"
+   }
+  ]
+ }
+}

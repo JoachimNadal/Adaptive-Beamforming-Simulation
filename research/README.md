@@ -7,7 +7,7 @@ R&D built on the frozen baseline `v1.0.0-phase1`. Nothing here modifies it: CI r
 |---|---|---|
 | Hypotheses | [HYPOTHESES.md](HYPOTHESES.md) | committed before the experiments |
 | 1 Covariance estimation | [covariance/REPORT.md](covariance/REPORT.md) | done |
-| 2 Unknown waveforms | `open_set/REPORT.md` | planned |
+| 2 Unknown waveforms | [open_set/REPORT.md](open_set/REPORT.md) | done |
 | 3 C port | `c_port/REPORT.md` | planned |
 | 4 Sparse arrays | `sparse/REPORT.md` | planned |
 | Receiver survey | `hardware/RECEIVER_SURVEY.md` | planned |
