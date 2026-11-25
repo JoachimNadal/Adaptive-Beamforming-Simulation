@@ -22,3 +22,47 @@ jobs:
           fetch-tags: true
       - run: git fetch --force --tags origin
       - run: python3 research/check_baseline.py
+
+  c-pipeline:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, ubuntu-24.04-arm]
+        compiler: [gcc, clang]
+    runs-on: ${{ matrix.os }}
+    env:
+      CC: ${{ matrix.compiler }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Release build, tests and benchmark
+        run: |
+          cmake -S embedded/pipeline_c -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build
+          ctest --test-dir build --output-on-failure
+          uname -m
+          ./build/bench_pipeline_f32
+          ./build/bench_pipeline_f64
+      - name: Address and undefined-behaviour sanitizers
+        run: |
+          cmake -S embedded/pipeline_c -B build-san -DCMAKE_BUILD_TYPE=Debug -DABFP_SANITIZE=ON
+          cmake --build build-san
+          ctest --test-dir build-san --output-on-failure
+      - name: Thread sanitizer on the ring buffer
+        run: >
+          $CC -std=c11 -O1 -g -fsanitize=thread -D_POSIX_C_SOURCE=200809L
+          -Iembedded/pipeline_c/include embedded/pipeline_c/tests/test_ring.c -lpthread
+          -o ring_tsan && ./ring_tsan
+
+  c-static-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y cppcheck
+      - run: >
+          cppcheck --enable=warning,performance,portability --inline-suppr --std=c99
+          --error-exitcode=1 --suppress=missingIncludeSystem
+          --suppress=normalCheckLevelMaxBranches
+          -I embedded/core/include -I embedded/pipeline_c/include embedded/pipeline_c/src
+      - run: >
+          gcc -std=c99 -O2 -fanalyzer -Wall -Wextra -Werror -Iembedded/core/include
+          -Iembedded/pipeline_c/include -c embedded/pipeline_c/src/*.c

@@ -1,0 +1,6 @@
+# bugprone-signed-bitwise flags literal shift counts (x >> 4), which are fine.
+Checks: >
+  -*,bugprone-*,cert-*,clang-analyzer-*,misc-*,performance-*,portability-*,
+  -bugprone-easily-swappable-parameters,-bugprone-signed-bitwise,-misc-include-cleaner
+WarningsAsErrors: '*'
+HeaderFilterRegex: 'abf.*\.h'
