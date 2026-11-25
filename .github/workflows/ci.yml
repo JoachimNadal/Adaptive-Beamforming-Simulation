@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: ubuntu-latest, python: "3.11" }
+          - { os: ubuntu-latest, python: "3.13" }
+          - { os: windows-latest, python: "3.12" }
+          - { os: ubuntu-24.04-arm, python: "3.12" }
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e ".[dev]"
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: mypy
+      - run: pytest
+
+  c-core:
+    strategy:
+      fail-fast: false
+      matrix:
+        # arm64 is the architecture of the Raspberry Pi 5 and Jetson Orin
+        os: [ubuntu-latest, ubuntu-24.04-arm]
+        compiler: [gcc, clang]
+    runs-on: ${{ matrix.os }}
+    env:
+      CC: ${{ matrix.compiler }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Release build, tests and benchmark
+        run: |
+          cmake -S embedded/core -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build
+          ctest --test-dir build --output-on-failure
+          uname -m
+          ./build/bench_abf
+      - name: Address and undefined-behaviour sanitizers
+        run: |
+          cmake -S embedded/core -B build-san -DCMAKE_BUILD_TYPE=Debug -DABF_SANITIZE=ON
+          cmake --build build-san
+          ctest --test-dir build-san --output-on-failure
+
+  static-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y cppcheck clang-tidy
+      - run: >
+          cppcheck --enable=warning,style,performance,portability --inline-suppr
+          --std=c99 --error-exitcode=1 --suppress=missingIncludeSystem
+          --suppress=normalCheckLevelMaxBranches
+          -I embedded/core/include embedded/core/src
+      - run: gcc -std=c99 -O2 -fanalyzer -Wall -Wextra -Werror -Iembedded/core/include -c embedded/core/src/abf_weights.c embedded/core/src/abf_frame.c
