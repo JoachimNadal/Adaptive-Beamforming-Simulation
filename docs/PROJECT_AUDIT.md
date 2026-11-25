@@ -103,7 +103,7 @@ Each one was reproduced on the unmodified code. "Measured" values come from exec
 | D11 | `rls.py` | `P` is never re-symmetrised | Harmless in double precision (asymmetry stays at 1e-16 after 20 000 updates). In single precision with a 40 dB interferer and λ = 0.9, `P` becomes indefinite (smallest eigenvalue −0.03) |
 | D12 | all pattern methods | 5° scan grid | Nulls and peaks between grid points are invisible |
 | D13 | `linear_array.py` vs beamformers | Default unit is `rad` in one and `deg` in the others | Source of D5 |
-| D25 | all examples and tests | The reference interferer (−40°, target 20°) lies almost in a natural null of the 4-element delay-and-sum beam | DAS alone rejects it by 32.6 dB, so the demo scene never shows what adaptation brings |
+| D25 | all examples and tests | The reference interferer (−40°, target 20°) lies almost in a natural null of the 4-element delay-and-sum beam | DAS alone rejects it by 32.5 dB, so the demo scene never shows what adaptation brings |
 
 ### Minor — engineering quality
 
