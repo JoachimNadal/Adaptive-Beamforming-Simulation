@@ -1,8 +1,8 @@
 import numpy as np
 
 from simulations.antenna_array.linear_array import LinearArray
-from simulations.scenarios.spatiotemporal_signal import simulate_spatiotemporal_sources
 from simulations.beamforming.lms import LMSBeamformer
+from simulations.scenarios.spatiotemporal_signal import simulate_spatiotemporal_sources
 
 
 def test_lms_error_decreases():
@@ -24,12 +24,10 @@ def test_lms_error_decreases():
         desired_amplitude=1.0,
         interference_amplitude=0.8,
         noise_power=0.03,
-        unite="deg"
+        unite="deg",
     )
 
-    desired_signal = np.exp(
-        1j * 2 * np.pi * desired_frequency * time_vector
-    )
+    desired_signal = np.exp(1j * 2 * np.pi * desired_frequency * time_vector)
 
     lms = LMSBeamformer(array, mu=0.001)
 

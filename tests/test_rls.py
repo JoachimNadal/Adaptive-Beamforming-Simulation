@@ -1,9 +1,9 @@
 import numpy as np
 
 from simulations.antenna_array.linear_array import LinearArray
-from simulations.scenarios.spatiotemporal_signal import simulate_spatiotemporal_sources
 from simulations.beamforming.lms import LMSBeamformer
 from simulations.beamforming.rls import RLSBeamformer
+from simulations.scenarios.spatiotemporal_signal import simulate_spatiotemporal_sources
 
 
 def test_rls_converges_faster_than_lms():
@@ -25,12 +25,10 @@ def test_rls_converges_faster_than_lms():
         desired_amplitude=1.0,
         interference_amplitude=0.8,
         noise_power=0.03,
-        unite="deg"
+        unite="deg",
     )
 
-    desired_signal = np.exp(
-        1j * 2 * np.pi * desired_frequency * time_vector
-    )
+    desired_signal = np.exp(1j * 2 * np.pi * desired_frequency * time_vector)
 
     lms = LMSBeamformer(array, mu=0.001)
     rls = RLSBeamformer(array, lambda_factor=0.99, delta=1.0)
