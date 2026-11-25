@@ -94,6 +94,8 @@ def geometry():
         pattern = np.abs(sp.steering(positions, np.radians(angles)).mean(axis=0)) ** 2
         gain = sp.ambiguity(positions, u)
         main = int(np.argmax(np.diff(gain) > 0))  # first minimum
+        # with half-wavelength units u = 2 is the trivial wrap from -90 to +90 degrees
+        last = len(u) - 1 - main
         spacing = np.diff(np.sort(positions))
         result[name] = {
             "positions": positions,
@@ -104,10 +106,10 @@ def geometry():
             "identifiable_sources": sp.contiguous(positions),
             "beamwidth_deg": half_power_beamwidth(angles, pattern),
             "sidelobe_db": peak_sidelobe_db(pattern),
-            "worst_ambiguity": float(gain[main:].max()),
-            "worst_ambiguity_at_sine": float(u[main + int(np.argmax(gain[main:]))]),
+            "worst_ambiguity": float(gain[main:last].max()),
+            "worst_ambiguity_at_sine": float(u[main + int(np.argmax(gain[main:last]))]),
             "unit_spacing_pairs": int(np.sum(spacing == 1)),
-            "grating_lobe": bool(np.any(gain[main:] > 0.999)),
+            "grating_lobe": bool(np.any(gain[main:last] > 0.999)),
             "num_elements_check": array.num_elements,
         }
     return result
@@ -165,6 +167,53 @@ def random_directions(positions, snapshots, trials=400):
         estimate = sp.coarray_music(compute_covariance_matrix(X), positions, 5)
         successes += bool(np.max(np.abs(estimate - angles)) < TOLERANCE)
     return {"success": successes / trials, "interval": proportion_interval(successes, trials)}
+
+
+def combined_scene(rng, count, separation, n_db=10.0):
+    while True:
+        angles = np.sort(rng.uniform(-60, 60, count))
+        if np.min(np.diff(angles)) >= separation:
+            break
+    powers = 10 ** ((n_db - rng.uniform(0, 10, count)) / 10)
+    return angles, powers
+
+
+def combined():
+    """All imperfections at once, five and two sources (H4.7, H4.8)."""
+    levels = {
+        "mild": {"separation": 18.0, "phase": 2.0, "coupling": 0.05},
+        "severe": {"separation": 14.0, "phase": 5.0, "coupling": 0.1},
+    }
+    result = {}
+    for level, v in levels.items():
+        options = {
+            "phase": v["phase"],
+            "coupling": v["coupling"],
+            "position_error": 0.01,
+            "correlation": 0.2,
+        }
+        for count, names in ((5, ("MRA-4", "nested-4")), (2, ("MRA-4", "nested-4", "ULA-4"))):
+            for name in names:
+                positions = sp.GEOMETRIES[name]
+                if sp.contiguous(positions) < count:
+                    continue
+                errors, successes, trials = [], 0, 400
+                for t in range(trials):
+                    rng = make_rng([14, count, t])
+                    angles, powers = combined_scene(rng, count, v["separation"])
+                    X = simulate(positions, angles, powers, 500, rng, **options)
+                    R = compute_covariance_matrix(X)
+                    error = sp.coarray_music(R, positions, count) - angles
+                    ok = bool(np.max(np.abs(error)) < TOLERANCE)
+                    successes += ok
+                    errors.append(error)
+                result[f"{level} sources={count} {name}"] = {
+                    "success": successes / trials,
+                    "interval": proportion_interval(successes, trials),
+                    "median_error_deg": float(np.median(np.abs(errors))),
+                    "rmse_deg": float(np.sqrt(np.mean(np.square(errors)))),
+                }
+    return result
 
 
 def comparison():
@@ -254,7 +303,7 @@ def beamforming():
     return result
 
 
-EXPERIMENTS = (geometry, stress, comparison, ambiguity, beamforming)
+EXPERIMENTS = (geometry, stress, combined, comparison, ambiguity, beamforming)
 
 
 def main(names):

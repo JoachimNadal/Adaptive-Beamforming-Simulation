@@ -19,6 +19,7 @@ GEOMETRIES = {
     "nested-8": (0, 1, 2, 3, 4, 9, 14, 19),
     "MRA-8": (0, 1, 4, 10, 16, 18, 21, 23),
     "ULA-7 (aperture of MRA-4)": tuple(range(7)),
+    "4 elements, wavelength spacing": (0, 2, 4, 6),
 }
 
 
