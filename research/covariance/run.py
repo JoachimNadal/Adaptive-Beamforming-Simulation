@@ -9,12 +9,13 @@ go to ``research/covariance/results``.
 
 import sys
 import time
+from functools import partial
 
 import numpy as np
 
 from dsp.signal_metrics import optimal_sinr, output_sinr, scene_covariance
 from examples.common import WAVELENGTH
-from research.covariance.methods import METHODS, Context
+from research.covariance.methods import METHODS, Context, noise_loaded_weights
 from research.harness import bootstrap_loss, loss_db, progress, save_results
 from simulations.channels.awgn import complex_noise, make_rng
 
@@ -178,7 +179,114 @@ def cost(repeats=200):
     return result
 
 
-EXPERIMENTS = (snapshots, pointing, calibration, noise_models, pulsed, many, correlation, cost)
+def random_scene(rng):
+    """Parameters of one held-out scene (see HYPOTHESES.md)."""
+    n = int(rng.choice([4, 8]))
+    interferers = []
+    for _ in range(rng.integers(1, n - 1)):
+        angle = rng.uniform(12, 75) * rng.choice([-1, 1])
+        interferers.append((float(angle), float(rng.uniform(0, 60))))
+    return {
+        "n": n,
+        "snapshots": round(float(np.exp(rng.uniform(np.log(4 * n), np.log(256))))),
+        "snr_db": float(rng.uniform(-5, 10)),
+        "interferers": interferers,
+        "options": {
+            "pointing": float(rng.uniform(-2, 2)),
+            "phase": float(rng.uniform(0, 5)),
+            "noise": str(rng.choice(["gaussian", "impulsive"])),
+        },
+    }
+
+
+def score_scenes(methods, scenes, stream):
+    """Losses (dB) of ``methods`` on random scenes of one seed stream, and their parameters."""
+    contexts = {n: Context(n) for n in (4, 8)}
+    ratios: dict[str, list[float]] = {name: [] for name in methods}
+    parameters = []
+    for seed in range(scenes):
+        rng = make_rng([stream, seed])
+        p = random_scene(rng)
+        context = contexts[p["n"]]
+        X, a, R_in = simulate(
+            context, rng, p["snapshots"], p["snr_db"], p["interferers"], p["options"]
+        )
+        best = optimal_sinr(a, 1.0, R_in)
+        for name, method in methods.items():
+            try:
+                ratios[name].append(output_sinr(method(X, context), a, 1.0, R_in) / best)
+            except np.linalg.LinAlgError:
+                ratios[name].append(0.0)
+        parameters.append((p["n"], p["options"]["phase"]))
+    losses = {k: -10 * np.log10(np.maximum(v, 1e-9)) for k, v in ratios.items()}
+    return losses, np.array(parameters)
+
+
+def summary(losses, parameters):
+    size, phase = parameters.T
+    subsets = {
+        "all": size > 0,
+        "N=4": size == 4,
+        "N=8": size == 8,
+        "phase < 1 deg": phase < 1,
+        "phase > 3 deg": phase > 3,
+    }
+    return {
+        label: {
+            name: {
+                "count": int(mask.sum()),
+                "median": float(np.median(v[mask])),
+                "p90": float(np.quantile(v[mask], 0.9)),
+                "p99": float(np.quantile(v[mask], 0.99)),
+                "over_10_db": float(np.mean(v[mask] > 10)),
+            }
+            for name, v in losses.items()
+        }
+        for label, mask in subsets.items()
+    }
+
+
+def held_out():
+    """Random scenes with seeds never used in the other experiments."""
+    return summary(*score_scenes(METHODS, 2000, 987654321))
+
+
+def loading_methods(factors=(1, 3, 10, 30, 100, 300, 1000)):
+    methods = {}
+    for factor in factors:
+        methods[f"noise x{factor}"] = partial(noise_loaded_weights, factor=factor)
+        methods[f"noise x{factor} + derivative"] = partial(
+            noise_loaded_weights, factor=factor, derivative=True
+        )
+    return methods
+
+
+def tuning():
+    """Design set: choose the loading factor."""
+    return summary(*score_scenes(loading_methods(), 1000, 111222333))
+
+
+def held_out_2():
+    """Second held-out set: every factor is reported, the choice is made by ``tuning``."""
+    methods = loading_methods() | {
+        k: METHODS[k] for k in ("relative 1e-2", "Phase 1 pipeline", "eigenspace", "hybrid")
+    }
+    return summary(*score_scenes(methods, 2000, 555666777))
+
+
+EXPERIMENTS = (
+    snapshots,
+    pointing,
+    calibration,
+    noise_models,
+    pulsed,
+    many,
+    correlation,
+    cost,
+    held_out,
+    tuning,
+    held_out_2,
+)
 
 
 def main(names):

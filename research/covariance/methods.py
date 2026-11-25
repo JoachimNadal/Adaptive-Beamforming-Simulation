@@ -44,14 +44,18 @@ def _relative(X, c):
     return mvdr_weights(S, c.a, loading_level(S, 1e-2))
 
 
+def noise_loaded_weights(X, c, factor=10.0, derivative=False):
+    """MVDR (or LCMV with derivative constraint) with loading ``factor x`` estimated noise."""
+    R = est.noise_loaded(compute_covariance_matrix(X), X.shape[1], factor)
+    return lcmv_weights(R, c.C, c.f) if derivative else mvdr_weights(R, c.a)
+
+
 def _noise(X, c):
-    S = compute_covariance_matrix(X)
-    return mvdr_weights(est.noise_loaded(S, X.shape[1]), c.a)
+    return noise_loaded_weights(X, c)
 
 
 def _noise_derivative(X, c):
-    S = compute_covariance_matrix(X)
-    return lcmv_weights(est.noise_loaded(S, X.shape[1]), c.C, c.f)
+    return noise_loaded_weights(X, c, derivative=True)
 
 
 def _relative_derivative(X, c):
@@ -120,6 +124,12 @@ def _eigencanceler(X, c):
     return w / np.vdot(w, c.a).conj()
 
 
+def _hybrid(X, c):
+    """Eigenspace projection; eigencanceler when no noise subspace is left for it."""
+    order = estimate_order_mdl(compute_covariance_matrix(X), X.shape[1])
+    return _eigenspace(X, c) if order <= c.n - 2 else _eigencanceler(X, c)
+
+
 def _reduced_rank_gsc(X, c):
     """Sidelobe canceller restricted to the principal components of the blocked data."""
     S = compute_covariance_matrix(X)
@@ -168,6 +178,7 @@ METHODS = {
     "Tyler": lambda X, c: mvdr_weights(est.regularized_tyler(X), c.a),
     "eigenspace": _eigenspace,
     "eigencanceler": _eigencanceler,
+    "hybrid": _hybrid,
     "reduced-rank GSC": _reduced_rank_gsc,
     "reconstruction": _reconstruction,
 }
