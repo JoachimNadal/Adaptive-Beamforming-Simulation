@@ -6,8 +6,15 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).parents[1]
-IGNORED = {".venv", "venv", "site-packages", "build", "results"}
-PAGES = [p for p in ROOT.rglob("*.md") if not IGNORED & set(p.relative_to(ROOT).parts)]
+IGNORED = {"venv", "site-packages", "build", "results"}
+
+
+def is_ignored(path):
+    parts = path.relative_to(ROOT).parts
+    return bool(IGNORED & set(parts)) or any(part.startswith(".") for part in parts[:-1])
+
+
+PAGES = [p for p in ROOT.rglob("*.md") if not is_ignored(p)]
 RUNNABLE = [ROOT / "README.md", ROOT / "Beamforming_Theory_to_Embedded_Guide.md"]
 
 
@@ -46,8 +53,7 @@ def test_code_blocks_run(page):
 def test_no_empty_file_or_placeholder():
     """Audit: 50 of 93 files were empty. Only package markers may be."""
     for path in ROOT.rglob("*"):
-        parts = set(path.relative_to(ROOT).parts)
-        if not path.is_file() or parts & (IGNORED | {".git"}) or path.name == "__init__.py":
+        if not path.is_file() or is_ignored(path) or path.name == "__init__.py":
             continue
         if path.suffix in (".py", ".md", ".c", ".h", ".toml"):
             assert path.stat().st_size > 2, f"{path} is empty"

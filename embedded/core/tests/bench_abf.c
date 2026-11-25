@@ -50,8 +50,8 @@ int main(void) {
             } while (elapsed < 0.5);
             rate[kernel] = elapsed / (double)runs;
         }
-        printf("%8u  %10.1f  %15.1f  %7.3f  %13.3f\n", (unsigned)n, BLOCK / rate[0] / 1e6,
-               BLOCK / rate[1] / 1e6, rate[2] * 1e6, rate[3] * 1e6);
+        printf("%8u  %10.1f  %15.1f  %7.3f  %13.3f\n", (unsigned)n, (double)BLOCK / rate[0] / 1e6,
+               (double)BLOCK / rate[1] / 1e6, rate[2] * 1e6, rate[3] * 1e6);
     }
     return 0;
 }
