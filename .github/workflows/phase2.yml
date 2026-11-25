@@ -1,0 +1,24 @@
+name: Phase 2
+
+on:
+  push:
+    branches: ["phase-2/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase2-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  baseline-frozen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+      - run: git fetch --force --tags origin
+      - run: python3 research/check_baseline.py
